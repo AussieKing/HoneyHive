@@ -1,15 +1,16 @@
+import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
-import Main from './Main';
 
-const Layout = () => {
+const Layout = ({ children }) => {
     return (
         <>
-            <Header title="Welcome!" />
-            <Main />
+            <Header />
+            <main>{children}</main> {/* This line renders the content passed to Layout */}
             <Footer />
         </>
     );
 };
 
 export default Layout;
+
