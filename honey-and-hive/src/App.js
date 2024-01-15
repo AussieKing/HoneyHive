@@ -1,32 +1,23 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Layout from './components/Layout';
-import FeedbackForm from './components/FeedbackForm';
+import ContactForm from './components/ContactForm'; // Renamed for clarity
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
 
 function App() {
-    const [feedback, setFeedback] = useState([]);
-
-    const handleNewFeedback = (newFeedback) => {
-        setFeedback([...feedback, newFeedback]);
+    const handleContactSubmit = (contactMessage) => {
+        // Here we could do something with the contact message, like sending an email
+        alert('Message sent!'); // For now, we'll just show an alert
     };
 
     return (
-      <div className='App'>
-          <Layout>
-              <FeedbackForm onSubmitFeedback={handleNewFeedback} />
-              <div>
-                  <h2>Feedback Received:</h2>
-                  <ul>
-                      {feedback.map((item, index) => (
-                          <li key={index}>
-                              <strong>{item.name}</strong> ({item.email}): {item.message}
-                          </li>
-                      ))}
-                  </ul>
-              </div>
-          </Layout>
-      </div>
-  );
+        <div className='App'>
+            <Layout>
+                <ContactForm onSubmitContact={handleContactSubmit} />
+                {/* Removed the feedback display. If we need to show a success message, we can do it within the ContactForm component. */}
+            </Layout>
+        </div>
+    );
 }
 
 export default App;
