@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# PROJECT DESCRIPTION
+We are building a website for "Honey and Hive", an interior design firm. The website aims to showcase the firm's portfolio, services, and allow visitors to contact the firm through an integrated contact form.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# CHALLENGES FACED
+- React Components & Styling: Implementing and styling various React components to create a visually appealing user interface.
+- Responsive Design: Ensuring the website is responsive and accessible on various devices.
+- CORS error when trying to send emails from the backend. We had to use a workaround to get around this. We used a library called cors-anywhere to bypass the CORS error. We then used the bypassed URL to send emails.
+- OAuth2.0 with Google. Integrating email capabilities to send messages from the contact form using Nodemailer and Google OAuth2 was rather time consuming, due to some authentication issues. By bypassing it using the App password (setup 2FA), we were able to successfully send emails.
+- We had to use a workaround to get the refresh token from Google. We had to use a different library (googleapis) to get the refresh token. We then used the refresh token to get the access token. We then used the access token to send emails.
 
-## Available Scripts
+# TECHNOLOGIES USED
+- React.js: For building the user interface.
+- React Bootstrap: For responsive design and styling components.
+- Node.js & Express: For backend server setup.
+- Nodemailer: For sending emails from the server.
+- Google OAuth2: For secure authentication in email services.
+- Axios: For making HTTP requests from the frontend.
+- dotenv: For managing environment variables securely.
+- Google APIs: Specifically Gmail API for the email functionality.
+- CORS (Cross-Origin Resource Sharing): To handle resource sharing between different domains.
+- Concurrently: To run multiple npm scripts concurrently.
+- Browser DevTools and Insomnia: For testing and debugging the application.
+- Google OAuth2.0: For secure authentication in email services.
+- Google Console API: For Gmail API and OAuth2.0. 
+- Body-parser: Middleware to parse incoming request bodies in a middleware before your handlers.
+- google-auth-library: For implementing Google authentication in Node.js.
+- express-session: Middleware for creating sessions.
+- Insomnia/Postman (not an npm package): Used for testing API endpoints.
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# TODO
+- Before production, change the Authorized redirect URIs in the Google API Console to the production URL (https://www.honeyandhiveinteriors.com/auth/google/callback . In https://console.cloud.google.com/apis/credentials
+)
+- Change the refresh token in the .env file to the production refresh token (and store in a database)
+- Change the client ID and client secret in the .env file to the production client ID and client secret (and store in a database)
+- Change the password in the .env file to the production password (and store in a database)
+- Change the email in the .env file to the production email (and store in a database)
