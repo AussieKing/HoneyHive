@@ -26,6 +26,57 @@ We are building a website for "Honey and Hive", an interior design firm. The web
 - google-auth-library: For implementing Google authentication in Node.js.
 - express-session: Middleware for creating sessions.
 - Insomnia/Postman (not an npm package): Used for testing API endpoints.
+- Dom React Router: For routing between pages.
+
+# STRUCTURE
+
+
+# TIMELINE
+**Day 1-5 : Contact page and Email sending capabilities** [x].
+
+**Day 6-20: Planning and Design** []
+- Research and gather inspiration from similar sites 
+- Create wireframes and mockups for each of the pages: homepage, about, services, projects, and contact.
+- Define the site's style guide (color palette, typography, layout principles, etc.).
+
+**Day 21-35: Homepage Development**
+- HTML structure.
+- CSS styling with responsive design.
+- Implementing a Bootstrap layout.
+- Adding interactive elements with JavaScript/jQuery.
+
+**Day 36-50: About Page**
+- Developing the HTML/CSS structure.
+- Integrating Handlebars for templating.
+- Adding personal touch with JavaScript animations.
+- Ensuring accessibility standards are met.
+
+**Day 51-65: Services Page and Subsections**
+- Services page development with React.js components.
+- Subsections for interior design and styling.
+- Advanced state management with React hooks.
+
+**Day 66-75: Projects Showcase**
+- Displaying projects with a responsive grid layout.
+- Using a headless CMS or API for project data.
+- Creating a dynamic gallery with modal pop-ups for project details.
+
+**Day 76-85: Authentication and User Management**
+- Implementing Firebase for user authentication.
+- Setting up secure user accounts and session management.
+- Handling form submissions securely with Node.js and Express.
+
+**Day 86-95: Backend Integration and Testing**
+- Integrating a MongoDB or MySQL database for storing inquiries and bookings.
+- Developing RESTful API endpoints for CRUD operations.
+- Unit and functional testing of components and backend.
+
+**Day 96-100: Finalization and Launch Preparation**
+- Conducting final tests and debugging.
+- Preparing documentation and commenting code.
+- Setting up continuous integration for deployment.
+- Conducting a soft launch to collect feedback.
+- Final adjustments and official launch.
 
 # TODO
 - Before production, change the Authorized redirect URIs in the Google API Console to the production URL (https://www.honeyandhiveinteriors.com/auth/google/callback . In https://console.cloud.google.com/apis/credentials

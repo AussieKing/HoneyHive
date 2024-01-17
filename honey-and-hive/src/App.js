@@ -1,24 +1,33 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // importing the BrowserRouter, Route and Routes components from react-router-dom
 import Layout from './components/Layout';
-import ContactForm from './components/ContactForm'; // Renamed for clarity
+import About from './components/About'; // importing the About component
+import Projects from './components/Projects'; // importing the Projects component
+import Services from './components/Services';   // importing the Services component
+import Main from './components/Main'; // importing the Home component
+import ContactForm from './components/ContactForm'; //! importing the ContactForm component
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 function App() {
     const handleContactSubmit = (contactMessage) => {
-        // Here we could do something with the contact message, like sending an email
-        alert('Message sent!'); // For now, we'll just show an alert
-    };
+        // Handle contact form submission here
+        alert('Message Sent!');
+    }
 
     return (
-        <div className='App'>
+        <Router>
             <Layout>
-                <ContactForm onSubmitContact={handleContactSubmit} />
-                {/* Removed the feedback display. If we need to show a success message, we can do it within the ContactForm component. */}
+                <Routes>
+                    <Route path="/" element={<Main />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/projects" element={<Projects />} />
+                    <Route path="/services" element={<Services />} />
+                    <Route path="/contact" element={<ContactForm onSubmitContact={handleContactSubmit} />} /> {/* //! passing the handleContactSubmit function as a prop to the ContactForm component */}
+                </Routes>
             </Layout>
-        </div>
+        </Router>
     );
 }
 
 export default App;
-
