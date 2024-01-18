@@ -1,0 +1,76 @@
+
+/* About.css */
+
+/* Reset styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Full page background image */
+.about-hero {
+  position: relative;
+  height: 100vh; /* 100% of the viewport height */
+  width: 100vw; /* 100% of the viewport width */
+  background: url('../assets/about-background.jpg') no-repeat center center;
+  background-size: cover;
+  margin: 0; /* Ensure no margin */
+  padding: 0; /* Ensure no padding */
+  background-attachment: fixed; /* Fixed background */
+  overflow: auto; /* Enable scrolling */
+}
+
+/* Content section */
+.about-content-section {
+  position: relative;
+  background-color: var(--background-color); /* Use the color defined in App.css */
+  padding: 60px 20px;
+}
+
+  /* Ethos section */
+  .about-ethos {
+    background-color: #BB9C71; /* Cream white */
+    padding: 60px 20px;
+  }
+  
+  /* Founders section */
+  .about-founders {
+    background-color: #f0ebe3; /* Beige */
+    padding: 60px 20px;
+  }
+  
+  /* Projects in the press section */
+  .about-press {
+    background-color: var(--background-color); /* Cream white */
+    padding: 60px 20px;
+  }
+  
+  /* Get in touch section */
+  .about-contact {
+    background-color: #4d4d4d; /* Chocolate */
+    color: #fff;
+    padding: 60px 20px;
+  }
+  
+  /* Footer already has its styling */
+  
+  /* Example of a button */
+  .about-button {
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .about-button:hover {
+    background-color: darken(var(--accent-color), 10%);
+  }
+  
+  

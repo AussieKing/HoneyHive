@@ -6,10 +6,9 @@
 }
 
 /* Styles for the app */
-/* Import fonts from a web font service or define similar web-safe fonts */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
-/* Define color variables */
+/* Color variables */
 :root {
   --background-color: #F5ECE2;
   --accent-color: #BB9C71;

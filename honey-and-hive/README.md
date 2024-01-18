@@ -32,12 +32,12 @@ We are building a website for "Honey and Hive", an interior design firm. The web
 
 
 # TIMELINE
-**Day 1-5 : Contact page and Email sending capabilities** [x].
+**Day 1-5 : Create Repo, Contact page and implement Email sending capabilities** [x].
 
 **Day 6-20: Planning and Design** []
-- Research and gather inspiration from similar sites 
-- Create wireframes and mockups for each of the pages: homepage, about, services, projects, and contact.
-- Define the site's style guide (color palette, typography, layout principles, etc.).
+- Research and gather inspiration from similar sites [x]
+- Create wireframes and mockups for each of the pages: homepage, about, services, projects, and contact. [x]
+- Define the site's style guide (color palette, typography, layout principles, etc.). [WIP]
 
 **Day 21-35: Homepage Development**
 - HTML structure.
@@ -46,9 +46,9 @@ We are building a website for "Honey and Hive", an interior design firm. The web
 - Adding interactive elements with JavaScript/jQuery.
 
 **Day 36-50: About Page**
-- Developing the HTML/CSS structure.
+- Developing the HTML/CSS structure. [x]
 - Integrating Handlebars for templating.
-- Adding personal touch with JavaScript animations.
+- Adding personal touch with JavaScript animations. 
 - Ensuring accessibility standards are met.
 
 **Day 51-65: Services Page and Subsections**
@@ -79,8 +79,8 @@ We are building a website for "Honey and Hive", an interior design firm. The web
 - Final adjustments and official launch.
 
 # TODO
-- Before production, change the Authorized redirect URIs in the Google API Console to the production URL (https://www.honeyandhiveinteriors.com/auth/google/callback . In https://console.cloud.google.com/apis/credentials
-)
+- Make the website responsive (About page, Services page, Projects page, Contact page)
+- Before production, change the Authorized redirect URIs in the Google API Console to the production URL (https://www.honeyandhiveinteriors.com/auth/google/callback . In https://console.cloud.google.com/apis/credentials)
 - Change the refresh token in the .env file to the production refresh token (and store in a database)
 - Change the client ID and client secret in the .env file to the production client ID and client secret (and store in a database)
 - Change the password in the .env file to the production password (and store in a database)

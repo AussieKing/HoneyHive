@@ -1,33 +1,32 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // importing the BrowserRouter, Route and Routes components from react-router-dom
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Layout from './components/Layout';
-import About from './components/About'; // importing the About component
-import Projects from './components/Projects'; // importing the Projects component
-import Services from './components/Services';   // importing the Services component
-import Main from './components/Main'; // importing the Home component
-import ContactForm from './components/ContactForm'; //! importing the ContactForm component
+import About from './components/About';
+import Projects from './components/Projects';
+import Services from './components/Services';
+import Main from './components/Main';
+import ContactForm from './components/ContactForm';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 function App() {
-    const handleContactSubmit = (contactMessage) => {
-        // Handle contact form submission here
-        alert('Message Sent!');
-    }
+  const handleContactSubmit = (contactMessage) => {
+    // Handle contact form submission here
+    alert('Message Sent!');
+  }
 
-    return (
-        <Router>
-            <Layout>
-                <Routes>
-                    <Route path="/" element={<Main />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/projects" element={<Projects />} />
-                    <Route path="/services" element={<Services />} />
-                    <Route path="/contact" element={<ContactForm onSubmitContact={handleContactSubmit} />} /> {/* //! passing the handleContactSubmit function as a prop to the ContactForm component */}
-                </Routes>
-            </Layout>
-        </Router>
-    );
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Layout><Main /></Layout>} />
+        <Route path="/about" element={<Layout useContainer={false}><About /></Layout>} />
+        <Route path="/projects" element={<Layout><Projects /></Layout>} />
+        <Route path="/services" element={<Layout><Services /></Layout>} />
+        <Route path="/contact" element={<Layout><ContactForm onSubmitContact={handleContactSubmit} /></Layout>} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;
+
