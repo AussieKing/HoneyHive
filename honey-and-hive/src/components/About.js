@@ -8,7 +8,11 @@ const About = () => {
         {/* This div has the fixed background image */}
       </div>
       <div className="about-content-section">
-        <h1>About Honey and Hive Interiors:</h1>
+        <h1>
+          Thoughtful client-focused interior design, creating beautiful and
+          innovative residential and commercial spaces, with sustainability in
+          mind.
+        </h1>
         {/* Additional content can go here */}
       </div>
       <div className="about-ethos">
@@ -17,7 +21,19 @@ const About = () => {
       </div>
       <div className="about-founders">
         {/* Content for the "Meet the Founders" section */}
-        <p>Founders content goes here...</p>
+        <p>
+          I came into this industry of interior design quite organically through
+          my avid appreciation for art, history, architecture and my love for
+          upcycling and breathing new life into new spaces and reinvigorating
+          the old. My strength as a designer and stylist is my inherent ability
+          to enhance interiors and create a healthy, balanced and aesthetically
+          pleasing environment, whether it be a single room, an entire home, a
+          hospitality venue, hotel, apartment complex or commercial dwelling. ​
+          I am a bit of a nomad, being that I am Canadian but was born and
+          raised in Indonesia. Living a somewhat transient lifestyle, the
+          privilege of travel from an early age has enriched my creativity and
+          allowed me to draw artistic inspiration from my cultural experiences.
+        </p>
       </div>
       <div className="about-press">
         {/* Content for the "Our Projects in the Press" section */}

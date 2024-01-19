@@ -1,3 +1,9 @@
+/* importing the fint from the font folder */
+@font-face {
+  font-family: 'Benquiat Pro ITC';
+  src: url('./assets/fonts/itc_benguiat_ITC/BenguiatStd-Book.otf') format('opentype');
+}
+
 /* Reset styles for the app */
 * {
   box-sizing: border-box;
@@ -23,11 +29,11 @@ body {
 
 /* Specific styles for the logo */
 .logo-font {
-  font-family: 'Times New Roman', Times, serif; /* A web-safe alternative for Benguiat Pro ITC */
+  font-family: 'Benquiat Pro ITC', 'Times New Roman', Times, serif; /* A web-safe alternative for Benguiat Pro ITC */
   color: var(--accent-color);
+  font-size: 1.5rem;
 }
 
-/* Removed the App-logo  */
 
 /* Mobile first styles */
 .App {
@@ -43,6 +49,60 @@ body {
   justify-content: center; /* Centering the items vertically */
   padding: 20px;
   color: #333;
+}
+
+/* Resizing the MENU and CONTACT text and FontAwesome icon */
+.header-link {
+  font-size: 70%; /* Reducing font size by 30% */
+}
+
+.header-icon {
+  font-size: 70%; /* Reducing icon size by 30% */
+}
+
+.logo-font {
+  font-family: 'Benquiat Pro ITC', 'Times New Roman', Times, serif; /* A web-safe alternative for Benguiat Pro ITC */
+  color: var(--accent-color); /* Using the color variable from App.css */
+}
+
+.navbar {
+  background-color: rgba(255, 255, 255, 0); /* Fully transparent */
+  -webkit-backdrop-filter: blur(10px); /* For Safari 9+ */
+  backdrop-filter: blur(10px); /* Blurring effect */
+}
+
+/* Align the menu and contact links to the sides and center the logo */
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Style for menu and contact links */
+.navbar .nav-link {
+  color: var(--text-color); /* Using the color variable from App.css */
+}
+
+/* Style for the FontAwesome icon */
+.fa-bars {
+  margin-right: 5px;
+}
+
+
+/* Add some padding at the top of the main content when the navbar is fixed */
+main {
+  padding-top: 56px; /* Adjust the value based on the height of your navbar */
+}
+
+/* Add padding-top to the main content */
+main {
+  padding-top: 56px; /* Height of the navbar. Adjust as needed */
 }
 
 /* Adjust link styles */
