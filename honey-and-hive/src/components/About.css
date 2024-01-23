@@ -7,7 +7,11 @@
   padding: 0;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Mr+Eaves+Sans:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap');
+
+.kaisei-opti-regular {
+  font-family: "Kaisei Opti", serif;
+}
 
 :root {
   --background-color: #F5ECE2; /* Example color */
@@ -28,92 +32,73 @@
 
 .about-content-section {
   display: flex;
-  padding: 15px; /* Adjust padding as needed */
-  margin-bottom: 100px; /* Add space below the section */
+  align-items: flex-start;
+  padding: 15px;
+  margin-bottom: 100px;
   background-color: var(--background-color);
-  position: relative; /* To allow absolute positioning inside */
 }
-
 .about-text-image {
-  width: 40%; /* Adjust the width as needed */
+  width: 40%;
+  height: 300px; /* or whatever height makes sense for your layout */
   background: url('../assets/person-drawing.png') no-repeat center center;
   background-size: cover;
   margin-right: 20px;
-  position: relative; /* Adjusted to relative */
-  top: 0;
-  bottom: 0;
 }
 
+
+
+/* Container for the h1, strong tag, and content */
 .about-text-content {
-  flex: 1; /* Take remaining space */
-  text-align: left; /* Align text to the left */
-}
-
-.italic-text {
-  font-style: italic; /* This ensures the portion of text is in italics */
-}
-
-/* New container for the OUR VISION text */
-.our-vision-container {
-  margin-right: 20px; /* Same as the space between image and text content */
-  margin-top: 50px; /* Aligning with content */
-  padding-left: 20px; /* To align with the content inside about-content-container */
-  flex-grow: 0; /* Do not allow it to grow, it should only take the space it needs */
-}
-
-/* Update styles for the about-content-container */
-.about-content-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align items to the start (left) */
-  position: relative; /* Adjusted to relative */
-  max-width: 500px; /* Adjust the width to fit the content area */
-  padding: 20px; /* Add padding to create space inside the box */
-  margin-left: auto; /* This will push the container to the right */
-  margin-right: 20px; /* Adjust as needed for spacing from the right edge */
+  flex: 1;
+  margin-left: 20px; /* Add margin if the image appears too close to the text */
 }
 
-/* Remove the absolute positioning from the strong tag */
-.about-content-container strong {
-  /* Remove position, top, and left properties */
-  color: var(--text-color);
-  font-size: 1.5em; /* Adjust the size as needed */
-  display: flex; /* Allow it to take the full width */
-  align-items: right; /* Align the text to the right */
+/* Flex container for strong tag and content alignment */
+.content-with-vision {
+  display: flex;
+  align-items: flex-start; /* Align items to the start of the container */
 }
 
-.about-content-container {
+.vision-title {
+  /* No margin is needed since it should be in line with the content */
+  display: flex; /* Align the strong tag */
+  align-items: center; /* Center it vertically */
+  padding-right: 20px; /* Ensure some spacing to the content */
+}
+
+.our-vision-text {
+  font-size: 1em; /* or any other size you prefer */
+  /* other styles */
+}
+
+.text-and-button {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align items to the start (left) */
-  position: relative; /* Adjusted to relative */
-  max-width: 500px; /* Adjust the width to fit the content area */
-  padding: 20px; /* Add padding to create space inside the box */
-  margin-left: auto; /* This will push the container to the right */
-  margin-right: 20px; /* Adjust as needed for spacing from the right edge */
+  justify-content: center; /* Center the content vertically if needed */
+}
+.about-text-content h1 {
+  margin-bottom: 50px; /* 50 pixels of space below the h1 */
 }
 
-.our-vision-and-text {
-  text-align: left;
-}
-
+/* Styles for h1 */
 h1 {
-  font-family: 'Mr Eaves San OT Book', sans-serif; /* Make sure the name matches the one provided by the font service */
-  /* ... other styles ... */
+  font-family: "Kaisei Opti", serif;
+  letter-spacing: -2.6px;
 }
 
-h1, h2, p {
-  margin-bottom: 0.5em; /* Space between elements */
+/* Styles for italic text */
+.italic-text {
+  font-family: "Kaisei Opti", serif;
+  font-style: italic; /* To ensure the text remains italic */
 }
 
-/* Style the link to look like a clickable link */
+/* Ensure the link is displayed as an underlined text */
 .book-consultation-link {
-  color: var(--text-color); /* Set the color of the link */
-  text-decoration: underline; /* Underline the link */
-  cursor: pointer; /* Change cursor to indicate clickability */
-  margin-top: 20px; /* Add space above the link if needed */
-  align-self: flex-start; /* Align to the start if inside a flex container */
-  /* You can add more styles to match your design */
+  color: inherit;
+  text-decoration: underline;
+  margin-top: 20px;
 }
 
 .book-consultation-link:hover {

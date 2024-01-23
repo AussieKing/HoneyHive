@@ -1,6 +1,6 @@
 import React from "react";
 import "./About.css"; // Import the stylesheet specific to About
-import { Link } from "react-router-dom"; //! introduced for the book button
+import { Link } from "react-router-dom"; //! introduced instead of the book button
 
 const About = () => {
   return (
@@ -9,18 +9,25 @@ const About = () => {
         {/* This div has the fixed background image */}
       </div>
       <div className="about-content-section">
-        <div className="about-text-image"></div> {/* This is the image on the left */}
+        <div className="about-text-image"></div>{" "}
+        {/* This is the image on the left */}
         <div className="about-text-content">
-        <h1>Honey & Hive Interiors - <em className="italic-text">If you can imagine it, it exists.</em></h1>
-          <div className="our-vision-container">
-            <strong>OUR VISION</strong>
-          </div>
-          <div className="about-content-container">
-            <div className="our-vision-and-text">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <h1>
+            Honey & Hive Interiors - <em>If you can imagine it, it exists.</em>
+          </h1>
+          <div className="content-with-vision">
+            <div className="vision-title">
+              <strong className="our-vision-text">OUR VISION</strong>
             </div>
-            {/* Change button to Link */}
-            <Link to="/contact" className="book-consultation-link">Book Your Design Consultation</Link>
+            <div className="text-and-button">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              <Link to="/contact" className="book-consultation-link">
+                Book Your Design Consultation
+              </Link>
+            </div>
           </div>
         </div>
       </div>
