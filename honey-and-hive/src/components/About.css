@@ -1,28 +1,13 @@
-/* About.css */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
+/* Main CSS styles for About page */
 @import url('https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap');
 
-.kaisei-opti-regular {
-  font-family: "Kaisei Opti", serif;
-}
-
 :root {
-  --background-color: #F5ECE2; /* Example color */
-  --text-color: #333; /* Example color */
-  --accent-color: #BB9C71; /* Example accent color */
+  --background-color: #F5ECE2;
+  --text-color: #333;
+  --accent-color: #BB9C71;
 }
 
-.about-page {
-  /* Styles for the about page */
-}
-
+/* Hero section styling */
 .about-hero {
   position: relative;
   height: 100vh;
@@ -30,6 +15,7 @@
   background-size: cover;
 }
 
+/* Content section styling, including flexbox layout */
 .about-content-section {
   display: flex;
   align-items: flex-start;
@@ -37,64 +23,48 @@
   margin-bottom: 100px;
   background-color: var(--background-color);
 }
+
+/* Image styling within content section */
 .about-text-image {
   width: 40%;
-  height: 300px; /* or whatever height makes sense for your layout */
+  height: 300px;
   background: url('../assets/person-drawing.png') no-repeat center center;
   background-size: cover;
   margin-right: 20px;
 }
 
-
-
-/* Container for the h1, strong tag, and content */
+/* Text content styling, including h1 and paragraph */
 .about-text-content {
   display: flex;
   flex-direction: column;
   flex: 1;
-  margin-left: 20px; /* Add margin if the image appears too close to the text */
+  margin-left: 20px;
 }
 
-/* Flex container for strong tag and content alignment */
+.about-text-content h1 {
+  font-family: "Kaisei Opti", serif;
+  letter-spacing: -2.6px;
+  margin-bottom: 50px;
+}
+
+/* Italic text styling */
+.italic-text {
+  font-style: italic;
+}
+
+/* Vision title and button container styling */
 .content-with-vision {
   display: flex;
-  align-items: flex-start; /* Align items to the start of the container */
+  align-items: flex-start;
 }
 
 .vision-title {
-  /* No margin is needed since it should be in line with the content */
-  display: flex; /* Align the strong tag */
-  align-items: center; /* Center it vertically */
-  padding-right: 20px; /* Ensure some spacing to the content */
-}
-
-.our-vision-text {
-  font-size: 1em; /* or any other size you prefer */
-  /* other styles */
-}
-
-.text-and-button {
   display: flex;
-  flex-direction: column;
-  justify-content: center; /* Center the content vertically if needed */
-}
-.about-text-content h1 {
-  margin-bottom: 50px; /* 50 pixels of space below the h1 */
+  align-items: center;
+  padding-right: 20px;
 }
 
-/* Styles for h1 */
-h1 {
-  font-family: "Kaisei Opti", serif;
-  letter-spacing: -2.6px;
-}
-
-/* Styles for italic text */
-.italic-text {
-  font-family: "Kaisei Opti", serif;
-  font-style: italic; /* To ensure the text remains italic */
-}
-
-/* Ensure the link is displayed as an underlined text */
+/* Button styling */
 .book-consultation-link {
   color: inherit;
   text-decoration: underline;
@@ -102,22 +72,22 @@ h1 {
 }
 
 .book-consultation-link:hover {
-  color: var(--accent-color); /* Change color to #BB9C71 on hover */
+  color: var(--accent-color);
 }
 
-
+/* Other section styling */
 .about-ethos,
 .about-projects,
 .about-founders,
 .about-press,
 .about-contact {
   padding: 60px 20px;
-  background-color: #e0d6cc; /* A contrasting background color */
+  background-color: #e0d6cc;
   color: var(--text-color);
   margin: 20px 0;
 }
 
-/* Button styling for interactive elements */
+/* Global button styling */
 .about-button {
   background-color: var(--accent-color);
   color: #fff;
@@ -127,11 +97,193 @@ h1 {
   cursor: pointer;
   font-weight: bold;
   transition: background-color 0.3s ease;
-  text-decoration: none; /* Remove underline from links */
 }
 
 .about-button:hover {
   background-color: darken(var(--accent-color), 10%);
 }
 
-/* Additional responsive and interactive styling to be added later */
+/* Founder section styling */
+
+.about-founders {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 20px;
+  background-color: var(--background-color);
+}
+
+.founders-left,
+.founders-right {
+  flex: 1;
+}
+
+.founders-left {
+  padding-right: 50px; /* Adjust as needed for spacing */
+  font-family: "Kaisei Opti", serif;
+  letter-spacing: -2.6px;
+  margin-bottom: 50px; /* 50 pixels of space below the h1 */
+  margin-left: 70px;
+}
+
+.founders-left em{
+  font-style: italic;
+  margin-left: 60px;
+}
+
+.founders-left p{
+  margin-left: 90px;
+}
+
+.founders-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  padding-left: 50px; 
+}
+
+.founder-image {
+  max-width: 100%;
+  height: 400px;
+}
+
+.founder-info {
+  text-align: center; /* Center text for the name, title, and description */
+}
+
+.founder-info h2 {
+  font-family: "Kaisei Opti", serif;
+  margin: 20px 0 10px; /* Space above and below the name */
+}
+
+.founder-title {
+  margin-bottom: 20px; /* Space below the title */
+}
+
+.founder-description {
+  text-align: left;
+}
+
+/* Style the "Read More" link with an underline and a hover effect */
+.read-more-link {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  color: #BB9C71; 
+  font-size: 0.9em; 
+  margin-top: 1rem; /* Space from the text above */
+  padding-bottom: 0.25rem; /* Space for the underline */
+}
+
+/* Create a pseudo-element for the underline */
+.read-more-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #BB9C71; 
+  visibility: hidden;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+/* Create a pseudo-element for the circle */
+.read-more-link::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -20px; 
+  transform: translate(0, -50%);
+  width: 8px; /* Circle size */
+  height: 8px; /* Circle size */
+  background-color: transparent; /* Circle color */
+  border: 2px solid#BB9C71; /* Circle border color */
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect for the underline */
+.read-more-link:hover::after {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+/* Hover effect for the circle */
+.read-more-link:hover::before {
+  background-color: #BB9C71; /* Circle fill color on hover */
+}
+
+/*! Get in touch section styling */
+.about-contact {
+  display: flex;
+  justify-content: space-between; /* This will put space between the two child divs */
+  align-items: center; /* This will vertically align them in the center */
+  padding: 15px; /* Adjusted padding for layout */
+  background-color: #616060;
+}
+
+.contact-left {
+  flex: 1;
+  padding-right: 20px; /* Adjust spacing as necessary */
+  margin-left: 70px;
+  color: #F5ECE2;
+}
+
+.contact-left h1{
+  font-family: "Kaisei Opti", serif;
+  letter-spacing: -2.6px;
+}
+
+.contact-left p{
+  margin-left: 95px;
+}
+
+.contact-right img {
+  width: 100%; /* This will make the image take full width of its parent */
+  max-width: 1200px; /* This will ensure the image does not become too big */
+  height: auto; /* This will maintain the aspect ratio */
+  align-self: flex-end; /* This will align the image to the right */
+  margin-bottom: 5px;
+}
+
+.contact-left, .contact-right {
+  flex: 1; /* This will allow them to grow equally */
+  max-width: 50%; /* This will ensure they do not exceed half the container's width */
+}
+
+.contact-image {
+  width: 100%; /* Full width of the container */
+  height: auto; /* Keep the aspect ratio */
+  margin-bottom: 20px; /* Spacing below the image */
+}
+
+/* .contact-info { */
+  /* Styles for the contact info */
+/* } */
+
+.book-consultation-link {
+  /* Styles for the book consultation link */
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-weight: bold;
+  text-decoration: underline;
+  color: var(--accent-color);
+  transition: background-color 0.3s ease;
+  margin-left: 75px;
+}
+
+.book-consultation-link:hover {
+  /* Styles for hover state */
+  text-decoration: none;
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+/* Responsive and interactive styling to be defined as needed */

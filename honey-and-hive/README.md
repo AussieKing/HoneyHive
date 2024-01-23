@@ -27,6 +27,7 @@ We are building a website for "Honey and Hive", an interior design firm. The web
 - express-session: Middleware for creating sessions.
 - Insomnia/Postman (not an npm package): Used for testing API endpoints.
 - Dom React Router: For routing between pages.
+- Google fonts: For fonts. 
 
 # STRUCTURE
 

@@ -1,16 +1,22 @@
-import React from "react";
-import "./About.css"; // Import the stylesheet specific to About
-import { Link } from "react-router-dom"; //! introduced instead of the book button
+import React, { useState } from "react";
+import "./About.css";
+import { Link } from "react-router-dom";
+import founderImage from "../assets/founder-image.png";
+import contactImage from '../assets/contact-image.jpg'; // Import the image used for the contact section 
 
 const About = () => {
+  const [readMore, setReadMore] = useState(false);
+
+  const handleReadMoreClick = () => {
+    setReadMore(!readMore);
+  };
+
   return (
     <div className="about-page">
       <div className="about-hero">
-        {/* This div has the fixed background image */}
       </div>
       <div className="about-content-section">
-        <div className="about-text-image"></div>{" "}
-        {/* This is the image on the left */}
+        <div className="about-text-image"></div> 
         <div className="about-text-content">
           <h1>
             Honey & Hive Interiors - <em>If you can imagine it, it exists.</em>
@@ -31,26 +37,93 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="about-ethos">
-        {/* Content for the "Our Ethos" section */}
-        <p>Our ethos content...</p>
-      </div>
+
       <div className="about-projects">
         {/* Content for the "Our Projects" section */}
         <p>Our projects content...</p>
       </div>
+
       <div className="about-founders">
-        {/* Content for the "Meet the Founders" section */}
-        <p>Meet the founders behind Honey and Hive...</p>
+        <div className="founders-left">
+          <h1>Meet the mind</h1>
+          <h1>
+            <em> behind </em>
+            <p>Honey and Hive.</p>
+          </h1>
+        </div>
+        <div className="founders-right">
+          <img src={founderImage} alt="Founder" className="founder-image" />
+          <div className="founder-info">
+            <h2>FOUNDER'S NAME</h2>
+            <p className="founder-title">Founder + Interior Designer</p>
+            <div className="founder-description">
+              <p>
+                Founder's short bio goes here... Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit. Quisque quis euismod risus. Donec
+                magna arcu, aliquam vel lacus in, tristique finibus neque.
+                Vestibulum feugiat diam mi, a vestibulum ipsum viverra
+                tincidunt. Praesent a pulvinar orci, in blandit ligula. Fusce
+                eget leo pharetra turpis convallis tempor. Integer justo leo,
+                fringilla at elit id, maximus tempor ligula. Proin iaculis,
+                velit nec consectetur luctus, nulla magna fermentum leo, non
+                convallis est arcu eget lorem. Donec sit amet libero id odio
+                efficitur elementum. Donec vel dignissim tellus. Phasellus
+                ultricies ligula quis neque blandit auctor. Praesent at arcu
+                finibus, congue lacus eget, volutpat mauris. Donec vulputate
+                accumsan turpis dictum ultricies. Donec interdum velit in lacus
+                dictum, ut venenatis odio tristique. Praesent quis est vitae
+                justo lobortis interdum.
+              </p>
+              {readMore && (
+                <p>
+                  Extended founder's bio goes here... Aenean venenatis magna
+                  vitae sem sagittis sollicitudin. Etiam vel euismod nibh. Donec
+                  dictum ut justo eu ornare. Pellentesque habitant morbi
+                  tristique senectus et netus et malesuada fames ac turpis
+                  egestas. Donec malesuada pulvinar orci, in semper felis. Class
+                  aptent taciti sociosqu ad litora torquent per conubia nostra,
+                  per inceptos himenaeos. Nulla pharetra libero velit. Nunc nunc
+                  ante, consectetur vel dui eget, bibendum elementum ex.
+                  Phasellus elementum magna quis augue efficitur, mollis aliquam
+                  purus bibendum. Maecenas eu ex vitae nibh euismod tristique
+                  quis a odio. Aliquam at feugiat nunc. Mauris mattis leo sit
+                  amet pellentesque luctus. Vestibulum molestie ante ac neque
+                  consequat, non viverra erat tincidunt. Nulla semper imperdiet
+                  egestas. Vivamus urna felis, egestas vitae rutrum eget,
+                  finibus eget tortor.
+                </p>
+              )}
+              <a onClick={handleReadMoreClick} className="read-more-link">
+                {readMore ? "Read Less" : "Read More"}
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
+
       <div className="about-press">
         {/* Content for the "Our Projects in the Press" section */}
         <p>Our work in the press...</p>
       </div>
+
+      {/* WORKING ON THIS SECTION */}
       <div className="about-contact">
-        {/* Content for the "Get in Touch" section */}
-        <p>Contact us...</p>
+      <div className="contact-left">
+        {/* Display a big bold text for the section title */}
+        <h1>Get In Touch</h1>
+        <p>We look forward to chatting about your project.</p>
+        <Link to="/contact" className="book-consultation-link">
+          Book A Consultation
+        </Link>
       </div>
+      <div className="contact-right">
+        <img src={contactImage} alt="Consultation" className="contact-image" />
+        {/* <div className="contact-info">
+          <p>Contact details, address, phone number, etc.</p>
+        </div> */}
+      </div>
+    </div>
+
     </div>
   );
 };
