@@ -1,15 +1,24 @@
 /* About.css */
-
-/* Reset styles */
 *,
 *::before,
 *::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-/* Full page background image */
+@import url('https://fonts.googleapis.com/css2?family=Mr+Eaves+Sans:wght@400&display=swap');
+
+:root {
+  --background-color: #F5ECE2; /* Example color */
+  --text-color: #333; /* Example color */
+  --accent-color: #BB9C71; /* Example accent color */
+}
+
+.about-page {
+  /* Styles for the about page */
+}
+
 .about-hero {
   position: relative;
   height: 100vh;
@@ -17,73 +26,115 @@
   background-size: cover;
 }
 
-/* Page content below the hero image */
-.about-page {
-  position: relative;
-}
-
-/* Content section styling */
 .about-content-section {
-  background-color: var(--background-color); /* Light cream white */
-  color: var(--text-color); /* Dark gray */
-  padding: 80px 20px; /* Generous padding for a spacious layout */
-  text-align: center; /* Center align the text */
+  display: flex;
+  padding: 15px; /* Adjust padding as needed */
+  margin-bottom: 100px; /* Add space below the section */
+  background-color: var(--background-color);
+  position: relative; /* To allow absolute positioning inside */
 }
 
-/* Content container styling, introducing flex-box */
-.about-text-content {
-  display: flex; /* Use flexbox to arrange image and text side by side */
-  align-items: center; /* Center items vertically */
-  justify-content: space-around; /* Space around the items */
-  background-color: #F5ECE2; /* Cream white background */
-  padding: 40px;
-  margin-bottom: 20px; /* Add some space below the content section */
-}
-
-.about-image-wrapper {
-  flex: 1; /* Take up 1 fraction of the space available */
+.about-text-image {
+  width: 40%; /* Adjust the width as needed */
   background: url('../assets/person-drawing.png') no-repeat center center;
   background-size: cover;
-  height: 300px; /* Adjust as necessary */
-  margin-right: 20px; /* Add some space between the image and text */
+  margin-right: 20px;
+  position: relative; /* Adjusted to relative */
+  top: 0;
+  bottom: 0;
 }
 
-.about-text {
-  flex: 2; /* Take up 2 fractions of the space available */
-  padding: 20px;
-}
-
-/* Styling for the ethos section */
-.about-ethos {
-  background-color: #e0d6cc; /* A slightly darker shade for contrast */
-  color: var(--text-color);
-  padding: 100px 20px;
+.about-text-content {
+  flex: 1; /* Take remaining space */
   text-align: left; /* Align text to the left */
 }
 
-/* Styling for the founders section */
-.about-founders {
-  background-color: #f0ebe3; /* A warm beige that complements the theme */
-  padding: 80px 20px;
+.italic-text {
+  font-style: italic; /* This ensures the portion of text is in italics */
 }
 
-/* Styling for the press section */
-.about-press {
-  background-color: var(--background-color); /* Consistent with the first section */
-  padding: 80px 20px;
+/* New container for the OUR VISION text */
+.our-vision-container {
+  margin-right: 20px; /* Same as the space between image and text content */
+  margin-top: 50px; /* Aligning with content */
+  padding-left: 20px; /* To align with the content inside about-content-container */
+  flex-grow: 0; /* Do not allow it to grow, it should only take the space it needs */
 }
 
-/* Styling for the contact section */
+/* Update styles for the about-content-container */
+.about-content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the start (left) */
+  position: relative; /* Adjusted to relative */
+  max-width: 500px; /* Adjust the width to fit the content area */
+  padding: 20px; /* Add padding to create space inside the box */
+  margin-left: auto; /* This will push the container to the right */
+  margin-right: 20px; /* Adjust as needed for spacing from the right edge */
+}
+
+/* Remove the absolute positioning from the strong tag */
+.about-content-container strong {
+  /* Remove position, top, and left properties */
+  color: var(--text-color);
+  font-size: 1.5em; /* Adjust the size as needed */
+  display: flex; /* Allow it to take the full width */
+  align-items: right; /* Align the text to the right */
+}
+
+.about-content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the start (left) */
+  position: relative; /* Adjusted to relative */
+  max-width: 500px; /* Adjust the width to fit the content area */
+  padding: 20px; /* Add padding to create space inside the box */
+  margin-left: auto; /* This will push the container to the right */
+  margin-right: 20px; /* Adjust as needed for spacing from the right edge */
+}
+
+.our-vision-and-text {
+  text-align: left;
+}
+
+h1 {
+  font-family: 'Mr Eaves San OT Book', sans-serif; /* Make sure the name matches the one provided by the font service */
+  /* ... other styles ... */
+}
+
+h1, h2, p {
+  margin-bottom: 0.5em; /* Space between elements */
+}
+
+/* Style the link to look like a clickable link */
+.book-consultation-link {
+  color: var(--text-color); /* Set the color of the link */
+  text-decoration: underline; /* Underline the link */
+  cursor: pointer; /* Change cursor to indicate clickability */
+  margin-top: 20px; /* Add space above the link if needed */
+  align-self: flex-start; /* Align to the start if inside a flex container */
+  /* You can add more styles to match your design */
+}
+
+.book-consultation-link:hover {
+  color: var(--accent-color); /* Change color to #BB9C71 on hover */
+}
+
+
+.about-ethos,
+.about-projects,
+.about-founders,
+.about-press,
 .about-contact {
-  background-color: #333333; /* A dark background for contrast */
-  color:#fff; /* White text for readability /
-  padding: 100px 20px;
-  text-align: center; / Centering the contact content */
-  }
-  
-  /* Button styling for interactive elements */
-  .about-button {
-  background-color: var(–accent-color);
+  padding: 60px 20px;
+  background-color: #e0d6cc; /* A contrasting background color */
+  color: var(--text-color);
+  margin: 20px 0;
+}
+
+/* Button styling for interactive elements */
+.about-button {
+  background-color: var(--accent-color);
   color: #fff;
   padding: 15px 30px;
   border: none;
@@ -91,10 +142,11 @@
   cursor: pointer;
   font-weight: bold;
   transition: background-color 0.3s ease;
-  }
-  
-  .about-button:hover {
-  background-color: darken(var(–accent-color), 10%);
-  }
-  
-  /* Additional responsive and interactive styling to be added later */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.about-button:hover {
+  background-color: darken(var(--accent-color), 10%);
+}
+
+/* Additional responsive and interactive styling to be added later */
