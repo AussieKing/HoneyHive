@@ -27,8 +27,21 @@ const About = () => {
             </div>
             <div className="text-and-button">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              At our core, we are dedicated to meticulously planned and harmoniously
+integrated designs. Whether collaborating with you on-site or remotely, our
+expertise encompasses New Builds, Renovations, and Refurbishments in
+the Residential, Commercial, Retail and Hospitality Sector. We consistently
+prioritise the delicate balance of functionality, aesthetics, and each client's
+unique preferences, while adhering to eco-conscious design principles.
+
+At H&H, we recognise that starting a design project can be overwhelming,
+particularly for those with limited time or a clear vision in mind. The thought
+of orchestrating a team to transform your space may feel daunting. Our
+mission is to alleviate this burden, guiding you through the process while
+minimising stress and ensuring an outcome that exceeds your
+expectations. We encourage early involvement, as it allows us to attend to
+every detail. We excel in seamless communication with architects, builders,
+trades and suppliers, diligently bringing your creative visions to life.
               </p>
               <Link to="/contact" className="book-consultation-link">
                 Book Your Design Consultation
@@ -118,9 +131,6 @@ const About = () => {
       </div>
       <div className="contact-right">
         <img src={contactImage} alt="Consultation" className="contact-image" />
-        {/* <div className="contact-info">
-          <p>Contact details, address, phone number, etc.</p>
-        </div> */}
       </div>
     </div>
 

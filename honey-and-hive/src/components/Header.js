@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,10 +12,33 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const [navbarScrolled, setNavbarScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setNavbarScrolled(true);
+      } else {
+        setNavbarScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
       {/* Navbar structure */}
-      <Navbar bg="transparent" variant="light" fixed="top">
+      <Navbar
+        // bg="transparent"
+        variant="light"
+        fixed="top"
+        className={navbarScrolled ? "navbar scrolled" : "navbar"}
+      >
         <Container>
           {/* Menu icon (burger menu)*/}
           <FontAwesomeIcon

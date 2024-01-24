@@ -38,18 +38,18 @@ We are building a website for "Honey and Hive", an interior design firm. The web
 **Day 6-20: Planning and Design** []
 - Research and gather inspiration from similar sites [x]
 - Create wireframes and mockups for each of the pages: homepage, about, services, projects, and contact. [x]
-- Define the site's style guide (color palette, typography, layout principles, etc.). [WIP]
+- Define the site's style guide (color palette, typography, layout principles, etc.). [x]
 
 **Day 21-35: Homepage Development**
-- HTML structure.
-- CSS styling with responsive design.
-- Implementing a Bootstrap layout.
-- Adding interactive elements with JavaScript/jQuery.
+- HTML structure. [x]
+- CSS styling with responsive design. []
+- Implementing a Bootstrap layout. [x]
+- Adding interactive elements with JavaScript/jQuery. []
 
 **Day 36-50: About Page**
 - Developing the HTML/CSS structure. [x]
 - Integrating Handlebars for templating.
-- Adding personal touch with JavaScript animations. 
+- Adding personal touch with JavaScript animations. []
 - Ensuring accessibility standards are met.
 
 **Day 51-65: Services Page and Subsections**

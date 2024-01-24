@@ -1,94 +1,100 @@
-/* Importing the font from the assets folder */
+/* Import and define fonts */
 @font-face {
-  font-family: 'Benguiat';
-  src: url('./assets/fonts/itc_benguiat_ITC/BenguiatStd-Book.otf') format('opentype');
+  font-family: "Benguiat";
+  src: url("./assets/fonts/itc_benguiat_ITC/BenguiatStd-Book.otf")
+    format("opentype");
   font-weight: bold;
   font-style: normal;
 }
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 
-/* Reset styles for the app */
+/* Reset styles */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Styles for the app */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
-
-/* Color variables */
+/* Define color variables */
 :root {
-  --background-color: #F5ECE2;
-  --accent-color: #BB9C71;
+  --background-color: #f5ece2;
+  --accent-color: #bb9c71;
   --text-color: #616060;
 }
 
+/* Basic body styles */
 body {
   background-color: var(--background-color);
   color: var(--text-color);
-  font-family: 'Lato', sans-serif; /* Good alternative for Mr Eaves San OT Book */
+  font-family: "Lato", sans-serif;
 }
 
-/* Specific styles for the logo */
-.logo-font {
-  font-family: 'Benguiat', 'Times New Roman', Times, serif; /* Using the imported Benguiat font */
-  color: var(--accent-color);
-  font-size: 1.5rem; /* Adjusted font size */
-}
-
-/* Navbar styles */
+/*! Navbar styles */
 .navbar {
-  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
-  backdrop-filter: blur(10px); /* Blurring effect for the background */
-  -webkit-backdrop-filter: blur(10px); /* For Safari */
-  border-bottom: none; /* Removes any border */
-  z-index: 1000; /* Ensures the navbar is above other content */
+  background-color: #F5ECE2; /* Cream background */
+  transition: background-color 0.3s;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
-/* Centering the brand logo */
+/* When the user has scrolled */
+.navbar.scrolled {
+  background-color: rgba(245, 236, 226, 0.8); /* Semi-transparent background */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Centering the brand logo in the navbar */
 .navbar-brand {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
 }
 
-/* Adjusting the MENU and CONTACT styles */
-.navbar .nav-link, .header-icon {
-  color: var(--text-color);
-  font-size: 0.7em; /* Smaller font size */
+/* Navbar link styles */
+.navbar .nav-link,
+.header-icon {
+  color: #BB9C71;
+  font-size: 0.8em;
+  font-weight: bold;
 }
 
-/* Full screen menu overlay, with the new background image */
+.logo-font {
+  font-family: "Benguiat", "Times New Roman", Times, serif !important;
+  color: var(--accent-color) !important; /* Gold color */
+  font-size: 2rem !important; /* Increased font size */
+}
+
+/* Menu overlay styles */
 .menu-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('./assets/about-background-dropdown.jpg') no-repeat center center fixed;
+  background: url("./assets/about-background-dropdown.jpg") no-repeat center
+    center fixed;
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  transition: transform 1s ease-in-out; /* Smooth transition for the overlay */
-  transform: translateY(-100%); /* Start offscreen */
-  z-index: 2000; /* Ensures the overlay is above all other content */
+  transition: transform 1s ease-in-out;
+  transform: translateY(-100%);
+  z-index: 2000;
 }
 
-/* Show the overlay */
 .menu-overlay.show {
-  transform: translateY(0); /* Brings the overlay into view */
+  transform: translateY(0);
 }
 
-/* Overlay content vertically */
+/* Menu content styles */
 .menu-content {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* Overlay content styles */
 .menu-content a {
   color: white;
   font-size: 2rem;
@@ -100,25 +106,129 @@ body {
 }
 
 .menu-content a:hover {
-  color: var(--accent-color); /* Accent color on hover */
+  color: var(--accent-color);
 }
 
 /* FontAwesome icon adjustments */
 .header-icon {
   cursor: pointer;
-  font-size: 1rem; /* Medium size icon */
+  font-size: 1.2rem; 
+  color: #BB9C71;
 }
 
-/* Adding padding at the top to account for the fixed navbar */
+/* Padding for main content */
 main {
-  padding-top: 56px; /* Height of the navbar */
+  padding-top: 30px; /* Adjust as needed for your layout */
 }
 
-/* Media queries for responsiveness */
-@media (min-width: 768px) {
-  .navbar .container {
-    justify-content: space-between; /* Ensures MENU and CONTACT are at the edges */
+/*! Footer styling */
+.footer {
+  background-color: var(--background-color);
+  padding: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.footer-section {
+  flex: 1 1 auto;
+  margin-right: 1rem;
+  min-width: 160px;
+}
+
+.footer-line {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.footer-logo {
+  flex: 0 0 auto;
+  text-align: center;
+}
+
+.footer-bottom {
+  text-align: center;
+  width: 100%;
+  padding-top: 1rem;
+  border-top: 1px solid #ccc;
+}
+
+/* Footer text styling */
+.footer h5 {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  color: var(--accent-color);
+}
+
+.footer p {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+/* Footer logo styling */
+.footer-logo h1 {
+  font-family: "Benguiat", serif;
+  font-size: 2.5rem;
+  color: var(--accent-color);
+}
+
+/* Responsive styling for the footer */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    margin-right: 0;
+    margin-bottom: 1rem;
+    text-align: center;
+    flex-basis: 100%;
+  }
+
+  .footer-logo {
+    margin-bottom: 1rem;
+    flex-basis: 100%;
+    order: -1; /* Place logo at the top */
   }
 }
 
-/* Further media queries and styles for high resolution/interactivity will be added below */
+.footer-column p,
+.footer-column a {
+  color: inherit;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .footer-content {
+    justify-content: space-around;
+  }
+
+  .footer-section,
+  .footer-logo {
+    flex: none;
+    flex-basis: auto;
+  }
+
+  .footer {
+    flex-wrap: nowrap;
+  }
+}
+/* Additional media queries and interactive styles can be added below */
