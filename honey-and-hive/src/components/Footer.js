@@ -4,7 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 
 const Footer = () => {
   return (
-    <footer className="footer mt-auto py-3">
+    <footer className="footer">
       <Container>
         <Row className="justify-content-between">
           <Col xs={12} md={2} className="footer-column">

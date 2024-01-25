@@ -39,6 +39,7 @@ We are building a website for "Honey and Hive", an interior design firm. The web
 - Research and gather inspiration from similar sites [x]
 - Create wireframes and mockups for each of the pages: homepage, about, services, projects, and contact. [x]
 - Define the site's style guide (color palette, typography, layout principles, etc.). [x]
+- Contact page []
 
 **Day 21-35: Homepage Development**
 - HTML structure. [x]

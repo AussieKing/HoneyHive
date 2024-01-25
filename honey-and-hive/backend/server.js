@@ -35,7 +35,6 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-
 app.get("/", (req, res) => {
   res.send("Hello World!"); // Simple response for root route
 });
@@ -67,7 +66,7 @@ app.get("/auth/google/callback", async (req, res) => {
 
 // Route for form submission and email sending
 app.post("/submit-form", async (req, res) => {
-    const { name, email, message } = req.body;
+    const { name, email, location, budget, projectType, startDate, message } = req.body;
     console.log("Received form submission: ", name, email, message);
   
     // Retrieve a fresh access token
@@ -79,7 +78,7 @@ app.post("/submit-form", async (req, res) => {
       from: process.env.EMAIL_USER,
       to: process.env.EMAIL_RECIPIENT,
       subject: `New Contact from ${name}`, // Template literal for subject
-      text: `You have received a new message from ${email}: ${message}`, // Template literal for text body
+      text: `You have received a new message from ${email}: CLIENT'S NAME: ${name} // LOCATION: ${location} // BUDGET: ${budget} // TYPE OF PROJECT: ${projectType} // PROPOSED START DATE: ${startDate}, ${message}`, // Template literal for text body
       auth: {
         user: process.env.EMAIL_USER,
         refreshToken: REFRESH_TOKEN,

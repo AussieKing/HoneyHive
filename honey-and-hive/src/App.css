@@ -29,7 +29,7 @@ body {
   font-family: "Lato", sans-serif;
 }
 
-/*! Navbar styles */
+/* Navbar styles */
 .navbar {
   background-color: #F5ECE2; /* Cream background */
   transition: background-color 0.3s;
@@ -55,7 +55,7 @@ body {
 .navbar .nav-link,
 .header-icon {
   color: #BB9C71;
-  font-size: 0.8em;
+  font-size: 0.em;
   font-weight: bold;
 }
 
@@ -121,12 +121,13 @@ main {
   padding-top: 30px; /* Adjust as needed for your layout */
 }
 
-/*! Footer styling */
+/* Footer styling */
 .footer {
   background-color: var(--background-color);
   padding: 2rem 0;
   display: flex;
   flex-wrap: wrap;
+  margin-top: auto ;
 }
 
 .footer-content {
@@ -181,6 +182,18 @@ main {
   color: var(--accent-color);
 }
 
+/*! Image for the contact page */
+.contact-bottom-image {
+  width: 100%;
+  display: block; /* makes sure it's a block-level element */
+}
+
+.contact-bottom-image img {
+  width: 100%;
+  height: auto; /* maintain aspect ratio */
+  display: block; /* remove any extra space around the image */
+}
+
 /* Responsive styling for the footer */
 @media (max-width: 768px) {
   .footer-content {
@@ -231,4 +244,3 @@ main {
     flex-wrap: nowrap;
   }
 }
-/* Additional media queries and interactive styles can be added below */
