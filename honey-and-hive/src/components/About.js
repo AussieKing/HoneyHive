@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./About.css";
 import { Link } from "react-router-dom";
 import founderImage from "../assets/founder-image.png";
-import contactImage from '../assets/contact-image.jpg'; // Import the image used for the contact section 
+import contactImage from "../assets/contact-image.jpg"; // Import the image used for the contact section
 
 const About = () => {
   const [readMore, setReadMore] = useState(false);
@@ -13,10 +13,9 @@ const About = () => {
 
   return (
     <div className="about-page">
-      <div className="about-hero">
-      </div>
+      <div className="about-hero"></div>
       <div className="about-content-section">
-        <div className="about-text-image"></div> 
+        <div className="about-text-image"></div>
         <div className="about-text-content">
           <h1>
             Honey & Hive Interiors - <em>If you can imagine it, it exists.</em>
@@ -27,21 +26,23 @@ const About = () => {
             </div>
             <div className="text-and-button">
               <p>
-              At our core, we are dedicated to meticulously planned and harmoniously
-integrated designs. Whether collaborating with you on-site or remotely, our
-expertise encompasses New Builds, Renovations, and Refurbishments in
-the Residential, Commercial, Retail and Hospitality Sector. We consistently
-prioritise the delicate balance of functionality, aesthetics, and each client's
-unique preferences, while adhering to eco-conscious design principles.
-
-At H&H, we recognise that starting a design project can be overwhelming,
-particularly for those with limited time or a clear vision in mind. The thought
-of orchestrating a team to transform your space may feel daunting. Our
-mission is to alleviate this burden, guiding you through the process while
-minimising stress and ensuring an outcome that exceeds your
-expectations. We encourage early involvement, as it allows us to attend to
-every detail. We excel in seamless communication with architects, builders,
-trades and suppliers, diligently bringing your creative visions to life.
+                At our core, we are dedicated to meticulously planned and
+                harmoniously integrated designs. Whether collaborating with you
+                on-site or remotely, our expertise encompasses New Builds,
+                Renovations, and Refurbishments in the Residential, Commercial,
+                Retail and Hospitality Sector. We consistently prioritise the
+                delicate balance of functionality, aesthetics, and each client's
+                unique preferences, while adhering to eco-conscious design
+                principles. At H&H, we recognise that starting a design project
+                can be overwhelming, particularly for those with limited time or
+                a clear vision in mind. The thought of orchestrating a team to
+                transform your space may feel daunting. Our mission is to
+                alleviate this burden, guiding you through the process while
+                minimising stress and ensuring an outcome that exceeds your
+                expectations. We encourage early involvement, as it allows us to
+                attend to every detail. We excel in seamless communication with
+                architects, builders, trades and suppliers, diligently bringing
+                your creative visions to life.
               </p>
               <Link to="/contact" className="book-consultation-link">
                 Book Your Design Consultation
@@ -119,21 +120,24 @@ trades and suppliers, diligently bringing your creative visions to life.
         <p>Our work in the press...</p>
       </div>
 
-      {/* WORKING ON THIS SECTION */}
+      {/* Contact sectiom*/}
       <div className="about-contact">
-      <div className="contact-left">
-        {/* Display a big bold text for the section title */}
-        <h1>Get In Touch</h1>
-        <p>We look forward to chatting about your project.</p>
-        <Link to="/contact" className="book-consultation-link">
-          Book A Consultation
-        </Link>
+        <div className="contact-left">
+          {/* Display a big bold text for the section title */}
+          <h1>Get In Touch</h1>
+          <p>We look forward to chatting about your project.</p>
+          <Link to="/contact" className="book-consultation-link">
+            Book A Consultation
+          </Link>
+        </div>
+        <div className="contact-right">
+          <img
+            src={contactImage}
+            alt="Consultation"
+            className="contact-image"
+          />
+        </div>
       </div>
-      <div className="contact-right">
-        <img src={contactImage} alt="Consultation" className="contact-image" />
-      </div>
-    </div>
-
     </div>
   );
 };
