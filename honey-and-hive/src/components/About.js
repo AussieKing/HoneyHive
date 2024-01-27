@@ -26,23 +26,29 @@ const About = () => {
             </div>
             <div className="text-and-button">
               <p>
-                At our core, we are dedicated to meticulously planned and
-                harmoniously integrated designs. Whether collaborating with you
-                on-site or remotely, our expertise encompasses New Builds,
-                Renovations, and Refurbishments in the Residential, Commercial,
-                Retail and Hospitality Sector. We consistently prioritise the
-                delicate balance of functionality, aesthetics, and each client's
-                unique preferences, while adhering to eco-conscious design
-                principles. At H&H, we recognise that starting a design project
-                can be overwhelming, particularly for those with limited time or
-                a clear vision in mind. The thought of orchestrating a team to
-                transform your space may feel daunting. Our mission is to
-                alleviate this burden, guiding you through the process while
-                minimising stress and ensuring an outcome that exceeds your
-                expectations. We encourage early involvement, as it allows us to
-                attend to every detail. We excel in seamless communication with
-                architects, builders, trades and suppliers, diligently bringing
-                your creative visions to life.
+                At our core, we focus on crafting spaces that blend an organic
+                feel with sophistication, always aiming for designs that are
+                both timeless and meticulously thought-out.
+              </p>
+              <p>
+                Your journey with us, as we transform the interiors of your
+                space, be it your home or business, is of utmost importance. We
+                pride ourselves on providing a seamless and enjoyable design
+                experience, ensuring that any concerns are addressed and every
+                option is considered in making your vision a reality. Moreover,
+                our efficient process is designed to save you time, allowing you
+                to focus on what matters most to you while we handle the
+                intricacies of your project.
+              </p>
+              <p>
+                Collaboration is key in our process. We engage closely with you
+                to understand your needs and aspirations, combining them with
+                our passion for design, technical expertise, and creative
+                vision. This fusion brings forth a space that is not only
+                functional and aesthetically pleasing but also uniquely yours.
+                We believe that your space is both a canvas and narrative,
+                reflecting not only your taste but the journey you’ve taken and
+                all you’ve achieved.
               </p>
               <Link to="/contact" className="book-consultation-link">
                 Book Your Design Consultation
@@ -72,21 +78,34 @@ const About = () => {
             <p className="founder-title">Founder + Interior Designer</p>
             <div className="founder-description">
               <p>
-                Founder's short bio goes here... Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit. Quisque quis euismod risus. Donec
-                magna arcu, aliquam vel lacus in, tristique finibus neque.
-                Vestibulum feugiat diam mi, a vestibulum ipsum viverra
-                tincidunt. Praesent a pulvinar orci, in blandit ligula. Fusce
-                eget leo pharetra turpis convallis tempor. Integer justo leo,
-                fringilla at elit id, maximus tempor ligula. Proin iaculis,
-                velit nec consectetur luctus, nulla magna fermentum leo, non
-                convallis est arcu eget lorem. Donec sit amet libero id odio
-                efficitur elementum. Donec vel dignissim tellus. Phasellus
-                ultricies ligula quis neque blandit auctor. Praesent at arcu
-                finibus, congue lacus eget, volutpat mauris. Donec vulputate
-                accumsan turpis dictum ultricies. Donec interdum velit in lacus
-                dictum, ut venenatis odio tristique. Praesent quis est vitae
-                justo lobortis interdum.
+                Ashley's journey into interior design was profoundly shaped by
+                her childhood in Indonesia, where extensive travel, her father's
+                passion for antique collecting, and her own love for furniture
+                design, up-cycling, and architecture converged. Her university
+                years in Canada, culminating in a Science degree in Psychology
+                and Winemaking, also saw her organically branching into staging
+                and styling for Residential Real Estate.
+              </p>
+              <p>
+                In 2014, a move to Australia to pursue winemaking led to an
+                unexpected enrichment of her design perspective, blending
+                artistry with scientific precision. This period marked a natural
+                and significant shift in her career from a full-time winemaker
+                and distributor to a full-time designer, immersing herself in
+                the renovation and project management of hospitality venues,
+                commercial spaces, and residential homes.
+              </p>
+              <p>
+                Ashley was later appointed to a leadership role as an Interior
+                Designer at a renowned Building & Interior Design Firm in
+                Brisbane, where she also led the Furniture & Styling team. Her
+                diploma in Interior Design, coupled with her practical
+                experience, has been instrumental in honing her skills. She has
+                successfully combined her diverse experiences, crafting a
+                uniquely holistic approach that applies Ethical, Biophilic and
+                Feng Shui principles to interior design. Her approach is
+                characterised by a harmonious blend of practicality, aesthetic
+                elegance, and spatial design that promote well-being.
               </p>
               {readMore && (
                 <p>

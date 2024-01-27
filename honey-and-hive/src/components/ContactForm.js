@@ -6,7 +6,6 @@ import contactBottomImg from '../assets/contact-bottom.jpg';
 
 
 const ContactForm = ({ onSubmitContact }) => {
-  //! Updated hook to track the new fields
   const [contact, setContact] = useState({
     name: "",
     email: "",
@@ -17,7 +16,6 @@ const ContactForm = ({ onSubmitContact }) => {
     message: "",
   });
 
-  //! Updated hook to track the new fields
   const [errors, setErrors] = useState({
     name: "",
     email: "",
