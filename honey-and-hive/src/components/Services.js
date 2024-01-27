@@ -7,6 +7,15 @@ import specialtyImage from "../assets/specialty-image.jpg";
 import smallerImage from "../assets/smaller-image.jpeg";
 import horizontalImage from "../assets/services-horizontal.jpg"; // Import the new image
 import designPhases from "../assets/design-phases.jpg"; // Import the new image
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import carouselImage1 from '../assets/carousel-image-1.jpg';
+import carouselImage2 from '../assets/carousel-image-2.jpg';
+import carouselImage3 from '../assets/carousel-image-3.jpg';
+import carouselImage4 from '../assets/carousel-image-4.jpg';
+import carouselImage5 from '../assets/carousel-image-5.jpg';
+import carouselImage6 from '../assets/carousel-image-6.jpg';
+
 
 const Services = () => {
   return (
@@ -64,7 +73,8 @@ const Services = () => {
         </div>
 
         {/* The new container */}
-        {/* <div className="services-content-wrapper">
+
+        <div className="services-content-wrapper">
           <div className="services-image-half">
             <img
               src={horizontalImage}
@@ -87,33 +97,12 @@ const Services = () => {
               </Link>
             </div>
           </div>
-        </div> */}
-        <div className="services-content-wrapper">
-  <div className="services-image-half">
-    <img src={horizontalImage} alt="Descriptive Alt Text" className="services-horizontal-image" />
-  </div>
-  <div className="services-text-half">
-    <div className="services-title">
-      <h2>WHAT WE DO</h2>
-    </div>
-    <div className="services-description">
-      <p>
-        Detail the services offered here. Explain the nature of the
-        projects, the approach taken by your company, and how you
-        differentiate yourself from the competition.
-      </p>
-      <Link to="/contact" className="book-consultation-link">
-        Book A Consultation
-      </Link>
-    </div>
-  </div>
-</div>
-
+        </div>
 
         {/* New Design phases section */}
         <div className="interior-design-section">
           <div className="interior-design-text">
-            <h1>Interior Design</h1>
+            <h1>Interior <em>Design</em></h1>
             <p>
               The Honey & Hive design process can be broken down into distinct
               phases.
@@ -169,14 +158,26 @@ const Services = () => {
         </div>
 
         <div className="projects-section">
-          <div className="projects-header">
-            <h1>Portfolio Projects</h1>
-            <Link to="/projects" className="view-all-projects-link">
-              View All Projects
-            </Link>
-          </div>
-          {/* Horizontal image carousel */}
-        </div>
+      <div className="projects-header">
+        <h1>Portfolio <em>Projects</em></h1>
+      </div>
+      <div className="projects-carousel">
+        <Swiper
+          spaceBetween={20}
+          slidesPerView={3}
+          onSlideChange={() => console.log("slide change")}
+          onSwiper={(swiper) => console.log(swiper)}
+        >
+          <SwiperSlide><img src={carouselImage1} alt="Carousel Image 1" /></SwiperSlide>
+          <SwiperSlide><img src={carouselImage2} alt="Carousel Image 2" /></SwiperSlide>
+          <SwiperSlide><img src={carouselImage3} alt="Carousel Image 3" /></SwiperSlide>
+          <SwiperSlide><img src={carouselImage4} alt="Carousel Image 4" /></SwiperSlide>
+          <SwiperSlide><img src={carouselImage5} alt="Carousel Image 5" /></SwiperSlide>
+          <SwiperSlide><img src={carouselImage6} alt="Carousel Image 6" /></SwiperSlide>
+        </Swiper>
+      </div>
+      {/* You can add more content here if needed */}
+    </div>
 
         <div className="about-contact">
           <div className="contact-left">
