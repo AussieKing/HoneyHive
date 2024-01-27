@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,6 +10,10 @@ const Header = () => {
   // Function to toggle menu open/close
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false); // Directly set the menu to be closed
   };
 
   const [navbarScrolled, setNavbarScrolled] = useState(false);
@@ -64,6 +68,11 @@ const Header = () => {
 
       {/* Menu overlay */}
       <div className={`menu-overlay ${isMenuOpen ? "show" : ""}`}>
+      <FontAwesomeIcon
+          icon={faTimes} // Using the 'times' icon as a close icon
+          onClick={closeMenu} // Using the closeMenu function on click
+          className="close-icon" // Assign a class for styling
+        />
         <div className="menu-content">
           {/* Menu links */}
           <Link to="/about" onClick={toggleMenu}>

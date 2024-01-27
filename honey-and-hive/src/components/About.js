@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./About.css";
 import { Link } from "react-router-dom";
 import founderImage from "../assets/founder-image.png";
-import contactImage from "../assets/contact-image.jpg"; // Import the image used for the contact section
+import contactImage from "../assets/contact-image.jpg"; 
 
 const About = () => {
   const [readMore, setReadMore] = useState(false);

@@ -84,6 +84,20 @@ body {
   z-index: 2000;
 }
 
+.close-icon {
+  position: absolute;
+  top: 20px; /* Adjust as necessary */
+  right: 20px; /* Adjust as necessary */
+  font-size: 30px; /* Adjust as necessary */
+  cursor: pointer; /* Changes the mouse cursor to indicate it's clickable */
+  color: #fff; /* Adjust color as necessary */
+  z-index: 10; /* Ensures the icon is above other elements */
+}
+
+.close-icon:hover {
+  color: var(--accent-color);
+}
+
 .menu-overlay.show {
   transform: translateY(0);
 }
