@@ -31,7 +31,7 @@ body {
 
 /* Navbar styles */
 .navbar {
-  background-color: #F5ECE2; /* Cream background */
+  background-color: #F5ECE2; 
   transition: background-color 0.3s;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
