@@ -88,4 +88,4 @@ We are building a website for "Honey and Hive", an interior design firm. The web
 - Change the password in the .env file to the production password (and store in a database)
 - Change the email in the .env file to the production email (and store in a database)
 - SEO strategy (Semantic HTML, Meta tags, Alt Text for all images, Responsive design, Page Load Speed, URL structure, Internal links, External links, Social media integration, Analytics, Accessibility, Sitemap, Robots.txt, etc.)
-- 
+- Implement security against data seeding (noSQL injections), XXS, etc
