@@ -53,7 +53,7 @@ const Footer = () => {
         </Row>
         <Row>
           <Col className="text-center footer-bottom">
-            <p>© 2024 Interior Designs. All rights reserved.</p>
+            <p>© 2024 Honey and Hive Interiors. All rights reserved.</p>
           </Col>
         </Row>
       </Container>

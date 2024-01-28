@@ -1,7 +1,81 @@
-import React from 'react';
+import React from "react";
+import "./Projects.css"; // Make sure the path to your CSS file is correct
+import { Link } from "react-router-dom";
+import contactImage from "../assets/contact-image.jpg";
+
+// Importing images (make sure these paths are correct)
+import figLoungeImage from "../assets/wbay-fig-4.jpg";
+import hepburnsImage from "../assets/hepburns-1.jpg";
+import managersQuartersImage from "../assets/m-quarters-7.jpg";
+import grapeTherapyImage from "../assets/grape-therapy-1.jpg";
+import proudHenryImage from "../assets/proud-henry-1.jpg";
+import doReMiImage from "../assets/doremi-1.jpg";
+
+const projectData = [
+  { title: "Fig Lounge", image: figLoungeImage, category: "COMMERCIAL" },
+  { title: "Hepburn’s", image: hepburnsImage, category: "COMMERCIAL" },
+  {
+    title: "Waterloo Bay Hotel - Manager’s Quarters",
+    image: managersQuartersImage,
+    category: "COMMERCIAL",
+  },
+  {
+    title: "Grape Therapy Drinking Den",
+    image: grapeTherapyImage,
+    category: "COMMERCIAL",
+  },
+  {
+    title: "Proud Henry Ginoteca",
+    image: proudHenryImage,
+    category: "COMMERCIAL",
+  },
+  { title: "Do Re Mi Café", image: doReMiImage, category: "COMMERCIAL" },
+];
 
 const Projects = () => {
-    return <h1>List of all projects here</h1>;
+  return (
+    <div className="projects-page">
+      {/* Fixed Background Image Container */}
+      <div className="fixed-background">
+        {/* Empty div for the background image */}
+      </div>
+
+      {/* Title and Projects Container */}
+      <div className="content-container">
+        <div className="title-container">
+          <h1 className="portfolio-title">
+            Portfolio <em>Projects</em>
+          </h1>
+        </div>
+        <div className="projects-container">
+          {projectData.map((project, index) => (
+            <div className="project-item" key={index}>
+              <img src={project.image} alt={project.title} />
+              <p className="project-title">{project.title}</p>
+              <p className="project-category">{project.category}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="about-contact">
+          <div className="contact-left">
+            <h1>Get In Touch</h1>
+            <p>We look forward to chatting about your project.</p>
+            <Link to="/contact" className="book-consultation-link">
+              Book A Consultation
+            </Link>
+          </div>
+          <div className="contact-right">
+            <img
+              src={contactImage}
+              alt="Consultation"
+              className="contact-image"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Projects;

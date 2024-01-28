@@ -30,11 +30,9 @@ const LegalDocument = () => {
       <div className="content-area">
         {isPrivacyPolicy ? (
           <div className="privacy-content">
+            <p>WEBSITE PRIVACY POLICY</p>
             <p>
-              <strong>WEBSITE PRIVACY POLICY</strong>
-            </p>
-            <p>
-              <strong>1. WE RESPECT YOUR PRIVACY</strong>
+              1. WE RESPECT YOUR PRIVACY
               <br />
               1.1. Honey and Hive Interiors respects your right to privacy and
               is committed to safeguarding the privacy of our customers and
@@ -47,7 +45,7 @@ const LegalDocument = () => {
             </p>
 
             <p>
-              <strong>2. COLLECTION OF PERSONAL INFORMATION</strong>
+              2. COLLECTION OF PERSONAL INFORMATION
               <br />
               2.1. Honey and Hive Interiors will, from time to time, receive and
               store personal information you enter onto our website, provided to
@@ -68,7 +66,7 @@ const LegalDocument = () => {
             </p>
 
             <p>
-              <strong>3. HOW WE COLLECT YOUR PERSONAL INFORMATION</strong>
+              3. HOW WE COLLECT YOUR PERSONAL INFORMATION
               <br />
               3.1. Honey and Hive Interiors collects personal information from
               you in a variety of ways, including when you interact with us
@@ -79,7 +77,7 @@ const LegalDocument = () => {
             </p>
 
             <p>
-              <strong>4. USE OF YOUR PERSONAL INFORMATION</strong>
+              4. USE OF YOUR PERSONAL INFORMATION
               <br />
               4.1. Honey and Hive Interiors may use personal information
               collected from you to provide you with information, updates, and
@@ -94,7 +92,7 @@ const LegalDocument = () => {
             </p>
 
             <p>
-              <strong>5. DISCLOSURE OF YOUR PERSONAL INFORMATION</strong>
+              5. DISCLOSURE OF YOUR PERSONAL INFORMATION
               <br />
               5.1. We may disclose your personal information to any of our
               employees, officers, insurers, professional advisers, agents,
@@ -135,7 +133,7 @@ const LegalDocument = () => {
             </p>
 
             <p>
-              <strong>6. SECURITY OF YOUR PERSONAL INFORMATION</strong>
+              6. SECURITY OF YOUR PERSONAL INFORMATION
               <br />
               6.1. Honey and Hive Interiors is committed to ensuring that the
               information you provide to us is secure. In order to prevent
@@ -154,7 +152,7 @@ const LegalDocument = () => {
             </p>
 
             <p>
-              <strong>7. ACCESS TO YOUR PERSONAL INFORMATION</strong>
+              7. ACCESS TO YOUR PERSONAL INFORMATION
               <br />
               7.1. You may request details of personal information that we hold
               about you in accordance with the provisions of the Privacy Act
@@ -171,7 +169,7 @@ const LegalDocument = () => {
             </p>
 
             <p>
-              <strong>8. COMPLAINTS ABOUT PRIVACY</strong>
+              8. COMPLAINTS ABOUT PRIVACY
               <br />
               8.1. If you have any complaints about our privacy practices,
               please feel free to send details of your complaints to Honey and
@@ -180,7 +178,7 @@ const LegalDocument = () => {
             </p>
 
             <p>
-              <strong>9. CHANGES TO PRIVACY POLICY</strong>
+              9. CHANGES TO PRIVACY POLICY
               <br />
               9.1. Please be aware that we may change this Privacy Policy in the
               future. We may modify this Policy at any time, in our sole
@@ -191,14 +189,13 @@ const LegalDocument = () => {
             </p>
 
             <p>
-              <strong>10. WEBSITE</strong>
+              10. WEBSITE
               <br />
-              10.1. When you visit our website [insert Honey and Hive Interiors
-              website URL], we may collect certain information such as browser
-              type, operating system, website visited immediately before coming
-              to our site, etc. This information is used in an aggregated manner
-              to analyze how people use our site, such that we can improve our
-              service.
+              10.1. When you visit our website www.honeyandhiveinteriors.com ,
+              we may collect certain information such as browser type, operating
+              system, website visited immediately before coming to our site,
+              etc. This information is used in an aggregated manner to analyze
+              how people use our site, such that we can improve our service.
               <br />
               10.2. Cookies: We may from time to time use cookies on our
               website. Cookies are very small files which a website uses to
@@ -228,155 +225,112 @@ const LegalDocument = () => {
         ) : (
           <div className="terms-content">
             <div className="terms-content">
+              <p>HONEY & HIVE INTERIORS TERMS AND CONDITIONS OF USE</p>
+
               <p>
-                <strong>TERMS OF PAYMENT:</strong>
+                1. ABOUT OUR SERVICES
                 <br />
-                Payment is due within 7 days of receiving the invoice.
+                1.1. Welcome to Honey & Hive Interiors. Our services encompass a
+                range of interior design solutions, including Concept Design &
+                Development, Documentation, Project Management, Furniture
+                Specifications, and Styling (the 'Services').
+                <br />
+                1.2. Honey & Hive Interiors operates with a commitment to
+                providing quality design services. By engaging with our
+                services, it is understood that you have read, understood, and
+                agreed to these terms (the 'Terms'). If you disagree with any
+                part of the Terms, please discontinue the use of our services
+                immediately.
+                <br />
+                1.3. We reserve the right to amend these Terms as necessary.
+                Changes will be effective immediately upon posting on our
+                website or direct communication to you. We recommend keeping a
+                copy of these Terms for your reference.
               </p>
 
               <p>
-                <strong>DESIGN FEES:</strong>
+                2. AGREEMENT TO TERMS
                 <br />
-                We charge a flat fee of $290 (inc gst) for the Initial
-                Consultation, an hourly fixed fee of $250/hr (inc gst) for any
-                Concept Design & Development work in Stage 1 & 2, and an hourly
-                fixed fee of $150.00/hr (inc gst) across our services offered in
-                Phases 3-5: Documentation, Project Management, Furniture
-                Specifications & Styling.
+                By continuing to use our services or by providing your
+                acceptance in writing or electronically, you acknowledge and
+                agree to these Terms.
               </p>
 
               <p>
-                <strong>CLIENT MEETINGS:</strong>
+                3. INTELLECTUAL PROPERTY AND COPYRIGHT
                 <br />
-                The Initial Consultation Meeting is set at $290 (inc gst) unless
-                communicated otherwise. *Travel fees may apply. Meetings beyond
-                what is outlined in the Fee Proposal will be charged at an
-                hourly rate of $150.00 (inc gst).
+                3.1. All material associated with our services, including
+                designs, documentation, and website content, is protected under
+                copyright laws. Unless specified, all intellectual property
+                rights are owned by Honey & Hive Interiors.
+                <br />
+                3.2. We grant you a non-exclusive, revocable license to use our
+                services and website materials for your personal, non-commercial
+                use, including the right to:
+                <br />
+                (a) Use the services as per these Terms;
+                <br />
+                (b) Store website content in your device's cache memory;
+                <br />
+                (c) Print materials for personal use.
+                <br />
+                3.3. No other rights are granted. All other rights are expressly
+                reserved by Honey & Hive Interiors.
               </p>
 
               <p>
-                <strong>REVISIONS:</strong>
+                4. PRIVACY POLICY
                 <br />
-                We allow for one round of revisions to all documentation issued
-                by Honey & Hive Interiors. Any further revisions required will
-                be billed at an hourly rate of $150.00 (inc gst). It is
-                advisable to review your plans carefully to reduce the need for
-                multiple revisions.
+                Our commitment to your privacy is detailed in our Privacy
+                Policy, available on our website, which forms part of these
+                Terms.
               </p>
 
               <p>
-                <strong>CHANGE OF SCOPE:</strong>
+                5. GENERAL DISCLAIMER
                 <br />
-                Additional fees may occur if there is a change in the project's
-                scope. If you decide to change the project's direction from what
-                was originally outlined in the design proposal, a new fee
-                proposal will be issued. Please refer to the scope of works in
-                the project design proposal for further details.
+                5.1. Our Terms do not limit any statutory rights under
+                Australian law, including the Australian Consumer Law.
+                <br />
+                5.2. Subject to statutory constraints, we exclude all implied
+                terms and warranties whether statutory or otherwise, relating to
+                our services. Honey & Hive Interiors is not liable for any
+                indirect damages arising in connection with our services.
               </p>
 
               <p>
-                <strong>INVOICES FROM OTHER CONSULTANTS:</strong>
+                6. LIMITATION OF LIABILITY
                 <br />
-                Invoices for services provided by consultants outside of Honey &
-                Hive Interiors will be sent directly to you from the consultant,
-                unless otherwise specified. We appreciate your prompt settlement
-                of these invoices, as per their payment terms.
+                6.1. Our total liability in connection with the Services will
+                not exceed the cost of resupplying our services to you.
+                <br />
+                6.2. Honey & Hive Interiors is not liable for any direct,
+                indirect, incidental, or consequential damages arising from your
+                use of our services.
               </p>
 
               <p>
-                <strong>ENGAGEMENT OF OTHER CONSULTANTS:</strong>
+                7. INDEMNITY
                 <br />
-                Please recognize that other consultants required to complete the
-                documentation provide expertise not held by Honey & Hive
-                Interiors. Consequently, we are not responsible for the services
-                provided. If we engage and/or coordinate any consultants, we
-                will do so directly as your agent, and you agree to indemnify us
-                against any claims that may arise from or relate to such
-                services.
+                You agree to indemnify Honey & Hive Interiors and its affiliates
+                against all claims, losses, or damages arising from your
+                content, use of our services, or breach of these Terms.
               </p>
 
               <p>
-                <strong>COPYRIGHT:</strong>
+                8. JURISDICTION
                 <br />
-                The ownership of the copyright in any design and original
-                documentation prepared by Honey & Hive Interiors will remain
-                with us. Upon making all required payments, you are granted a
-                license to use the documentation for the purpose of gaining
-                necessary approvals and for the construction of the project.
-                This license is not transferable and any alterations to the
-                documentation supplied by Honey & Hive Interiors must have
-                written permission from us and must specify the extent of
-                alterations permitted.
+                These Terms are governed by the laws of Queensland. Disputes
+                arising will be exclusively subject to the jurisdiction of the
+                courts of Queensland.
               </p>
 
               <p>
-                <strong>COST ESTIMATES:</strong>
+                9. SEVERABILITY
                 <br />
-                Honey & Hive Interiors does not claim competence in accurately
-                estimating the construction cost of the project. If we provide
-                an indicative estimate of cost, it must not be relied upon and
-                must be confirmed by a quantity surveyor or builder.
-              </p>
-
-              <p>
-                <strong>QUOTATION ACCEPTANCE AND ENGAGEMENT AGREEMENT:</strong>
-                <br />
-                To accept the Fee Proposal and engage our services at Honey &
-                Hive Interiors, we require your signature, either in writing or
-                electronically.
-              </p>
-
-              <p>
-                <strong>TERMINATION OF ENGAGEMENT:</strong>
-                <br />
-                If this engagement is terminated before completion, for any
-                reason, you will be responsible for paying the total outstanding
-                fees applicable for the plans being developed at the time of
-                termination. The Initial Consultation and deposit made upon
-                engaging our services is non-refundable.
-              </p>
-
-              <p>
-                <strong>STAGE APPROVALS:</strong>
-                <br />
-                Before Honey & Hive Interiors can commence each plan phase, we
-                require your written or electronic acceptance of the current
-                prepared plans and your written or electronic acceptance to
-                proceed with further plan drafting. Settlement of all invoices
-                issued is also necessary before moving on to the next phase.
-              </p>
-
-              <p>
-                <strong>LIMIT OF SERVICES:</strong>
-                <br />
-                If you choose to coordinate the other consultants yourself, our
-                services will conclude upon the issuance of BA Plans to you and
-                finalisation of your account. If we are engaged to coordinate
-                other consultants, our services will cease upon receipt of
-                Approved Building Plans from the Certifier and finalisation of
-                your account. If you require us to carry out further design or
-                drafting work, or consult on any issue after the Approved
-                Building Plans have been issued, additional costs associated
-                with those extra services will be quoted at the time of your
-                request.
-              </p>
-
-              <p>
-                <strong>PROCUREMENT:</strong>
-                <br />
-                We offer furnishings and accessories at or below retail prices
-                (RRP or market value). If a retailer has an ongoing promotion,
-                you'll benefit from sale prices when you make your purchase. Our
-                trade or wholesale discounts assist in covering our project
-                management and the seamless provision of our full-service
-                Procurement & Install services. At Honey & Hive, we prefer to
-                share a portion of our industry discounts with our clients. In
-                the absence of any trade or wholesale discounts, a 15% handling
-                fee will be added. If you choose to compare our supplier quotes
-                with other suppliers and decide to purchase items independently,
-                please note that we do not assume any responsibility for
-                ordering, or issues pertaining to quality, warranties,
-                deliveries, or returns.
+                If any part of these Terms is found to be invalid or
+                unenforceable, that part will be severed, and the remaining
+                Terms will remain in effect.
               </p>
             </div>
           </div>
