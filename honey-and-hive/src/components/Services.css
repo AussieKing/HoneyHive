@@ -236,6 +236,7 @@
 
   .projects-header {
     padding-left: 5em; /* Adjust this value as needed */
+    padding-top: 80px
   }
 
   .projects-carousel {
