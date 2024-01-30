@@ -13,22 +13,22 @@ const Footer = () => {
               <span className="footer-line">Based in Brisbane,</span>
             </p>
             <p>
-              <span className="footer-line">Main Warehouse</span>
+              <span className="footer-line">Servicing SEQ</span>
             </p>
             <p>
-              <span className="footer-line">123 Main Street,</span>
+              <span className="footer-line">Brisbane</span>
             </p>
             <p>
-              <span className="footer-line">Brisbane, 4000</span>
+              <span className="footer-line">4000</span>
             </p>
           </Col>
           <Col xs={12} md={2} className="footer-column">
             <h5><strong>CONTACT</strong></h5>
             <p>
-              <span className="footer-line">hello@myemail.com.au</span>
+              <span className="footer-line">ashley@honeyandhiveinteriors.com</span>
             </p>
             <p>
-              <span className="footer-line">0400 000 000</span>
+              <span className="footer-line">0427 766 288</span>
             </p>
           </Col>
 

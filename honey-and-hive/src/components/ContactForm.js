@@ -119,16 +119,17 @@ const ContactForm = ({ onSubmitContact }) => {
         <p>
           We look forward to chatting about your project.
           <br />
-          ***Founder's name here***
+          Honey & Hive Interiors
         </p>
+        <br />
         <div className="additional-info">
           {/* Additional contact details here */}
           <p><strong>GENERAL INQUIRIE</strong>S</p>
           {/* TODO: link to google maps */}
           <p>BRISBANE</p>
           <p>Main Warehouse</p>
-          <p>0400 000 000</p>
-          <p>hello@myemail.com.au</p>
+          <p>0427 766 288</p>
+          <p>ashley@honeyandhiveinteriors.com</p>
         </div>
       </div>
 

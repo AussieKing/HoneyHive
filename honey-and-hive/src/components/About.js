@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./About.css";
 import { Link } from "react-router-dom";
-import founderImage from "../assets/founder-image.png";
+import founderImage from "../assets/founder-image.jpg";
 import contactImage from "../assets/contact-image.jpg"; 
 
 const About = () => {
@@ -74,7 +74,7 @@ const About = () => {
         <div className="founders-right">
           <img src={founderImage} alt="Founder" className="founder-image" />
           <div className="founder-info">
-            <h2>FOUNDER'S NAME</h2>
+            <h2>ASHLEY BERINI</h2>
             <p className="founder-title">Founder + Interior Designer</p>
             <div className="founder-description">
               <p>

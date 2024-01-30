@@ -208,6 +208,8 @@
   .interior-design-image {
     flex: 1; /* Take up the other half of the space */
     max-width: 50%;
+    height: 100%;
+    margin-top: 115px
   }
   
   .interior-design-image img {

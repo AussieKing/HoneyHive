@@ -1,9 +1,8 @@
 import React from "react";
-import "./Projects.css"; // Make sure the path to your CSS file is correct
+import "./Projects.css"; 
 import { Link } from "react-router-dom";
 import contactImage from "../assets/contact-image.jpg";
 
-// Importing images (make sure these paths are correct)
 import figLoungeImage from "../assets/wbay-fig-4.jpg";
 import hepburnsImage from "../assets/hepburns-1.jpg";
 import managersQuartersImage from "../assets/m-quarters-7.jpg";
