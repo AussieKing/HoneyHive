@@ -1,3 +1,4 @@
+/* Legal Document Container Styles */
 .legal-document-container {
   display: flex;
   flex-direction: row;
@@ -11,6 +12,7 @@
   padding-top: 100px;
 }
 
+/* Navigation Links Styles */
 .navigation-links {
   flex: 1; 
   display: flex;
@@ -26,13 +28,14 @@
   margin-left: 20px;
 }
 
+/* Content Area Styles */
 .content-area {
   flex: 1; 
   padding: 0 20px; 
   overflow-y: auto; 
 }
 
-/* Reusing our styles from the read-more-link */
+/* Read More Link Styles */
 .read-more-link {
   display: inline; 
   position: relative;
@@ -45,31 +48,32 @@
   transition: all 0.3s ease-in-out; 
 }
 
-.read-more-link::after {
+.read-more-link::after,
+.read-more-link::before {
   content: '';
   position: absolute;
-  width: 100%; 
+  transition: all 0.3s ease-in-out;
+}
+
+.read-more-link::after {
+  width: 100%;
   height: 1px;
   bottom: 0;
   left: 0;
   background-color: #BB9C71;
-  visibility: hidden; 
+  visibility: hidden;
   border-radius: 5px;
-  transform: scaleX(0); 
-  transform-origin: left; 
-  transition: all 0.3s ease-in-out; 
+  transform: scaleX(0);
+  transform-origin: left;
 }
 
-/* Hover effect for the link underline */
 .read-more-link:hover::after,
 .read-more-link.active::after {
   visibility: visible;
-  transform: scaleX(1); 
+  transform: scaleX(1);
 }
 
 .read-more-link::before {
-  content: '';
-  position: absolute;
   top: 50%;
   right: -20px;
   transform: translate(0, -50%);
@@ -78,15 +82,14 @@
   background-color: transparent;
   border: 2px solid #BB9C71;
   border-radius: 50%;
-  transition: all 0.3s ease-in-out;
 }
 
-/* Hover effect for the circle */
 .read-more-link:hover::before,
 .read-more-link.active::before {
-  background-color: #BB9C71; 
+  background-color: #BB9C71;
 }
-/* Responsive adjustments for smaller screens */
+
+/* Responsive Design Adjustments */
 @media (max-width: 768px) {
   .legal-document-container {
     flex-direction: column;
@@ -105,7 +108,6 @@
   }
 
   .content-area {
-    padding-left: 0;
+    padding: 0;
   }
 }
-/* Adjust headerHeight and footerHeight placeholders to match the actual sizes. */
