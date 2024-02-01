@@ -9,6 +9,7 @@
   position: relative;
 }
 
+/* Contact Information Styles */
 .contact-info {
   width: 50%;
   font-family: "Kaisei Opti", serif;
@@ -16,7 +17,7 @@
 
 .contact-info h1 {
   margin-bottom: 20px;
-  color: #f5ece2; 
+  color: #f5ece2;
   letter-spacing: -2.6px;
 }
 
@@ -26,6 +27,7 @@
   margin-bottom: 10px;
 }
 
+/* Form Styling */
 .contact-form {
   width: 50%;
   display: flex;
@@ -36,9 +38,12 @@
   margin-bottom: 15px;
 }
 
-.label {
+/* Label and Input Field Styling */
+.label,
+.input,
+.textarea {
+  color: #f5ece2;
   font-weight: bold;
-  color: #f5ece2; 
 }
 
 /* Text area styling */
@@ -51,12 +56,11 @@
   padding: 10px 0 !important; /* Padding top and bottom without sides */
 }
 
-/* Remove the outline on focus and change the bottom border color */
 .input:focus,
 .textarea:focus {
   outline: none !important;
-  border-bottom: 1px solid #bb9c71 !important; /* Accent color for bottom border on focus */
-  box-shadow: none !important; /* Removes any box shadow if present */
+  border-bottom: 1px solid #bb9c71 !important;
+  box-shadow: none !important; /* Removes the box shadow  */
 }
 
 /* Overrides the autofill background color in Webkit browsers like Safari */
@@ -66,17 +70,17 @@
   box-shadow: 0 0 0px 1000px #616060 inset !important;
   -webkit-text-fill-color: white !important;
 }
-
-/* If the form field is invalid, you may want to indicate this with a different border color */
-.input.is-invalid,
-.textarea.is-invalid {
-  border-bottom: 1px solid #ff0000; /* Red bottom border for invalid input */
-}
-
+/* Placeholder Styles */
 .input::placeholder,
 .textarea::placeholder {
   color: #bbb;
   opacity: 1;
+}
+
+/* Invalid Input Styles */
+.input.is-invalid,
+.textarea.is-invalid {
+  border-bottom: 1px solid #ff0000; /* Red bottom border for invalid input */
 }
 
 .input:-ms-input-placeholder,
@@ -97,78 +101,84 @@
 
 /* Submit button styling */
 .submit-button {
-    background-color: transparent !important;
-    border: none !important;
-    cursor: pointer;
-    padding: 10px 20px;
-    text-decoration: underline;
-    color: #F5ECE2; 
-    font-size: 16px; 
-    line-height: normal;
-    margin: 0; 
-    transition: all 0.3s ease; 
-  }
-  
-  .submit-button:hover,
-.submit-button:focus { 
-  text-decoration: none;
-  background-color: #BB9C71 !important; 
-  color: #F5ECE2; 
+  background-color: transparent !important;
+  border: none !important;
+  cursor: pointer;
+  padding: 10px 20px;
+  text-decoration: underline;
+  color: #f5ece2;
+  font-size: 16px;
+  line-height: normal;
+  margin: 0;
+  transition: all 0.3s ease;
 }
-  
-  .alert {
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1050;
-    border: 1px solid transparent;
-    border-radius: 5px;
-    background-color: #28a745;
-    color: white;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: inline-block;
-    font-size: 0.9rem;
-    width: auto;
-    text-align: center;
-  }
-  
-  .alert-success {
-    animation: fadeOut 5s ease-in-out forwards;
-    animation-delay: 2s;
-  }
 
-  /* ContactForm.css */
+.submit-button:hover,
+.submit-button:focus {
+  text-decoration: none;
+  background-color: #bb9c71 !important;
+  color: #f5ece2;
+}
+
+/* Alert Message Styles */
+.alert {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1050;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background-color: #28a745;
+  color: white;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  font-size: 0.9rem;
+  width: auto;
+  text-align: center;
+}
+
+.alert-success {
+  animation: fadeOut 5s ease-in-out forwards;
+  animation-delay: 2s;
+}
+
+/* Contact Bottom Image Styles */
 .contact-bottom-image {
-  width: 100%; /* takes the full width */
-  display: block; /* makes sure it's a block-level element */
-  clear: both; /* clears past floats */
+  width: 100%;
+  display: block;
+  clear: both;
 }
 
 .contact-bottom-image img {
   width: 100%;
-  height: auto; /* maintain aspect ratio */
-  display: block; /* remove any extra space around the image */
+  height: auto;
+  display: block;
 }
 
-  @keyframes fadeOut {
-    from { opacity: 1; }
-    to { opacity: 0; }
+@keyframes fadeOut {
+  from {
+    opacity: 1;
   }
-  
-  @media (max-width: 768px) {
-    .contact-container {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .contact-info,
-    .contact-form {
-      width: 100%;
-    }
-  
-    .submit-button {
-      align-self: center;
-    }
+  to {
+    opacity: 0;
   }
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+  }
+
+  .submit-button {
+    align-self: center;
+  }
+}
