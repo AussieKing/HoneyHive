@@ -216,6 +216,18 @@ p {
 
 
 /* Media query adjustments for responsiveness */
+/*! LRG SCR */
+@media (min-width: 1024px) {
+  .home-image-half {
+    flex-basis: 60%; /* Increase width */
+    max-width: 60%; /* Ensure it's allowed to grow */
+  }
+  .home-content-wrapper {
+    justify-content: center; /* This will help manage the spacing */
+  }
+}
+
+
 @media (max-width: 768px) {
   .home-content-wrapper, 
   .key-offerings-content, 
