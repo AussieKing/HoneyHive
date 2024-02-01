@@ -1,4 +1,5 @@
 /* Import and define fonts */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 @font-face {
   font-family: "Benguiat";
   src: url("./assets/fonts/itc_benguiat_ITC/BenguiatStd-Book.otf")
@@ -6,7 +7,6 @@
   font-weight: bold;
   font-style: normal;
 }
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 
 /* Reset styles */
 * {
@@ -34,14 +34,14 @@ body {
   background-color: #F5ECE2; 
   transition: background-color 0.3s;
   backdrop-filter: none;
-  -webkit-backdrop-filter: none;
+  /* -webkit-backdrop-filter: none; */
 }
 
 /* When the user has scrolled */
 .navbar.scrolled {
   background-color: rgba(245, 236, 226, 0.8); /* Semi-transparent background */
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  /* -webkit-backdrop-filter: blur(10px); */
 }
 
 /* Centering the brand logo in the navbar */
@@ -54,8 +54,7 @@ body {
 /* Navbar link styles */
 .navbar .nav-link,
 .header-icon {
-  color: #BB9C71;
-  font-size: 0.em;
+  color: var(--accent-color);
   font-weight: bold;
 }
 
@@ -66,36 +65,26 @@ body {
 }
 
 /* Menu overlay styles */
-.menu-overlay {
+.menu-overlay,
+.menu-overlay-show {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("./assets/about-background-dropdown.jpg") no-repeat center
-    center fixed;
+  background: url("./assets/about-background-dropdown.jpg") no-repeat center center fixed;
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  transition: transform 1s ease-in-out;
   transform: translateY(-100%);
   z-index: 2000;
+  transition: transform 1s ease-in-out;
 }
 
-.close-icon {
-  position: absolute;
-  top: 20px; /* Adjust as necessary */
-  right: 20px; /* Adjust as necessary */
-  font-size: 30px; /* Adjust as necessary */
-  cursor: pointer; /* Changes the mouse cursor to indicate it's clickable */
-  color: #fff; /* Adjust color as necessary */
-  z-index: 10; /* Ensures the icon is above other elements */
-}
-
-.close-icon:hover {
-  color: var(--accent-color);
+.menu-overlay {
+  transform: translateY(-100%);
 }
 
 .menu-overlay.show {
@@ -103,12 +92,6 @@ body {
 }
 
 /* Menu content styles */
-.menu-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .menu-content a {
   color: white;
   font-size: 2rem;
@@ -120,6 +103,27 @@ body {
 }
 
 .menu-content a:hover {
+  color: var(--accent-color);
+}
+
+.menu-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Close button */
+.close-icon {
+  position: absolute;
+  top: 20px; /* Adjust as necessary */
+  right: 20px; /* Adjust as necessary */
+  font-size: 30px; /* Adjust as necessary */
+  cursor: pointer; /* Changes the mouse cursor to indicate it's clickable */
+  color: #fff; /* Adjust color as necessary */
+  z-index: 10; /* Ensures the icon is above other elements */
+}
+
+.close-icon:hover {
   color: var(--accent-color);
 }
 
@@ -152,70 +156,54 @@ main {
   width: 100%;
 }
 
-.footer-section {
+.footer-section,
+.footer-logo,
+.footer-bottom {
   flex: 1 1 auto;
-  margin-right: 1rem;
   min-width: 160px;
-}
-
-.footer-line {
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
-.footer-logo {
-  flex: 0 0 auto;
   text-align: center;
 }
 
 .footer-bottom {
-  text-align: center;
-  width: 100%;
   padding-top: 1rem;
   border-top: 1px solid #ccc;
 }
 
-/* Footer text styling */
-.footer h5 {
+/* Footer text and logo styling */
+.footer h5,
+.footer p,
+.footer-logo h1 {
   font-size: 0.9rem;
   margin-bottom: 0.5rem;
   text-transform: uppercase;
   color: var(--accent-color);
-}
-
-.footer p {
-  font-size: 0.8rem;
   line-height: 1.6;
-  color: var(--text-color);
 }
 
-/* Footer logo styling */
 .footer-logo h1 {
   font-family: "Benguiat", serif;
   font-size: 2.5rem;
-  color: var(--accent-color);
 }
 
-/*! Image for the contact page */
+/* Image for the contact page */
 .contact-bottom-image {
   width: 100%;
-  display: block; /* makes sure it's a block-level element */
+  display: block; 
 }
 
 .contact-bottom-image img {
   width: 100%;
-  height: auto; /* maintain aspect ratio */
-  display: block; /* remove any extra space around the image */
+  height: auto; 
+  display: block; 
 }
 
 /* Responsive styling for the footer */
 @media (max-width: 768px) {
-  .footer-content {
+  .footer-content,
+  .footer-section,
+  .footer-logo {
     flex-direction: column;
     align-items: center;
-  }
-
-  .footer-section {
     margin-right: 0;
     margin-bottom: 1rem;
     text-align: center;
@@ -223,9 +211,21 @@ main {
   }
 
   .footer-logo {
-    margin-bottom: 1rem;
-    flex-basis: 100%;
     order: -1; /* Place logo at the top */
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-content {
+    justify-content: space-around;
+  }
+
+  .footer,
+  .footer-section,
+  .footer-logo {
+    flex-wrap: nowrap;
+    flex: none;
+    flex-basis: auto;
   }
 }
 
@@ -241,20 +241,4 @@ main {
 
 .footer-column a:hover {
   text-decoration: underline;
-}
-
-@media (min-width: 768px) {
-  .footer-content {
-    justify-content: space-around;
-  }
-
-  .footer-section,
-  .footer-logo {
-    flex: none;
-    flex-basis: auto;
-  }
-
-  .footer {
-    flex-wrap: nowrap;
-  }
 }
