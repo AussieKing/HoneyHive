@@ -1,33 +1,35 @@
 /* Main CSS styles for About page */
 
 /* Import fonts */
-@import url('https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap");
 
 /* Reset styles */
-*, 
+*,
 *::before,
-
+*::after {
+  box-sizing: border-box;
+}
 
 :root {
-  --background-color: #F5ECE2;
+  --background-color: #f5ece2;
   --text-color: #333;
-  --accent-color: #BB9C71;
+  --accent-color: #bb9c71;
 }
 
 /* Hero section styling */
 .about-hero {
   position: relative;
   height: 100vh;
-  background: url('../assets/about-background.jpg') no-repeat center center fixed;
+  background: url("../assets/about-background.jpg") no-repeat center center
+    fixed;
   background-size: cover;
 }
 
 .about-page {
-  background-color: #F5ECE2; /* Your chosen color */
+  background-color: #f5ece2; /* Your chosen color */
 }
 
-
-/* Content section styling, including flexbox layout */
+/* Content section styling */
 .about-content-section {
   display: flex;
   align-items: flex-start;
@@ -39,13 +41,13 @@
 .about-text-image {
   width: 40%;
   height: 300px;
-  background: url('../assets/about-1.jpg') no-repeat center center;
+  background: url("../assets/about-1.jpg") no-repeat center center;
   background-size: cover;
   margin-right: 20px;
   margin-top: 100px;
 }
 
-/* Text content styling, including h1 and paragraph */
+/* Text content styling */
 .about-text-content {
   display: flex;
   flex-direction: column;
@@ -59,7 +61,6 @@
   margin-bottom: 50px;
 }
 
-/* Italic text styling */
 .italic-text {
   font-style: italic;
 }
@@ -77,6 +78,12 @@
 }
 
 /* Button styling */
+.book-consultation-link,
+.about-button {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
 .book-consultation-link {
   color: inherit;
   text-decoration: underline;
@@ -87,7 +94,16 @@
   color: var(--accent-color);
 }
 
-/* Other section styling */
+/* Global button styling */
+.about-button {
+  background-color: var(--accent-color);
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+}
+
+/* Section styling */
 .about-ethos,
 .about-projects,
 .about-founders,
@@ -98,23 +114,7 @@
   color: var(--text-color);
 }
 
-/* Global button styling */
-.about-button {
-  background-color: var(--accent-color);
-  color: #fff;
-  padding: 15px 30px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.about-button:hover {
-  background-color: darken(var(--accent-color), 10%);
-}
-
 /* Founder section styling */
-
 .about-founders {
   display: flex;
   align-items: center;
@@ -129,27 +129,29 @@
 }
 
 .founders-left {
-  padding-right: 50px; /* Adjust as needed for spacing */
+  padding-right: 50px;
   font-family: "Kaisei Opti", serif;
   letter-spacing: -2.6px;
-  margin-bottom: 50px; /* 50 pixels of space below the h1 */
+  margin-bottom: 50px;
   margin-left: 70px;
 }
 
-.founders-left em{
+.founders-left em {
   font-style: italic;
+  display: inline-block;
   margin-left: 60px;
 }
 
-.founders-left p{
+.founders-left p {
+  font-family: "Kaisei Opti", serif;
   margin-left: 90px;
 }
 
 .founders-right {
   display: flex;
   flex-direction: column;
-  align-items: center; 
-  padding-left: 50px; 
+  align-items: center;
+  padding-left: 50px;
 }
 
 .founder-image {
@@ -158,122 +160,122 @@
 }
 
 .founder-info {
-  text-align: center; /* Center text for the name, title, and description */
+  text-align: center;
 }
 
-.founder-info h2 {
+.founder-info h2,
+.founder-title {
   font-family: "Kaisei Opti", serif;
-  margin: 20px 0 10px; /* Space above and below the name */
+  margin: 20px 0 10px;
 }
 
 .founder-title {
-  margin-bottom: 20px; /* Space below the title */
+  margin-bottom: 20px;
 }
 
 .founder-description {
   text-align: left;
 }
 
-/* Style the "Read More" link with an underline and a hover effect */
+.book-consultation-link {
+  margin-left: 60px;
+}
+
+/* Read More link styling */
 .read-more-link {
   display: inline-block;
   position: relative;
   cursor: pointer;
   text-decoration: none;
-  color: #BB9C71; 
-  font-size: 0.9em; 
-  margin-top: 1rem; /* Space from the text above */
-  padding-bottom: 0.25rem; /* Space for the underline */
+  color: #bb9c71;
+  font-size: 0.9em;
+  margin-top: 1rem; 
+  padding-bottom: 0.25rem; 
 }
 
-/* Create a pseudo-element for the underline */
-.read-more-link::after {
-  content: '';
+/* Pseudo-element for the underline */
+.read-more-link {
+  color: var(--accent-color);
+  font-size: 0.9em;
+  margin-top: 1rem;
+  padding-bottom: 0.25rem;
+}
+
+.read-more-link::after,
+.read-more-link::before {
+  content: "";
   position: absolute;
+  transition: all 0.3s ease-in-out;
+}
+
+.read-more-link::after {
   width: 100%;
   height: 1px;
   bottom: 0;
   left: 0;
-  background-color: #BB9C71; 
+  background-color: var(--accent-color);
   visibility: hidden;
-  border-radius: 5px;
   transform: scaleX(0);
-  transition: all 0.3s ease-in-out 0s;
 }
 
-/* Create a pseudo-element for the circle */
 .read-more-link::before {
-  content: '';
-  position: absolute;
   top: 50%;
-  right: -20px; 
-  transform: translate(0, -50%);
-  width: 8px; /* Circle size */
-  height: 8px; /* Circle size */
-  background-color: transparent; /* Circle color */
-  border: 2px solid#BB9C71; /* Circle border color */
+  right: -20px;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border: 2px solid var(--accent-color);
   border-radius: 50%;
-  transition: all 0.3s ease-in-out;
 }
 
-/* Hover effect for the underline */
 .read-more-link:hover::after {
   visibility: visible;
   transform: scaleX(1);
 }
 
-/* Hover effect for the circle */
 .read-more-link:hover::before {
-  background-color: #BB9C71; /* Circle fill color on hover */
+  background-color: var(--accent-color);
 }
 
-/*! Get in touch section styling */
+/* Get in touch section styling */
 .about-contact {
   display: flex;
-  justify-content: space-between; /* This will put space between the two child divs */
-  align-items: center; /* This will vertically align them in the center */
-  padding: 15px; /* Adjusted padding for layout */
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
   background-color: #616060;
+  color: var(--background-color);
+}
+
+.contact-left,
+.contact-right {
+  flex: 1;
 }
 
 .contact-left {
-  flex: 1;
-  padding-right: 20px; /* Adjust spacing as necessary */
-  margin-left: 70px;
-  color: #F5ECE2;
+  margin-left: 80px;
 }
 
-.contact-left h1{
+.contact-left h1,
+.contact-left p,
+.book-consultation-link {
+  color: rgb(245, 236, 226);
+}
+
+.contact-left h1 {
   font-family: "Kaisei Opti", serif;
   letter-spacing: -2.6px;
 }
 
-.contact-left p{
+.contact-left p,
+.book-consultation-link {
   margin-left: 95px;
 }
 
 .contact-right img {
-  width: 100%; /* This will make the image take full width of its parent */
-  max-width: 1200px; /* This will ensure the image does not become too big */
-  height: auto; /* This will maintain the aspect ratio */
-  align-self: flex-end; /* This will align the image to the right */
-  margin-bottom: 5px;
+  width: 100%;
+  height: auto;
 }
-
-.contact-left, .contact-right {
-  flex: 1; /* This will allow them to grow equally */
-  max-width: 50%; /* This will ensure they do not exceed half the container's width */
-}
-
-.contact-image {
-  width: 100%; /* Full width of the container */
-  height: auto; /* Keep the aspect ratio */
-  margin-bottom: 20px; /* Spacing below the image */
-}
-
-/* .contact-info { */
-  /* Styles for the contact info */
-/* } */
 
 .book-consultation-link {
   /* Styles for the book consultation link */
@@ -295,4 +297,23 @@
   color: #fff;
 }
 
-/* Responsive and interactive styling to be defined as needed */
+/* Responsive and interactive styling */
+@media (max-width: 768px) {
+  .about-content-section,
+  .about-founders {
+    flex-direction: column;
+  }
+
+  .about-text-image,
+  .founders-left,
+  .founders-right {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 0;
+  }
+
+  .contact-left,
+  .contact-right {
+    max-width: 100%;
+  }
+}

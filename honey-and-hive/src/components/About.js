@@ -142,7 +142,6 @@ const About = () => {
       {/* Contact sectiom*/}
       <div className="about-contact">
         <div className="contact-left">
-          {/* Display a big bold text for the section title */}
           <h1>Get In Touch</h1>
           <p>We look forward to chatting about your project.</p>
           <Link to="/contact" className="book-consultation-link">
