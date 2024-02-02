@@ -316,4 +316,50 @@
   .contact-right {
     max-width: 100%;
   }
+
+   /* Hide the 'Get In Touch' section at the bottom */
+   .about-contact {
+    display: none;
+  }
+}
+
+/*! NEW MEDIA QUERIES */
+/* Extra large devices (large desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .founders-left {
+    margin-left: 150px; /* Adjust this value as needed */
+    padding-right: 0;
+  }
+
+  .founders-right {
+    padding-left: 0;
+    padding-right: 100px;;
+  }
+
+}
+
+/* Medium size screens (768 to 991px) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  body, html {
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+
+  .navbar, .about-page, .any-other-container {
+    max-width: 100%; /* Ensure no element stretches beyond the viewport */
+    padding: 0 15px; 
+  }
+}
+
+/* Small screens (below 768px) */
+@media only screen and (max-width: 767px) {
+  body, html {
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+
+  .navbar, .about-page, .any-other-container {
+    max-width: 100%; /* Ensure no element stretches beyond the viewport */
+    padding: 0 10px;
+  }
 }

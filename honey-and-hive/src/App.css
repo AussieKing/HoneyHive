@@ -185,7 +185,6 @@ main {
 .footer-logo h1 {
   font-size: 0.9rem;
   margin-bottom: 0.5rem;
-  text-transform: uppercase;
   color: var(--accent-color);
   line-height: 1.6;
 }
