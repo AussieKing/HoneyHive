@@ -174,7 +174,7 @@ const Home = () => {
         </div>
 
         {/* About us */}
-        <div classname="about-content-wrapper">
+        {/* <div classname="about-content-wrapper">
           <div className="about-image-half">IMAGE HERE</div>
           <div className="about-text-half">
             <div className="about-title">
@@ -185,7 +185,7 @@ const Home = () => {
               LEARN MORE HERE - link to about page
             </div>
           </div>
-        </div>
+        </div> */}
 
         <div className="about-contact">
           <div className="contact-left">

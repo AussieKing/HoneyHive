@@ -209,9 +209,15 @@ const Services = () => {
             </h1>
           </div>
           <div className="projects-carousel">
-            <Swiper
+          <Swiper
               spaceBetween={20}
-              slidesPerView={3}
+              slidesPerView={1} 
+              breakpoints={{
+                768: {
+                  slidesPerView: 3, 
+                  spaceBetween: 20,
+                },
+              }}
               onSlideChange={() => console.log("slide change")}
               onSwiper={(swiper) => console.log(swiper)}
             >
@@ -235,7 +241,6 @@ const Services = () => {
               </SwiperSlide>
             </Swiper>
           </div>
-          {/* You can add more content here if needed */}
         </div>
 
         <div className="about-contact">
