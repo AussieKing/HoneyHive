@@ -6,7 +6,7 @@ import contactImage from "../assets/contact-image.jpg";
 import specialtyImage from "../assets/home-specialty-image.jpg";
 import video1 from "../assets/video-1.mp4";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
+import "swiper/css/bundle";
 import carouselImage1 from "../assets/carousel-image-1.jpg";
 import carouselImage2 from "../assets/carousel-image-2.jpg";
 import carouselImage3 from "../assets/carousel-image-3.jpg";
@@ -118,7 +118,13 @@ const Home = () => {
           <div className="projects-carousel">
             <Swiper
               spaceBetween={20}
-              slidesPerView={3}
+              slidesPerView={1} 
+              breakpoints={{
+                768: {
+                  slidesPerView: 3, 
+                  spaceBetween: 20,
+                },
+              }}
               onSlideChange={() => console.log("slide change")}
               onSwiper={(swiper) => console.log(swiper)}
             >

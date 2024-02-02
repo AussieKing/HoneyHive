@@ -65,7 +65,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-left: 50px;
+  margin-left: calc(10% + 50px); 
   margin-top: 50px
 }
 
@@ -116,46 +116,50 @@ p {
 }
 
 /* Content wrapper */
+/*! modified */
 .home-content-wrapper {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 4em 0;
+  flex-direction: row; /* Ensures that children are side by side */
+  justify-content: space-between; /* Adds space between the children */
+  align-items: center; /* Vertically aligns the children */
+  padding: 4em 0; /* Existing padding */
 }
 
-.home-aligned-image img, .home-aligned-image video {
-  width: auto;
-  height: auto;
-  display: block;
-}
-  
-.home-image-half {
-  margin-right: 0; 
-  max-width: 100%; 
-}
-
-.home-horizontal-image {
-  width: 100%; 
-  height: auto;
-}
-
-.home-text-half {
-  display: flex;
-  flex-direction: row; 
-  align-items: flex-start; 
-  flex: 1; 
-  max-width: 50%; 
-  padding-left: 2em; 
-}
-
+/* Home Title */
 .home-title {
-  flex: 0 0 auto;
-  margin-right: 20px; 
+  margin-bottom: 20px; /* Adds space between the title and the description */
+}
+
+/* Home Text Half */
+.home-text-half {
+  flex: 1; /* Allows the text section to fill the remaining space */
+  padding: 0 2em; /* Adds horizontal padding */
+  margin-right: 50px; /* Adds space between the text and the image */
+  margin-left: 20px;
+
 }
 
 .home-description {
   flex: 1; 
 }
+
+/* Home Image Half */
+.home-image-half {
+  flex: 0 0 50%; /* Takes up half the width of its parent */
+  margin-right: 0;
+  max-width: 50%;
+  /* Ensure there's no padding or margin inside that could push the video away from the right edge */
+  padding: 0;
+}
+
+/* Home Aligned Image and Video */
+.home-aligned-image img,
+.home-aligned-image video {
+  width: 95%; /* Ensures the video fills its container */
+  height: auto; /* Maintains aspect ratio */
+  display: block; /* Ensures it's a block-level element without inline properties */
+}
+
 
 /* Carousel section */
 .projects-carousel, .swiper {
@@ -181,6 +185,7 @@ p {
 .key-offerings-content {
   display: flex; 
   width: 100%; 
+  margin-left: 50px;
 }
 
 .key-offerings-title {
@@ -216,26 +221,36 @@ p {
 
 
 /* Media query adjustments for responsiveness */
-/*! LRG SCR */
+/* Large screens */
 @media (min-width: 1024px) {
   .home-image-half {
-    flex-basis: 60%; /* Increase width */
-    max-width: 60%; /* Ensure it's allowed to grow */
+    flex-basis: 60%; 
+    max-width: 60%; 
   }
   .home-content-wrapper {
-    justify-content: center; /* This will help manage the spacing */
+    justify-content: center; 
   }
 }
 
-
+/* Small screens */
 @media (max-width: 768px) {
-  .home-content-wrapper, 
-  .key-offerings-content, 
-  .home-hero-content, 
-  .title-div, 
-  .home-image-half, 
+  /* Hide the contact link in the header */
+  .navbar .nav-link {
+    display: none;
+  }
+
+  /* Reorder the hero content so the image is on top and the text is below */
+  .home-hero-content {
+    flex-direction: column-reverse;
+  }
+
+  /* Adjust the home content wrapper to stack children vertically */
+  .home-content-wrapper,
+  .key-offerings-content,
+  .title-div,
+  .home-image-half,
   .home-text-half,
-  .home-image-container, 
+  .home-image-container,
   .home-aligned-image {
     flex-direction: column;
     align-items: center;
@@ -244,31 +259,51 @@ p {
     margin: 20px 0;
   }
 
-  .home-text-half, 
+  /* Adjust padding for the text half and title div for smaller screens */
+  .home-text-half,
   .title-div {
-    padding: 1em; 
+    padding: 1em;
   }
 
-  .home-specialty-image, 
-  .home-aligned-image img, 
-  .home-aligned-image video, 
+  /* Ensure images and videos scale down to fit the width of the screen */
+  .home-specialty-image,
+  .home-aligned-image img,
+  .home-aligned-image video,
   .key-offerings-image img {
     max-width: 100%;
     height: auto;
   }
 
-  .read-more-link, 
+  /* Adjust read-more links and key offerings links for smaller screens */
+  .read-more-link,
   .key-offerings-title a {
-    max-width: 100%; 
-    margin-bottom: 30px; 
+    max-width: 100%;
+    margin-bottom: 30px;
   }
 
+  /* Order key offerings content properly */
   .key-offerings-image {
-    order: 2; 
+    order: 2;
+  }
+
+  .key-offerings-container {
+    padding: 0; /* Removes padding */
+  }
+
+  .key-offerings-image img {
+    width: 100%;
+    padding: 0;
+    margin: 0;
   }
 
   .key-offerings-title {
     order: 1;
   }
+
+  /* Hide the 'Get In Touch' section at the bottom */
+  .home-overlay .about-contact {
+    display: none;
+  }
 }
+
 
