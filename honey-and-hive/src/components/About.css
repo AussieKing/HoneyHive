@@ -326,6 +326,10 @@
 /*! NEW MEDIA QUERIES */
 /* Extra large devices (large desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+.about-text-content , .about-contact {
+  font-size: 22px;
+}
+
   .founders-left {
     margin-left: 150px; /* Adjust this value as needed */
     padding-right: 0;
@@ -334,6 +338,7 @@
   .founders-right {
     padding-left: 0;
     padding-right: 100px;;
+    font-size: 22px;
   }
 
 }

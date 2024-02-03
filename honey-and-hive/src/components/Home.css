@@ -116,7 +116,6 @@ p {
 }
 
 /* Content wrapper */
-/*! modified */
 .home-content-wrapper {
   display: flex;
   flex-direction: row; /* Ensures that children are side by side */
@@ -179,7 +178,8 @@ p {
   display: flex; 
   justify-content: space-between; 
   align-items: center; 
-  padding: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .key-offerings-content {
@@ -198,18 +198,20 @@ p {
   margin-bottom: 50px;
   font-size: 3em;
   color: var(--text-color);
+  padding-left: 50px;
 }
 
 .read-more-link, 
 .key-offerings-title a { 
   display: block; 
   margin-bottom: 10px; 
+  padding-left: 50px;
 }
 
 .key-offerings-image {
   flex-basis: 50%;
   display: flex;
-  justify-content: center; 
+  justify-content: start; 
   align-items: center; 
 }
 
@@ -219,9 +221,50 @@ p {
   max-width: none; 
 }
 
+/* Extend underline hover effect for read-more-link */
+.read-more-link::after {
+  content: '';
+  position: absolute;
+  width: 0; /* Start with no width */
+  height: 1px;
+  bottom: 0;
+  right: 0; /* Extend to the right */
+  background-color: #BB9C71;
+  visibility: hidden;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+/* Adjust width on hover to extend the underline */
+.read-more-link:hover::after {
+  visibility: visible;
+  transform: scaleX(1);
+  width: 100%; /* Extend to full width on hover */
+}
+
 
 /* Media query adjustments for responsiveness */
 /* Large screens */
+@media (min-width: 1200px) {
+  .title-div,
+  .home-page p,
+  .home-page a,
+  .home-page .book-consultation-link {
+    font-size: 20px;
+  }
+}
+
+/* Medium devices (tablets up to 991px) */
+@media (max-width: 991px) {
+  .title-div,
+  .home-page p,
+  .home-page a,
+  .home-page .book-consultation-link {
+    font-size: 18px;
+  }
+}
+
 @media (min-width: 1024px) {
   .home-image-half {
     flex-basis: 60%; 

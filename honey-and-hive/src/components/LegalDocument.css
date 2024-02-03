@@ -81,7 +81,6 @@
   height: 8px;
   background-color: transparent;
   border: 2px solid #BB9C71;
-  border-radius: 50%;
 }
 
 .read-more-link:hover::before,
@@ -90,24 +89,42 @@
 }
 
 /* Responsive Design Adjustments */
+@media (min-width: 1200px) {
+  .privacy-content p,
+  .terms-content p {
+    font-size: 20px; 
+  }
+}
+
 @media (max-width: 768px) {
   .legal-document-container {
     flex-direction: column;
   }
 
   .navigation-links {
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: row; /* Adjust if you want vertical stacking */
+    justify-content: flex-start; /* Adjust based on layout needs */
     padding-right: 0;
+    border-right: none; /* Ensure no right border */
     border-bottom: 2px solid #BB9C71;
     margin-bottom: 20px;
   }
 
+  /* Ensure child elements don't overflow */
   .navigation-links div {
     padding: 0;
+    margin-right: 0; /* Adjust or remove margins that might cause overflow */
   }
 
+  /* Adjust content area padding if needed */
   .content-area {
-    padding: 0;
+    padding: 20px; /* Adjust based on your design needs */
   }
+
+  .privacy-content p,
+  .terms-content p {
+    font-size: 20px; 
+  }
+
 }
+

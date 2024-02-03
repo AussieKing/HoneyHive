@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./About.css";
 import { Link } from "react-router-dom";
 import founderImage from "../assets/founder-image.jpg";
-import contactImage from "../assets/contact-image.jpg"; 
+import contactImage from "../assets/contact-image.jpg";
 
 const About = () => {
   const [readMore, setReadMore] = useState(false);
@@ -18,11 +18,11 @@ const About = () => {
         <div className="about-text-image"></div>
         <div className="about-text-content">
           <h1>
-            Honey & Hive Interiors - <em>If you can imagine it, it exists.</em>
+            Honey & Hive Interiors - <em>If you can see it, it exists.</em>
           </h1>
           <div className="content-with-vision">
             <div className="vision-title">
-              <strong className="our-vision-text">OUR VISION</strong>
+              <div className="our-vision-text">OUR ETHOS</div>
             </div>
             <div className="text-and-button">
               <p>
@@ -46,6 +46,8 @@ const About = () => {
                 our passion for design, technical expertise, and creative
                 vision. This fusion brings forth a space that is not only
                 functional and aesthetically pleasing but also uniquely yours.
+              </p>
+              <p>
                 We believe that your space is both a canvas and narrative,
                 reflecting not only your taste but the journey you’ve taken and
                 all you’ve achieved.
@@ -57,10 +59,6 @@ const About = () => {
           </div>
         </div>
       </div>
-
-      {/* <div className="about-projects">
-        <p>Our projects content...</p>
-      </div> */}
 
       <div className="about-founders">
         <div className="founders-left">

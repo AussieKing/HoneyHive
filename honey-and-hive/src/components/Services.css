@@ -295,7 +295,14 @@
   .services-page p,
   .services-page a,
   .services-page .book-consultation-link {
-    font-size: 24px;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .services-aligned-image {
+    width: 100%; /* Adjust the width as needed */
+    height: auto; /* Automatically adjust the height to maintain aspect ratio */
   }
 }
 
@@ -304,7 +311,7 @@
   .services-page p,
   .services-page a,
   .services-page .book-consultation-link {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .interior-design-section {

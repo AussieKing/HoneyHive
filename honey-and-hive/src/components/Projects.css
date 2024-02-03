@@ -67,3 +67,64 @@
   object-fit: cover;
   aspect-ratio: 3 / 4; /* Ensures a consistent and more vertical aspect ratio */
 }
+
+/*! Overlay effect for project items */
+.project-item {
+  position: relative;
+  overflow: hidden; /* Prevents the overlay from spilling outside the image */
+  cursor: pointer; /* Indicates the item is clickable */
+}
+
+.project-image-container {
+  position: relative;
+  overflow: hidden; /* Ensures the overlay doesn't spill outside this container */
+}
+
+.project-image-container img {
+  width: 100%;
+  height: auto;
+  display: block; /* Ensures the image doesn't have extra space below */
+}
+
+.project-hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(245, 236, 226, 0.7); /* Semi-transparent overlay color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Overlay is transparent by default */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transitions for hover effects */
+  transform: scale(0); /* Overlay is scaled down initially */
+}
+
+.project-image-container:hover .project-hover-overlay {
+  opacity: 1; /* Fully visible on hover */
+  transform: scale(1); /* Scales to normal size */
+}
+
+.project-hover-overlay h1 {
+  color: #333; /* Title color */
+  font-size: 2rem; /* Title size */
+  background-color: transparent; /* No background for the title */
+  padding: 1rem 2rem; /* Padding inside the overlay */
+}
+
+
+/* Responsive Design Adjustments */
+/* Large screens adjustments */
+@media (min-width: 1200px) {
+  .project-title,
+  .project-category {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-container {
+    grid-template-columns: 1fr; /* Changes the grid to a single column */
+  }
+}

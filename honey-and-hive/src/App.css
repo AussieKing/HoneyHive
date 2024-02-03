@@ -204,6 +204,20 @@ main {
   font-size: 2.5rem;
 }
 
+.footer-logo {
+  text-align: center; /* Center everything inside the logo column */
+  /* ... other styles ... */
+}
+
+.footer-icon {
+  display: block; /* Make sure the image is a block-level element to allow for margins */
+  margin: 0 auto; /* Auto margins on the sides center block-level elements horizontally */
+  max-width: 100px; /* Adjust the width as necessary */
+  height: auto; /* Keep the image's aspect ratio */
+  margin-top: 1rem; /* Space between the logo text and the icon */
+}
+
+
 .header-and-first-item {
   display: flex;
   align-items: flex-start; /* Align items to the top */
@@ -239,8 +253,9 @@ main {
   }
 }
 
+
 /* Responsive styling for screens at 768px and below */
-@media (max-width: 768px) {
+@media (max-width: 886px) {
   .footer {
     display: flex;
     flex-direction: column;
@@ -310,4 +325,11 @@ main {
 
 .footer-column a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .logo-font {
+    margin-top: 10px; /* Adds 10px space above the text */
+    /* or padding-top: 10px; if you prefer padding */
+  }
 }

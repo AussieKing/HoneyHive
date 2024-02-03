@@ -1,6 +1,8 @@
 import React from "react";
 import "../App.css";
 import { Container, Row, Col } from "react-bootstrap";
+import IconV1 from '../assets/Icon v1.png';
+
 
 const Footer = () => {
   return (
@@ -10,7 +12,9 @@ const Footer = () => {
           {/* STUDIO Column */}
           <Col xs={12} md={2} className="footer-column">
             <div className="header-and-first-item">
-              <h5><strong>STUDIO</strong></h5>
+              <h5>
+                <strong>STUDIO</strong>
+              </h5>
               <div className="first-item-and-below">
                 <p>Based in Brisbane,</p>
                 <p>Servicing SEQ</p>
@@ -23,11 +27,12 @@ const Footer = () => {
           {/* CONTACT Column */}
           <Col xs={12} md={2} className="footer-column">
             <div className="header-and-first-item">
-              <h5><strong>CONTACT</strong></h5>
+              <h5>
+                <strong>CONTACT</strong>
+              </h5>
               <div className="first-item-and-below">
-                <p>0427 766 288</p>
-                <p>ashley@honeyandhiveinteriors.com</p>
-                
+                <p>0427766288</p>
+                <p>Email Us</p>
               </div>
             </div>
           </Col>
@@ -35,14 +40,19 @@ const Footer = () => {
           {/* LOGO Column */}
           <Col xs={12} md={2} className="footer-column footer-logo">
             <h1>H&H</h1>
+            <img src={IconV1} alt="Icon" className="footer-icon" />
           </Col>
 
           {/* MENU Column */}
           <Col xs={12} md={2} className="footer-column">
             <div className="header-and-first-item">
-              <h5><strong>MENU</strong></h5>
+              <h5>
+                <strong>MENU</strong>
+              </h5>
               <div className="first-item-and-below">
-                <p><a href="/home">Home</a></p>
+                <p>
+                  <a href="/home">Home</a>
+                </p>
                 <a href="/about">About</a>
                 <a href="/services">Services</a>
                 <a href="/projects">Projects</a>
@@ -56,9 +66,15 @@ const Footer = () => {
           {/* SOCIAL Column */}
           <Col xs={12} md={2} className="footer-column">
             <div className="header-and-first-item">
-              <h5><strong>SOCIAL</strong></h5>
+              <h5>
+                <strong>SOCIAL</strong>
+              </h5>
               <div className="first-item-and-below">
-                <p><a href="https://www.instagram.com/honeyandhiveinteriors/">Instagram</a></p>
+                <p>
+                  <a href="https://www.instagram.com/honeyandhiveinteriors/">
+                    Instagram
+                  </a>
+                </p>
                 <a href="https://facebook.com/">Facebook</a>
               </div>
             </div>

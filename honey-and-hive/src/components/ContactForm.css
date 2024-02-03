@@ -7,6 +7,7 @@
   padding: 40px;
   font-family: "Lato", sans-serif;
   position: relative;
+  padding-top: 100px;
 }
 
 /* Contact Information Styles */
@@ -19,6 +20,10 @@
   margin-bottom: 20px;
   color: #f5ece2;
   letter-spacing: -2.6px;
+}
+
+.additional-info {
+  padding-bottom: 30px;
 }
 
 .contact-info p,
@@ -167,6 +172,25 @@
 }
 
 /* Responsive Design Adjustments */
+/* Large screens adjustment */
+@media (min-width: 1200px) {
+  .contact-info h1 {
+    font-size: 2.5rem; /* Increase h1 size */
+  }
+
+  .contact-info p,
+  .additional-info p,
+  .contact-form .label,
+  .contact-form .input,
+  .contact-form .textarea {
+    font-size: 20px; /* Set font size to 20px */
+  }
+
+  .submit-button {
+    font-size: 20px; /* Increase submit button font size */
+  }
+}
+
 @media (max-width: 768px) {
   .contact-container {
     flex-direction: column;

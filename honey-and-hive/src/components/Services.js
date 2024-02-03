@@ -45,7 +45,9 @@ const Services = () => {
         </div>
         <div className="services-subcontent">
           <div className="title-div">
-            <p><strong>OUR SPECIALTIES</strong></p>
+            <p>
+              <strong>OUR SPECIALTIES</strong>
+            </p>
             <div className="services-specialties-list">
               <p>RESIDENTIAL DESIGN</p>
               <p>RETAIL DESIGN</p>
@@ -53,21 +55,27 @@ const Services = () => {
             </div>
           </div>
           <div className="title-div">
-          <p><strong>OUR MISSION</strong></p>
+            <p>
+              <strong>OUR MISSION</strong>
+            </p>
             <p>
               At our core, we are dedicated to meticulously planned and
-              harmoniously integrated designs.<br></br> Whether collaborating with you
-              on-site or remotely, our expertise encompasses New Builds,
-              Renovations, and Refurbishments in the Residential, Commercial,
-              Retail and Hospitality Sector. <br></br> Our mission is to provide
-              personalised interior design solutions that offer exceptional
-              value. <br></br> We are dedicated to exceeding expectations in both quality
-              and service, ensuring a seamless and stress-free experience that
-              saves you time
+              harmoniously integrated designs.<br></br> Whether collaborating
+              with you on-site or remotely, our expertise encompasses New
+              Builds, Renovations, and Refurbishments in the Residential,
+              Commercial, Retail and Hospitality Sector. <br></br> Our mission
+              is to provide personalised interior design solutions that offer
+              exceptional value. <br></br> We are dedicated to exceeding
+              expectations in both quality and service, ensuring a seamless and
+              stress-free experience that saves you time
             </p>
           </div>
           <div className="services-aligned-image">
-            <img src={smallerImage} alt="Aligned Specialty" />
+            <img
+              src={smallerImage}
+              alt="Aligned Specialty"
+              className="services-aligned-image"
+            />
           </div>
         </div>
 
@@ -83,7 +91,9 @@ const Services = () => {
           </div>
           <div className="services-text-half">
             <div className="services-title">
-            <p><strong>WHAT WE DO</strong></p>
+              <p>
+                <strong>WHAT WE DO</strong>
+              </p>
             </div>
             <div className="services-description">
               <p>
@@ -209,12 +219,12 @@ const Services = () => {
             </h1>
           </div>
           <div className="projects-carousel">
-          <Swiper
+            <Swiper
               spaceBetween={20}
-              slidesPerView={1} 
+              slidesPerView={1}
               breakpoints={{
                 768: {
-                  slidesPerView: 3, 
+                  slidesPerView: 3,
                   spaceBetween: 20,
                 },
               }}

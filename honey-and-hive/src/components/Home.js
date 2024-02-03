@@ -45,9 +45,9 @@ const Home = () => {
 
         <div className="title-div">
           <h2>
-            <strong>LET’S COLLABORATE</strong>
+            LET’S COLLABORATE TO ELEVATE YOUR SPACE{" "}
             <p></p>
-            TO ELEVATE YOUR SPACE{" "}
+            
           </h2>
           <p>
             Embrace the essence of your imagination and let Honey & Hive
@@ -153,6 +153,12 @@ const Home = () => {
         {/* Key Offerings */}
         <div className="key-offerings-container">
           <div className="key-offerings-content">
+            <div className="key-offerings-image">
+              <img
+                src={require("../assets/key-offerings.jpg")}
+                alt="Key Offerings"
+              />
+            </div>
             <div className="key-offerings-title">
               <h1>
                 Key<em> Offerings</em>
@@ -164,28 +170,9 @@ const Home = () => {
                 INTERIOR STYLING
               </Link>
             </div>
-            <div className="key-offerings-image">
-              <img
-                src={require("../assets/key-offerings.jpg")}
-                alt="Key Offerings"
-              />
-            </div>
+            
           </div>
         </div>
-
-        {/* About us */}
-        {/* <div classname="about-content-wrapper">
-          <div className="about-image-half">IMAGE HERE</div>
-          <div className="about-text-half">
-            <div className="about-title">
-              <h2>ABOUT US</h2>
-            </div>
-            <div className="about-description">
-              <p>MAYBE AN ABOUT FOUNDER HERE?</p>
-              LEARN MORE HERE - link to about page
-            </div>
-          </div>
-        </div> */}
 
         <div className="about-contact">
           <div className="contact-left">

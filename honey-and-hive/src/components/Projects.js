@@ -1,5 +1,5 @@
 import React from "react";
-import "./Projects.css"; 
+import "./Projects.css";
 import { Link } from "react-router-dom";
 import contactImage from "../assets/contact-image.jpg";
 
@@ -49,7 +49,12 @@ const Projects = () => {
         <div className="projects-container">
           {projectData.map((project, index) => (
             <div className="project-item" key={index}>
-              <img src={project.image} alt={project.title} />
+              <div className="project-image-container">
+                <img src={project.image} alt={project.title} />
+                <div className="project-hover-overlay">
+                  <h1>View<em> Project</em></h1>
+                </div>
+              </div>
               <p className="project-title">{project.title}</p>
               <p className="project-category">{project.category}</p>
             </div>
