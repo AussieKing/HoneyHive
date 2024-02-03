@@ -7,48 +7,61 @@ const Footer = () => {
     <footer className="footer">
       <Container>
         <Row className="justify-content-between">
+          {/* STUDIO Column */}
           <Col xs={12} md={2} className="footer-column">
-            <h5><strong>STUDIO</strong></h5>
-            <p>
-              <span className="footer-line">Based in Brisbane,</span>
-            </p>
-            <p>
-              <span className="footer-line">Servicing SEQ</span>
-            </p>
-            <p>
-              <span className="footer-line">Brisbane</span>
-            </p>
-            <p>
-              <span className="footer-line">4000</span>
-            </p>
-          </Col>
-          <Col xs={12} md={2} className="footer-column">
-            <h5><strong>CONTACT</strong></h5>
-            <p>
-              <span className="footer-line">ashley@honeyandhiveinteriors.com</span>
-            </p>
-            <p>
-              <span className="footer-line">0427 766 288</span>
-            </p>
+            <div className="header-and-first-item">
+              <h5><strong>STUDIO</strong></h5>
+              <div className="first-item-and-below">
+                <p>Based in Brisbane,</p>
+                <p>Servicing SEQ</p>
+                <p>Brisbane</p>
+                <p>4000</p>
+              </div>
+            </div>
           </Col>
 
+          {/* CONTACT Column */}
+          <Col xs={12} md={2} className="footer-column">
+            <div className="header-and-first-item">
+              <h5><strong>CONTACT</strong></h5>
+              <div className="first-item-and-below">
+                <p>0427 766 288</p>
+                <p>ashley@honeyandhiveinteriors.com</p>
+                
+              </div>
+            </div>
+          </Col>
+
+          {/* LOGO Column */}
           <Col xs={12} md={2} className="footer-column footer-logo">
             <h1>H&H</h1>
           </Col>
+
+          {/* MENU Column */}
           <Col xs={12} md={2} className="footer-column">
-            <h5><strong>MENU</strong></h5>
-            <a href="/home">Home</a>
-            <a href="/about">About</a>
-            <a href="/services">Services</a>
-            <a href="/projects">Projects</a>
-            <a href="/contact">Contact</a>
-            <a href="/terms-conditions">Terms & Conditions</a>
-            <a href="/privacy-policy">Privacy Policy</a>
+            <div className="header-and-first-item">
+              <h5><strong>MENU</strong></h5>
+              <div className="first-item-and-below">
+                <p><a href="/home">Home</a></p>
+                <a href="/about">About</a>
+                <a href="/services">Services</a>
+                <a href="/projects">Projects</a>
+                <a href="/contact">Contact</a>
+                <a href="/terms-conditions">Terms & Conditions</a>
+                <a href="/privacy-policy">Privacy Policy</a>
+              </div>
+            </div>
           </Col>
+
+          {/* SOCIAL Column */}
           <Col xs={12} md={2} className="footer-column">
-            <h5><strong>SOCIAL</strong></h5>
-            <a href="https://www.instagram.com/honeyandhiveinteriors/">Instagram</a>
-            <a href="https://facebook.com/">Facebook</a>
+            <div className="header-and-first-item">
+              <h5><strong>SOCIAL</strong></h5>
+              <div className="first-item-and-below">
+                <p><a href="https://www.instagram.com/honeyandhiveinteriors/">Instagram</a></p>
+                <a href="https://facebook.com/">Facebook</a>
+              </div>
+            </div>
           </Col>
         </Row>
         <Row>

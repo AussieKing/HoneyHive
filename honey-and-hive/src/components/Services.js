@@ -45,7 +45,7 @@ const Services = () => {
         </div>
         <div className="services-subcontent">
           <div className="title-div">
-            <h2>OUR SPECIALTIES</h2>
+            <p><strong>OUR SPECIALTIES</strong></p>
             <div className="services-specialties-list">
               <p>RESIDENTIAL DESIGN</p>
               <p>RETAIL DESIGN</p>
@@ -53,7 +53,7 @@ const Services = () => {
             </div>
           </div>
           <div className="title-div">
-            <h2>OUR MISSION </h2>
+          <p><strong>OUR MISSION</strong></p>
             <p>
               At our core, we are dedicated to meticulously planned and
               harmoniously integrated designs.<br></br> Whether collaborating with you
@@ -83,7 +83,7 @@ const Services = () => {
           </div>
           <div className="services-text-half">
             <div className="services-title">
-              <h2>WHAT WE DO</h2>
+            <p><strong>WHAT WE DO</strong></p>
             </div>
             <div className="services-description">
               <p>

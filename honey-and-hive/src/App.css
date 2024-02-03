@@ -37,7 +37,6 @@ body {
   padding-left: 25;
 }
 
-
 /* Navbar styles */
 .navbar {
   background-color: #F5ECE2; 
@@ -72,7 +71,6 @@ body {
   color: var(--accent-color) !important; /* Gold color */
   font-size: 2rem !important; /* Increased font size */
 }
-
 
 /* Menu overlay styles */
 .menu-overlay,
@@ -149,6 +147,18 @@ main {
   padding-top: 30px; /* Adjust as needed for your layout */
 }
 
+/* Image for the contact page */
+.contact-bottom-image {
+  width: 100%;
+  display: block; 
+}
+
+.contact-bottom-image img {
+  width: 100%;
+  height: auto; 
+  display: block; 
+}
+
 /* Footer styling */
 .footer {
   background-color: var(--background-color);
@@ -194,21 +204,33 @@ main {
   font-size: 2.5rem;
 }
 
-/* Image for the contact page */
-.contact-bottom-image {
-  width: 100%;
-  display: block; 
+.header-and-first-item {
+  display: flex;
+  align-items: flex-start; /* Align items to the top */
 }
 
-.contact-bottom-image img {
-  width: 100%;
-  height: auto; 
-  display: block; 
+.header-and-first-item h5 {
+  margin-right: 20px; /* Adjust spacing between the h5 and the container */
+}
+
+.first-item-and-below p, .first-item-and-below p a {
+  margin-bottom: 0.5rem; /* Adjusts spacing between paragraphs */
+  display: block; /* Ensure links also appear in block layout */
+}
+
+.first-item-and-below a:not(p a) {
+  display: block; /* Non-paragraph links should also appear in block layout */
 }
 
 /* Responsive styling */
-
 /* On larger screens */
+@media (min-width: 1200px) {
+  .footer .footer-column p, .footer  .footer-column a {
+    font-size: 18px; 
+  }
+}
+
+/* On medium screens */
 @media (min-width: 1024px) {
   .navbar .container, .footer .container {
     max-width: 90vw; 
@@ -217,23 +239,51 @@ main {
   }
 }
 
+/* Responsive styling for screens at 768px and below */
 @media (max-width: 768px) {
-  .footer-content,
-  .footer-section,
-  .footer-logo {
+  .footer {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    margin-right: 0;
-    margin-bottom: 1rem;
-    text-align: center;
-    flex-basis: 100%;
+    padding: 2rem;
   }
 
-  .footer-logo {
-    order: -1; /* Place logo at the top */
+  .footer-column {
+    margin: 0;
+    padding: 0;
+    width: 100%; 
+  }
+
+  .footer-column .header-and-first-item,
+  .footer-column .first-item-and-below {
+    /* Remove any specific alignment styles */
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .footer-column h5,
+  .footer-column p,
+  .footer-column a {
+    text-align: center;
+    margin: 0.5rem 0;
+    width: 100%; 
+  }
+
+  .footer-logo h1 {
+    margin: 0;
+    align-self: center;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    width: 100%;
   }
 }
 
+/* On small screens */
 @media (min-width: 768px) {
   .footer-content {
     justify-content: space-around;
