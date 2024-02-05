@@ -59,15 +59,15 @@ const Services = () => {
               <strong>OUR MISSION</strong>
             </p>
             <p>
-              At our core, we are dedicated to meticulously planned and
-              harmoniously integrated designs.<br></br> Whether collaborating
-              with you on-site or remotely, our expertise encompasses New
-              Builds, Renovations, and Refurbishments in the Residential,
-              Commercial, Retail and Hospitality Sector. <br></br> Our mission
-              is to provide personalised interior design solutions that offer
-              exceptional value. <br></br> We are dedicated to exceeding
-              expectations in both quality and service, ensuring a seamless and
-              stress-free experience that saves you time
+              Dedicated to our mission of delivering exceptional value, we take
+              pride in offering personalized interior design solutions that
+              transcend conventional standards. Our commitment extends beyond
+              quality and service, ensuring a seamless and stress-free
+              experience that saves you time, whether working with you in person
+              or remotely. With expertise in crafting and revitalizing
+              residential and hospitality spaces, we excel in seamlessly
+              blending innovative functionality with meticulously curated
+              designs. This is what sets us apart!
             </p>
           </div>
           <div className="services-aligned-image">
@@ -97,9 +97,21 @@ const Services = () => {
             </div>
             <div className="services-description">
               <p>
-                Detail the services offered here. Explain the nature of the
-                projects, the approach taken by your company, and how you
-                differentiate yourself from the competition.
+                Embarking on a design project can initially feel overwhelming,
+                particularly if you find yourself short on time or uncertain
+                about your vision. The thought of orchestrating an entire team
+                to transform your space can be a daunting and we get that!<p></p> At
+                Honey & Hive Interiors, we're here to lift this burden, offering
+                our expertise to streamline the process and ensure a result that
+                surpasses your expectations. <p></p>We encourage you to engage H&H from
+                the very beginning, and from that point forward, we will take
+                care of the intricacies and the nitty gritty. <p></p>Our seamless
+                communication with architects, builders, trades and suppliers
+                ensures a collaborative effort, bringing your vision to life. We
+                truly believe that every space possesses inherent potential, and
+                our expertise lies in realizing this potential and bringing it
+                to fruition. Here is an overview of our design process when you
+                choose to partner with us.
               </p>
               <Link to="/contact" className="book-consultation-link">
                 Book A Consultation
