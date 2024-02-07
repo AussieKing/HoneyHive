@@ -64,7 +64,6 @@ We are building a website for "Honey and Hive", an interior design firm. The web
 - Creating a dynamic gallery with modal pop-ups for project details. [x]
 
 **Day 76-85: Authentication and User Management** []
-- Setting up secure user accounts and session management. []
 - Handling form submissions securely with Node.js and Express. []
 
 **Day 86-95: Backend Integration and Testing** []

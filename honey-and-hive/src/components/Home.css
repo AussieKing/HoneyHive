@@ -138,6 +138,10 @@ p {
 
 }
 
+.home-text-half h2 {
+  font-size: 1.5em;
+}
+
 .home-description {
   flex: 1; 
 }
