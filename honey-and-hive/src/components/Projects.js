@@ -35,15 +35,17 @@ const Projects = () => {
             const imageUrl = attributes.mainImage.data ? `http://localhost:1337${attributes.mainImage.data.attributes.url}` : '';
             return (
               <div className="project-item" key={project.id}>
-                <div className="project-image-container">
-                  {/* Update the image source to use the URL from Strapi */}
-                  <img src={imageUrl} alt={attributes.title} />
+              <div className="project-image-container">
+                {/* Update the image source to use the URL from Strapi */}
+                <img src={`http://localhost:1337${attributes.mainImage.data.attributes.url}`} alt={attributes.title} />
+                <Link to={`/projects/${attributes.slug}`}> {/* Update this line */}
                   <div className="project-hover-overlay">
                     <h1>View<em> Project</em></h1>
                   </div>
-                </div>
-                <p className="project-title">{attributes.title}</p>
+                </Link> {/* Update this line */}
               </div>
+              <p className="project-title">{attributes.title}</p>
+            </div>
             );
           })}
         </div>
