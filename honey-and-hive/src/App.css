@@ -135,10 +135,10 @@ body {
   color: var(--accent-color);
 }
 
-/* FontAwesome icon adjustments */
+/* Custom icon adjustments */
 .header-icon {
   cursor: pointer;
-  font-size: 1.2rem; 
+  max-height: 35px;
   color: #BB9C71;
 }
 

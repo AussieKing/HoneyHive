@@ -3,6 +3,7 @@ import { Navbar, Nav, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import menuIcon from '../assets/logo-single.png'; // Import your custom menu icon
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -38,22 +39,20 @@ const Header = () => {
     <>
       {/* Navbar structure */}
       <Navbar
-        // bg="transparent"
         variant="light"
         fixed="top"
         className={navbarScrolled ? "navbar scrolled" : "navbar"}
       >
         <Container>
-          {/* Menu icon (burger menu)*/}
-          <FontAwesomeIcon
-            icon={faBars}
+          {/* Menu icon (custom PNG image)*/}
+          <img
+            src={menuIcon}
+            alt="Menu"
             onClick={toggleMenu}
             className="header-icon"
           />
 
           <Navbar.Brand href="/" className="logo-font">
-            {" "}
-            {/* Because the logo is styled, we need to make sure the class here matches App.css */}
             HONEY & HIVE
           </Navbar.Brand>
 
@@ -68,7 +67,7 @@ const Header = () => {
 
       {/* Menu overlay */}
       <div className={`menu-overlay ${isMenuOpen ? "show" : ""}`}>
-      <FontAwesomeIcon
+        <FontAwesomeIcon
           icon={faTimes} // Using the 'times' icon as a close icon
           onClick={closeMenu} // Using the closeMenu function on click
           className="close-icon" // Assign a class for styling
