@@ -102,10 +102,10 @@
   }
 
   .navigation-links {
-    flex-direction: row; /* Adjust if you want vertical stacking */
-    justify-content: flex-start; /* Adjust based on layout needs */
+    flex-direction: row; 
+    justify-content: flex-start;
     padding-right: 0;
-    border-right: none; /* Ensure no right border */
+    border-right: none; 
     border-bottom: 2px solid #BB9C71;
     margin-bottom: 20px;
   }
@@ -113,12 +113,12 @@
   /* Ensure child elements don't overflow */
   .navigation-links div {
     padding: 0;
-    margin-right: 0; /* Adjust or remove margins that might cause overflow */
+    margin-right: 0; 
   }
 
   /* Adjust content area padding if needed */
   .content-area {
-    padding: 20px; /* Adjust based on your design needs */
+    padding: 20px; 
   }
 
   .privacy-content p,

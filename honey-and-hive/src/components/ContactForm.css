@@ -59,18 +59,18 @@
 /* Text area styling */
 .input,
 .textarea {
-  background-color: transparent !important; /* No background */
-  border: none !important; /* No border */
-  border-bottom: 1px solid #777 !important; /* Just a bottom border */
+  background-color: transparent !important; 
+  border: none !important; 
+  border-bottom: 1px solid #777 !important;
   color: white !important;
-  padding: 10px 0 !important; /* Padding top and bottom without sides */
+  padding: 10px 0 !important; 
 }
 
 .input:focus,
 .textarea:focus {
   outline: none !important;
   border-bottom: 1px solid #bb9c71 !important;
-  box-shadow: none !important; /* Removes the box shadow  */
+  box-shadow: none !important; 
 }
 
 /* Overrides the autofill background color in Webkit browsers like Safari */
@@ -90,7 +90,7 @@
 /* Invalid Input Styles */
 .input.is-invalid,
 .textarea.is-invalid {
-  border-bottom: 1px solid #ff0000; /* Red bottom border for invalid input */
+  border-bottom: 1px solid #ff0000; 
 }
 
 .input:-ms-input-placeholder,
@@ -180,7 +180,7 @@
 /* Large screens adjustment */
 @media (min-width: 1200px) {
   .contact-info h1 {
-    font-size: 2.5rem; /* Increase h1 size */
+    font-size: 2.5rem; 
   }
 
   .contact-info p,
@@ -188,11 +188,11 @@
   .contact-form .label,
   .contact-form .input,
   .contact-form .textarea {
-    font-size: 20px; /* Set font size to 20px */
+    font-size: 20px; 
   }
 
   .submit-button {
-    font-size: 20px; /* Increase submit button font size */
+    font-size: 20px; 
   }
 }
 

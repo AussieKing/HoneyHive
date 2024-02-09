@@ -72,7 +72,7 @@ p {
 /* Read more link style */
 .read-more-link {
   position: relative;
-  display: inline-block; /* This will shrink the container to the size of the text */
+  display: inline-block; 
   margin-bottom: 75px; 
   max-width: 20%;
 }
@@ -118,22 +118,22 @@ p {
 /* Content wrapper */
 .home-content-wrapper {
   display: flex;
-  flex-direction: row; /* Ensures that children are side by side */
-  justify-content: space-between; /* Adds space between the children */
-  align-items: center; /* Vertically aligns the children */
-  padding: 4em 0; /* Existing padding */
+  flex-direction: row; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 4em 0;
 }
 
 /* Home Title */
 .home-title {
-  margin-bottom: 20px; /* Adds space between the title and the description */
+  margin-bottom: 20px; 
 }
 
 /* Home Text Half */
 .home-text-half {
-  flex: 1; /* Allows the text section to fill the remaining space */
-  padding: 0 2em; /* Adds horizontal padding */
-  margin-right: 50px; /* Adds space between the text and the image */
+  flex: 1; 
+  padding: 0 2em;
+  margin-right: 50px;
   margin-left: 20px;
 
 }
@@ -148,19 +148,18 @@ p {
 
 /* Home Image Half */
 .home-image-half {
-  flex: 0 0 50%; /* Takes up half the width of its parent */
+  flex: 0 0 50%;
   margin-right: 0;
   max-width: 50%;
-  /* Ensure there's no padding or margin inside that could push the video away from the right edge */
   padding: 0;
 }
 
 /* Home Aligned Image and Video */
 .home-aligned-image img,
 .home-aligned-image video {
-  width: 95%; /* Ensures the video fills its container */
-  height: auto; /* Maintains aspect ratio */
-  display: block; /* Ensures it's a block-level element without inline properties */
+  width: 95%; 
+  height: auto; 
+  display: block; 
 }
 
 

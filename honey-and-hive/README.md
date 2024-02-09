@@ -29,6 +29,7 @@ We are building a website for "Honey and Hive", an interior design firm. The web
 - Dom React Router: For routing between pages.
 - Google fonts: For fonts. 
 - Strapi (Headless CMS): For managing project data (Projects page/portfolio).
+- Intersection observer : for effects when scrolling.
 
 # STRUCTURE
 
@@ -51,13 +52,13 @@ We are building a website for "Honey and Hive", an interior design firm. The web
 **Day 36-50: About Page** []
 - Developing the HTML/CSS structure. [x]
 - Integrating Handlebars for templating. [x]
-- Adding personal touch with JavaScript animations. []
+- Adding personal touch with JavaScript animations. [x]
 - Ensuring accessibility standards are met. []
 
-**Day 51-65: Services Page and Subsections** []
+**Day 51-65: Services Page and Subsections** [x]
 - Services page development with React.js components.[x]
 - Subsections for interior design and styling. [x]
-- Advanced state management with React hooks. []
+- Advanced state management with React hooks. [x]
 
 **Day 66-75: Projects Showcase** [x]
 - Displaying projects with a responsive grid layout. [x]

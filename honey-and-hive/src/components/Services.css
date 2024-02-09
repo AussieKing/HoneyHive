@@ -22,6 +22,40 @@
   background-color: var(--background-color);
 }
 
+/* em effect  */
+@keyframes popIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  80% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    color: #444;
+  }
+  50% {
+    color: #BB9C71;
+  }
+  100% {
+    color: #444;
+  }
+}
+
+.em-animate {
+  display: inline-block;
+  animation: popIn 0.6s ease-out, colorChange 4s infinite alternate;
+  cursor: pointer; 
+}
+
+
 /* Hero Section Styles */
 .services-hero {
   position: relative;
@@ -53,6 +87,7 @@
 .services-specialty-image {
   width: 100%;
   height: auto;
+  margin-bottom: 30px;
 }
 
 .services-hero-text {
@@ -126,6 +161,18 @@
   margin-right: 30px;
 }
 
+.services-specialties-list p {
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer; /* Indicates an interactive element */
+}
+
+.services-specialties-list p:hover {
+  transform: scale(1.05); 
+  color: #BB9C71; 
+}
+
+
+
 .services-content-wrapper {
   display: flex;
   justify-content: space-between;
@@ -186,12 +233,12 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  background-color: #e0d6cc; /* Same as in the About page */
+  background-color: #e0d6cc; 
   padding: 4em;
 }
 
 .interior-design-text {
-  flex: 1; /* Take up half the space */
+  flex: 1; 
   max-width: 50%;
   padding-right: 2em;
 }
@@ -202,18 +249,18 @@
 }
 
 .interior-design-text h2 {
-  margin-left: 0; /* Resets any left margin */
-  padding-left: 0; /* Resets any left padding */
-  text-align: left; /* Ensures text is aligned to the left */
+  margin-left: 0; 
+  padding-left: 0; 
+  text-align: left; 
 }
 
 .interior-design-text p {
   font-family: "Lato", sans-serif;
   list-style-type: none;
   padding-bottom: 5px;
-  margin-left: 0; /* Resets any left margin */
-  padding-left: 0; /* Resets any left padding */
-  text-align: left; /* Ensures text is aligned to the left */
+  margin-left: 0; 
+  padding-left: 0; 
+  text-align: left; 
 }
 
 .interior-design-phases h2 {
@@ -227,7 +274,7 @@
 }
 
 .interior-design-image {
-  flex: 1; /* Take up the other half of the space */
+  flex: 1; 
   max-width: 50%;
   height: 100%;
   margin-top: 115px;
@@ -261,23 +308,21 @@
 }
 
 .projects-carousel {
-  margin-bottom: 50px; /* Adds 50px margin to the bottom of the carousel */
+  margin-bottom: 50px; 
 }
 
 .swiper {
   width: 100%;
   height: 100%;
-  margin: 0 auto; /* Remove any unwanted margin */
-  padding: 0; /* Remove any unwanted padding */
-  height: auto; /* Adjust height to fit the content */
+  margin: 0 auto; 
+  padding: 0; 
+  height: auto; 
 }
 
 .swiper-slide {
   text-align: center;
   font-size: 18px;
   background: #fff;
-
-  /* Center slide contents vertically */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -301,8 +346,8 @@
 
 @media (min-width: 1024px) {
   .services-aligned-image {
-    width: 100%; /* Adjust the width as needed */
-    height: auto; /* Automatically adjust the height to maintain aspect ratio */
+    width: 100%; 
+    height: auto; 
   }
 }
 
@@ -384,20 +429,19 @@
   }
 
   .interior-design-image img {
-    width: 100%; /* Ensure image takes full width */
+    width: 100%; 
     margin: 0;
     padding: 0;
   }
 
   .interior-design-section {
-    flex-direction: column; /* Stack text and image vertically */
+    flex-direction: column; 
   }
 
   .interior-design-text h2,
   .interior-design-text p {
-    margin-left: 0; /* Ensure alignment is reset on mobile */
-    padding-left: 0; /* Ensure padding does not affect alignment */
-    /* Additional mobile-specific styles here if necessary */
+    margin-left: 0; 
+    padding-left: 0; 
   }
 
   .services-page {
@@ -406,7 +450,7 @@
 
   .projects-carousel,
   .about-contact {
-    margin: 0; /* Remove margins that could be causing white space */
-    padding: 0; /* Adjust padding to ensure consistency */
+    margin: 0; 
+    padding: 0;
   }
 }

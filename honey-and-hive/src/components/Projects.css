@@ -14,24 +14,24 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
-  margin-bottom: -50vh; /* Adjusts spacing for the following content */
+  margin-bottom: -50vh; 
 }
 
 /* Content Container */
 .content-container {
   position: relative;
-  z-index: 1; /* Ensures content is above the background */
+  z-index: 1;
   background: transparent;
-  padding-top: 50vh; /* Aligns start of content below the fixed background */
+  padding-top: 50vh; 
 }
 
 /* Project Titles and Categories */
 .project-title,
 .project-category {
   text-align: start;
-  text-transform: uppercase; /* Applies only to .project-title */
-  font-weight: bold; /* Applies only to .project-title */
-  margin-top: 8px; /* Standardized margin for consistency */
+  text-transform: uppercase; 
+  font-weight: bold;
+  margin-top: 8px;
 }
 
 /* Portfolio Title */
@@ -39,8 +39,14 @@
   font-family: "Kaisei Opti", serif;
   letter-spacing: -2.6px;
   text-align: center;
-  margin: 100px 40px 10px; /* Adjusts for top margin and horizontal alignment */
+  margin: 100px 40px 10px;
   background-color: transparent;
+}
+
+/* Project titles size */
+.projects-container .project-title{
+  font-size: 24px; 
+  font-family: Verdana, Geneva, Tahoma, sans-serif; 
 }
 
 /* Title Container */
@@ -54,10 +60,10 @@
 .projects-container {
   padding: 30px 40px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Creates a 3-column grid */
-  grid-gap: 20px; /* Space between grid items */
-  margin: 0 auto; /* Centers the grid */
-  background-color: #f5ece2; /* Matches title container background for consistency */
+  grid-template-columns: repeat(3, 1fr); 
+  grid-gap: 20px;
+  margin: 0 auto; 
+  background-color: #f5ece2;
 }
 
 /* Project Item Styles */
@@ -65,25 +71,25 @@
   width: 100%;
   height: auto;
   object-fit: cover;
-  aspect-ratio: 3 / 4; /* Ensures a consistent and more vertical aspect ratio */
+  aspect-ratio: 3 / 4;
 }
 
-/*! Overlay effect for project items */
+/* Overlay effect for project items */
 .project-item {
   position: relative;
-  overflow: hidden; /* Prevents the overlay from spilling outside the image */
-  cursor: pointer; /* Indicates the item is clickable */
+  overflow: hidden;
+  cursor: pointer; 
 }
 
 .project-image-container {
   position: relative;
-  overflow: hidden; /* Ensures the overlay doesn't spill outside this container */
+  overflow: hidden; 
 }
 
 .project-image-container img {
   width: 100%;
   height: auto;
-  display: block; /* Ensures the image doesn't have extra space below */
+  display: block;
 }
 
 .project-hover-overlay {
@@ -92,25 +98,25 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(245, 236, 226, 0.7); /* Semi-transparent overlay color */
+  background: rgba(245, 236, 226, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0; /* Overlay is transparent by default */
-  transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transitions for hover effects */
-  transform: scale(0); /* Overlay is scaled down initially */
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: scale(0); 
 }
 
 .project-image-container:hover .project-hover-overlay {
-  opacity: 1; /* Fully visible on hover */
-  transform: scale(1); /* Scales to normal size */
+  opacity: 1; 
+  transform: scale(1); 
 }
 
 .project-hover-overlay h1 {
-  color: #333; /* Title color */
-  font-size: 2rem; /* Title size */
-  background-color: transparent; /* No background for the title */
-  padding: 1rem 2rem; /* Padding inside the overlay */
+  color: #333; 
+  font-size: 2rem;
+  background-color: transparent;
+  padding: 1rem 2rem; 
 }
 
 
@@ -119,12 +125,12 @@
 @media (min-width: 1200px) {
   .project-title,
   .project-category {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 
 @media (max-width: 768px) {
   .projects-container {
-    grid-template-columns: 1fr; /* Changes the grid to a single column */
+    grid-template-columns: 1fr;
   }
 }

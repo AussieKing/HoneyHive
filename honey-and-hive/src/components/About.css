@@ -320,6 +320,10 @@
     margin-top: 0;
   }
 
+  .about-text-image {
+    margin-bottom: 20px;;
+  }
+
   .contact-left,
   .contact-right {
     max-width: 100%;

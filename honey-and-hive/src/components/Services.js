@@ -1,12 +1,12 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import "./Services.css";
 import servicesBackground from "../assets/services-background.jpg";
 import contactImage from "../assets/contact-image.jpg";
 import specialtyImage from "../assets/specialty-image.jpg";
 import smallerImage from "../assets/smaller-image.jpeg";
-import horizontalImage from "../assets/services-horizontal.jpg"; // Import the new image
-import designPhases from "../assets/design-phases.jpg"; // Import the new image
+import horizontalImage from "../assets/services-horizontal.jpg";
+import designPhases from "../assets/design-phases.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import carouselImage1 from "../assets/carousel-image-1.jpg";
@@ -15,8 +15,40 @@ import carouselImage3 from "../assets/carousel-image-3.jpg";
 import carouselImage4 from "../assets/carousel-image-4.jpg";
 import carouselImage5 from "../assets/carousel-image-5.jpg";
 import carouselImage6 from "../assets/carousel-image-6.jpg";
+import _ from "lodash"; 
+import { useInView } from 'react-intersection-observer';
+
 
 const Services = () => {
+  const swiperRef = useRef(null);
+  const [lastScrollY, setLastScrollY] = useState(window.scrollY);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const direction = window.scrollY > lastScrollY ? 'next' : 'prev';
+      if (swiperRef.current) {
+        if (direction === 'next') {
+          swiperRef.current.slideNext();
+        } else {
+          swiperRef.current.slidePrev();
+        }
+      }
+      setLastScrollY(window.scrollY);
+    };
+
+    // Throttle the scroll event to avoid performance issues
+    const throttledHandleScroll = _.throttle(handleScroll, 100);
+
+    window.addEventListener('scroll', throttledHandleScroll);
+
+    return () => window.removeEventListener('scroll', throttledHandleScroll);
+  }, [lastScrollY]);
+
+  const { ref, inView } = useInView({
+    triggerOnce: true, // Trigger animation once
+    threshold: 0.5,    // Trigger when 50% visible
+  });
+
   return (
     <div className="services-page">
       <div
@@ -38,9 +70,9 @@ const Services = () => {
             />
           </div>
           <div className="services-hero-text">
-            <h1>
-              Serving <em>Your </em>Vision.
-            </h1>
+          <h1 ref={ref}>
+        Serving <em className={inView ? 'em-animate' : ''}>Your</em> Vision.
+      </h1>
           </div>
         </div>
         <div className="services-subcontent">
@@ -52,6 +84,7 @@ const Services = () => {
               <p>RESIDENTIAL DESIGN</p>
               <p>RETAIL DESIGN</p>
               <p>HOSPITALITY DESIGN</p>
+              <p>PROJECT MANAGMENT</p>
             </div>
           </div>
           <div className="title-div">
@@ -225,43 +258,30 @@ const Services = () => {
         </div>
 
         <div className="projects-section">
-          <div className="projects-header">
-            <h1>
-              Portfolio <em>Projects</em>
-            </h1>
-          </div>
-          <div className="projects-carousel">
-            <Swiper
-              spaceBetween={20}
-              slidesPerView={1}
-              breakpoints={{
-                768: {
-                  slidesPerView: 3,
-                  spaceBetween: 20,
-                },
-              }}
-              onSlideChange={() => console.log("slide change")}
-              onSwiper={(swiper) => console.log(swiper)}
-            >
-              <SwiperSlide>
-                <img src={carouselImage1} alt="Carousel Image 1" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={carouselImage2} alt="Carousel Image 2" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={carouselImage3} alt="Carousel Image 3" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={carouselImage4} alt="Carousel Image 4" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={carouselImage5} alt="Carousel Image 5" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={carouselImage6} alt="Carousel Image 6" />
-              </SwiperSlide>
-            </Swiper>
+        <div className="projects-header">
+          <h1>
+            Portfolio <em>Projects</em>
+          </h1>
+        </div>
+        <div className="projects-carousel">
+          <Swiper
+            onSwiper={(swiper) => (swiperRef.current = swiper)}
+            spaceBetween={20}
+            slidesPerView={1}
+            breakpoints={{
+              768: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+              },
+            }}
+          >
+            <SwiperSlide><img src={carouselImage1} alt="Carousel Image 1" /></SwiperSlide>
+            <SwiperSlide><img src={carouselImage2} alt="Carousel Image 2" /></SwiperSlide>
+            <SwiperSlide><img src={carouselImage3} alt="Carousel Image 3" /></SwiperSlide>
+            <SwiperSlide><img src={carouselImage4} alt="Carousel Image 4" /></SwiperSlide>
+            <SwiperSlide><img src={carouselImage5} alt="Carousel Image 5" /></SwiperSlide>
+            <SwiperSlide><img src={carouselImage6} alt="Carousel Image 6" /></SwiperSlide>
+          </Swiper>
           </div>
         </div>
 

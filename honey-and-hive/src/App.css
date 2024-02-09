@@ -47,7 +47,7 @@ body {
 
 /* When the user has scrolled */
 .navbar.scrolled {
-  background-color: rgba(245, 236, 226, 0.8); /* Semi-transparent background */
+  background-color: rgba(245, 236, 226, 0.8); 
   backdrop-filter: blur(10px);
   /* -webkit-backdrop-filter: blur(10px); */
 }
@@ -68,8 +68,8 @@ body {
 
 .logo-font {
   font-family: "Benguiat", "Times New Roman", Times, serif !important;
-  color: var(--accent-color) !important; /* Gold color */
-  font-size: 2rem !important; /* Increased font size */
+  color: var(--accent-color) !important; 
+  font-size: 2rem !important; 
 }
 
 /* Menu overlay styles */
@@ -123,12 +123,12 @@ body {
 /* Close button */
 .close-icon {
   position: absolute;
-  top: 20px; /* Adjust as necessary */
-  right: 20px; /* Adjust as necessary */
-  font-size: 30px; /* Adjust as necessary */
-  cursor: pointer; /* Changes the mouse cursor to indicate it's clickable */
-  color: #fff; /* Adjust color as necessary */
-  z-index: 10; /* Ensures the icon is above other elements */
+  top: 20px; 
+  right: 20px; 
+  font-size: 30px; 
+  cursor: pointer; 
+  color: #fff;
+  z-index: 10; 
 }
 
 .close-icon:hover {
@@ -144,7 +144,7 @@ body {
 
 /* Padding for main content */
 main {
-  padding-top: 30px; /* Adjust as needed for your layout */
+  padding-top: 30px;
 }
 
 /* Image for the contact page */
@@ -205,36 +205,35 @@ main {
 }
 
 .footer-logo {
-  text-align: center; /* Center everything inside the logo column */
-  /* ... other styles ... */
+  text-align: center; 
 }
 
 .footer-icon {
-  display: block; /* Make sure the image is a block-level element to allow for margins */
-  margin: 0 auto; /* Auto margins on the sides center block-level elements horizontally */
-  max-width: 100px; /* Adjust the width as necessary */
-  height: auto; /* Keep the image's aspect ratio */
-  margin-top: 1rem; /* Space between the logo text and the icon */
+  display: block; 
+  margin: 0 auto;
+  max-width: 100px; 
+  height: auto; 
+  margin-top: 1rem;
 }
 
 
 .header-and-first-item {
   display: flex;
-  align-items: flex-start; /* Align items to the top */
+  align-items: flex-start; 
   color: #555;
 }
 
 .header-and-first-item h5 {
-  margin-right: 20px; /* Adjust spacing between the h5 and the container */
+  margin-right: 20px; 
 }
 
 .first-item-and-below p, .first-item-and-below p a {
-  margin-bottom: 0.5rem; /* Adjusts spacing between paragraphs */
-  display: block; /* Ensure links also appear in block layout */
+  margin-bottom: 0.5rem;
+  display: block; 
 }
 
 .first-item-and-below a:not(p a) {
-  display: block; /* Non-paragraph links should also appear in block layout */
+  display: block; 
 }
 
 /* Responsive styling */
@@ -330,7 +329,6 @@ main {
 
 @media (max-width: 768px) {
   .logo-font {
-    margin-top: 10px; /* Adds 10px space above the text */
-    /* or padding-top: 10px; if you prefer padding */
+    margin-top: 10px; 
   }
 }

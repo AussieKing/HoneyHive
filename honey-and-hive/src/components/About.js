@@ -21,10 +21,11 @@ const About = () => {
           Crafting Interiors, from Brisbane and Beyond:<p></p> Honey & Hive Interiors - <em>If you can see it, it exists.</em>
           </h1>
           <div className="content-with-vision">
-            <div className="vision-title">
+            {/* <div className="vision-title">
               <div className="our-vision-text">OUR ETHOS</div>
-            </div>
+            </div> */}
             <div className="text-and-button">
+              <p><strong>OUR ETHOS</strong></p>
               <p>
                 At our core, we focus on crafting spaces that blend an organic
                 feel with sophistication, always aiming for designs that are
