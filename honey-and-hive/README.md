@@ -28,6 +28,7 @@ We are building a website for "Honey and Hive", an interior design firm. The web
 - Insomnia/Postman (not an npm package): Used for testing API endpoints.
 - Dom React Router: For routing between pages.
 - Google fonts: For fonts. 
+- Strapi (Headless CMS): For managing project data (Projects page/portfolio).
 
 # STRUCTURE
 
@@ -58,28 +59,27 @@ We are building a website for "Honey and Hive", an interior design firm. The web
 - Subsections for interior design and styling. [x]
 - Advanced state management with React hooks. []
 
-**Day 66-75: Projects Showcase** []
+**Day 66-75: Projects Showcase** [x]
 - Displaying projects with a responsive grid layout. [x]
-- Using a headless CMS or API for project data. []
+- Using a headless CMS or API for project data. [x]
 - Creating a dynamic gallery with modal pop-ups for project details. [x]
 
-**Day 76-85: Authentication and User Management** []
-- Handling form submissions securely with Node.js and Express. []
+**Day 76-85: Authentication and User Management** [x]
+- Handling form submissions securely with Node.js and Express. [x]
 
 **Day 86-95: Backend Integration and Testing** []
 - Integrating a MongoDB or MySQL database for storing inquiries and bookings. [x]
 - Developing RESTful API endpoints for CRUD operations. [x]
 - Unit and functional testing of components and backend. []
 
-**Day 96-100: Finalization and Launch Preparation**
-- Conducting final tests and debugging.
-- Preparing documentation and commenting code.
-- Setting up continuous integration for deployment.
-- Conducting a soft launch to collect feedback.
-- Final adjustments and official launch.
+**Day 96-100: Finalization and Launch Preparation** []
+- Conducting final tests and debugging. []
+- Preparing documentation and commenting code. []
+- Setting up continuous integration for deployment. []
+- Conducting a soft launch to collect feedback. []
+- Final adjustments and official launch. []
 
 # TODO
-- Make the website responsive (About page, Services page, Projects page, Contact page)
 - Before production, change the Authorized redirect URIs in the Google API Console to the production URL (https://www.honeyandhiveinteriors.com/auth/google/callback . In https://console.cloud.google.com/apis/credentials)
 - Change the refresh token in the .env file to the production refresh token (and store in a database)
 - Change the client ID and client secret in the .env file to the production client ID and client secret (and store in a database)

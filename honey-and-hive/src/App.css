@@ -221,6 +221,7 @@ main {
 .header-and-first-item {
   display: flex;
   align-items: flex-start; /* Align items to the top */
+  color: #555;
 }
 
 .header-and-first-item h5 {
