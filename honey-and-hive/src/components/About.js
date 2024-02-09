@@ -21,9 +21,6 @@ const About = () => {
           Crafting Interiors, from Brisbane and Beyond:<p></p> Honey & Hive Interiors - <em>If you can see it, it exists.</em>
           </h1>
           <div className="content-with-vision">
-            {/* <div className="vision-title">
-              <div className="our-vision-text">OUR ETHOS</div>
-            </div> */}
             <div className="text-and-button">
               <p><strong>OUR ETHOS</strong></p>
               <p>

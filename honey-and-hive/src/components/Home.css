@@ -69,51 +69,84 @@ p {
   margin-top: 50px
 }
 
+/* Key Offerings */
+.key-offerings-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the start of the flex container */
+} 
+
+.key-offerings-title a {
+  display: block; /* This will place each link on a new line */
+  margin-bottom: 10px; /* Adjust the space between the links as needed */
+}
+
+.key-offerings-title .read-more-link {
+  margin-left: 60px; /* Adjust the value as needed */
+}
+
 /* Read more link style */
 .read-more-link {
   position: relative;
-  display: inline-block; 
-  margin-bottom: 75px; 
-  max-width: 20%;
+  display: inline-block;
+  margin-bottom: 75px;
+  padding: 0.5em 1em; /* Adjust padding as needed */
+  text-decoration: none; /* Removes underline from links */
+  color: var(--text-color); /* Ensures the text color is consistent */
+  background-color: transparent; /* Ensures background is transparent */
+  transition: color 0.5s ease; /* Smooth transition for color changes */
 }
 
 /* Hover Animations for Links */
-.read-more-link::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  bottom: 0;
-  left: 0;
-  background-color: #BB9C71; 
-  visibility: hidden;
-  border-radius: 5px;
-  transform: scaleX(0);
-  transition: all 0.3s ease-in-out 0s;
+/* Read more link style adjustments */
+.key-offerings-title .read-more-link {
+  position: relative;
+  display: inline-block; /* Use flex to better control the positioning of pseudo-elements */
+  align-items: center; /* Align items (including pseudo-elements) vertically */
+  margin-bottom: 75px;
+  padding: 0; /* Remove padding to ensure underline starts at text */
+  text-decoration: none; /* Removes underline from links */
+  color: var(--text-color); /* Ensures the text color is consistent */
+  background-color: transparent; /* Ensures background is transparent */
 }
 
-.read-more-link::before {
+
+/* The underline effect */
+.key-offerings-title .read-more-link .read-more-link::after {
+  content: '';
+  position: absolute;
+  left: 0; /* Start at the very left of the element */
+  bottom: -5px; /* Adjust to the desired position below the text */
+  height: 2px;
+  width: 0;
+  background: #BB9C71;
+  transition: width 0.3s ease-in-out;
+}
+
+/* When hovering over the link, extend the underline to the full width of the text */
+.key-offerings-title .read-more-link .read-more-link:hover::after {
+  width: 100%;
+}
+
+/* Adjust the circle position */
+.key-offerings-title .read-more-link .read-more-link::before {
   content: '';
   position: absolute;
   top: 50%;
-  right: -20px; 
+  right: -20px; /* Adjust if necessary */
   transform: translate(0, -50%);
-  width: 8px; 
-  height: 8px; 
-  background-color: transparent;
-  border: 2px solid #BB9C71; 
+  width: 8px;
+  height: 8px;
+  border: 2px solid #BB9C71;
   border-radius: 50%;
-  transition: all 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 
-.read-more-link:hover::after {
-  visibility: visible;
-  transform: scaleX(1);
+/* Change the circle's background on hover */
+.key-offerings-title .read-more-link .read-more-link:hover::before {
+  background-color: #BB9C71;
 }
 
-.read-more-link:hover::before {
-  background-color: #BB9C71; 
-}
 
 /* Content wrapper */
 .home-content-wrapper {
@@ -264,7 +297,7 @@ p {
   .home-page p,
   .home-page a,
   .home-page .book-consultation-link {
-    font-size: 18px;
+    font-size: 17px;
   }
 }
 

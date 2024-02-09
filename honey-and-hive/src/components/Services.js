@@ -71,7 +71,7 @@ const Services = () => {
           </div>
           <div className="services-hero-text">
           <h1 ref={ref}>
-        Serving <em className={inView ? 'em-animate' : ''}>Your</em> Vision.
+        Serving <p></p><em className={inView ? 'em-animate' : ''}>Your</em><p></p> Vision.
       </h1>
           </div>
         </div>
@@ -167,7 +167,7 @@ const Services = () => {
             </p>
             <div className="interior-design-phases">
               <div className="phase-container">
-                <h2>PHASE ZERO</h2>
+                <h2>PHASE 0</h2>
                 <div>
                   <p>INITIAL CONSULTATION</p>
                   <p>
@@ -183,7 +183,7 @@ const Services = () => {
                 </div>
               </div>
               <div className="phase-container">
-                <h2>PHASE ONE</h2>
+                <h2>PHASE 1</h2>
                 <div>
                   <p>CONCEPT DESIGN</p>
                   <p>
@@ -196,7 +196,7 @@ const Services = () => {
                 </div>
               </div>
               <div className="phase-container">
-                <h2>PHASE TWO</h2>
+                <h2>PHASE 2</h2>
                 <div>
                   <p>DESIGN DEVELOPMENT</p>
                   <p>
@@ -209,7 +209,7 @@ const Services = () => {
                 </div>
               </div>
               <div className="phase-container">
-                <h2>PHASE THREE</h2>
+                <h2>PHASE 3</h2>
                 <div>
                   <p>DESIGN DOCUMENTATION</p>
                   <p>
@@ -223,7 +223,7 @@ const Services = () => {
                 </div>
               </div>
               <div className="phase-container">
-                <h2>PHASE FOUR</h2>
+                <h2>PHASE 4</h2>
                 <div>
                   <p>CONSTRUCTION</p>
                   <p>
@@ -237,7 +237,7 @@ const Services = () => {
                 </div>
               </div>
               <div className="phase-container">
-                <h2>PHASE FIVE</h2>
+                <h2>PHASE 5</h2>
                 <div>
                   <p>FURNITURE & STYLING</p>
                   <p>
