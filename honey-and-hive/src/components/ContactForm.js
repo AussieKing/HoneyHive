@@ -128,7 +128,7 @@ const ContactForm = ({ onSubmitContact }) => {
           {/* TODO: link to google maps */}
           <p>BRISBANE</p>
           <p>Main Warehouse</p>
-          <p>0427 766 288</p>
+          <p><a href="tel:+61427766288">0427766288</a></p>
           <p>ashley@honeyandhiveinteriors.com</p>
         </div>
       </div>

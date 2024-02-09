@@ -1,8 +1,8 @@
 import React from "react";
 import "../App.css";
 import { Container, Row, Col } from "react-bootstrap";
-import IconV1 from '../assets/Icon v1.png';
-
+import IconV1 from "../assets/Icon v1.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -31,15 +31,26 @@ const Footer = () => {
                 <strong>CONTACT</strong>
               </h5>
               <div className="first-item-and-below">
-                <p>0427766288</p>
-                <p>Email Us</p>
+                <p><a href="tel:+61427766288">Call Us</a></p>
+                <p><a href="mailto:ashley@honeyandhiveinteriors.com">Email Us</a></p>
               </div>
             </div>
           </Col>
 
           {/* LOGO Column */}
           <Col xs={12} md={2} className="footer-column footer-logo">
-            <h1>H&H</h1>
+            <h1>
+              <Link
+                to="/home"
+                style={{
+                  color: "inherit",
+                  textDecoration: "inherit",
+                  fontSize: "inherit",
+                }}
+              >
+                H&H
+              </Link>
+            </h1>
             <img src={IconV1} alt="Icon" className="footer-icon" />
           </Col>
 
