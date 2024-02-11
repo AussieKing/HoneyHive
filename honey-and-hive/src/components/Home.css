@@ -253,8 +253,9 @@ p {
 
 .key-offerings-image img {
   width: 100%; 
+  max-height: 400px;
   height: auto; 
-  max-width: none; 
+  object-fit: cover;
 }
 
 /* Extend underline hover effect for read-more-link */
@@ -350,6 +351,20 @@ p {
   /* Reorder the hero content so the image is on top and the text is below */
   .home-hero-content {
     flex-direction: column-reverse;
+  }
+
+  .home-content-wrapper, .projects-section .projects-header {
+    padding-top: 0px;
+    margin-top: 0px;
+  }
+
+  .home-content-wrapper, .title-div .read-more-link {
+    padding-bottom:0px;
+    margin-bottom:0px;
+  }
+
+  .key-offerings-title h1 {
+    padding-left: 0;
   }
 
   /* Adjust the home content wrapper to stack children vertically */

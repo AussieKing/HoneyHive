@@ -137,6 +137,7 @@ const About = () => {
       <div className="about-contact">
         <div className="contact-left">
           <h1>Get In Touch</h1>
+          <p></p>
           <p>We look forward to chatting about your project.</p>
           <Link to="/contact" className="book-consultation-link">
             Book A Consultation

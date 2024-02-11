@@ -386,6 +386,10 @@
     max-width: 100%;
   }
 
+  .services-hero-text {
+    font-size: 0.8em;
+  }
+
   .services-text-half {
     padding: 1em;
   }
@@ -419,6 +423,18 @@
     margin-right: 0;
   }
 
+  .services-hero-text h1 {
+    font-size: 3em;
+  }
+
+  .interior-design-text h1, .projects-section .projects-header h1 {
+    font-size: 2em;
+  }
+
+  .title-div p, .services-text-half .services-title p strong, .services-description title, .services-description p, .interior-design-text p,.interior-design-text h2, .projects-section .projects-header p {
+    font-size: 0.9em;
+  }
+
   .services-text-half {
     flex-direction: column;
   }
@@ -446,6 +462,15 @@
 
   .services-page {
     margin-bottom: -20px;
+  }
+
+  .services-title, .services-description {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .projects-section {
+    padding-top: 30px;
   }
 
   .projects-carousel,

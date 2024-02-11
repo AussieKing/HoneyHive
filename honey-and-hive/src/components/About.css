@@ -20,7 +20,7 @@
 .about-hero {
   position: relative;
   height: 100vh;
-  background: url("../assets/about-background.jpg") no-repeat center center
+  background: url("../assets/about-background.PNG") no-repeat center center
     fixed;
   background-size: cover;
 }
@@ -40,7 +40,7 @@
 /* Image styling within content section */
 .about-text-image {
   width: 40%;
-  height: 300px;
+  height: 500px;
   background: url("../assets/about-1.jpg") no-repeat center center;
   background-size: cover;
   margin-right: 20px;
@@ -283,7 +283,14 @@
 .contact-right img {
   width: 100%;
   height: auto;
+  max-height: 800px;
+  object-fit: cover;
 }
+
+/* width: 100%; 
+max-height: 400px;
+height: auto; 
+object-fit: cover; */
 
 .book-consultation-link {
   /* Styles for the book consultation link */

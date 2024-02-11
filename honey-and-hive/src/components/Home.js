@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
-import homeBackground from "../assets/home-background.jpg";
+import homeBackground from "../assets/home-background.PNG";
 import contactImage from "../assets/contact-image.jpg";
 import specialtyImage from "../assets/home-specialty-image.jpg";
 import video1 from "../assets/video-1.mp4";
@@ -37,8 +37,8 @@ const Home = () => {
           </div>
           <div className="home-hero-text">
             <h1>
-              We create earthy and sophisticated spaces with an emphasis on{" "}
-              <em>timeless </em> and considered design.
+              We create earthy and considerate spaces with an emphasis on{" "}
+              <em>timeless and considered</em> design.
             </h1>
           </div>
         </div>
@@ -155,7 +155,7 @@ const Home = () => {
           <div className="key-offerings-content">
             <div className="key-offerings-image">
               <img
-                src={require("../assets/key-offerings.jpg")}
+                src={require("../assets/key-offerings.PNG")}
                 alt="Key Offerings"
               />
             </div>
