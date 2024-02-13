@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 import homeBackground from "../assets/home-background.PNG";
@@ -15,6 +15,18 @@ import carouselImage5 from "../assets/carousel-image-5.jpg";
 import carouselImage6 from "../assets/carousel-image-6.jpg";
 
 const Home = () => {
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:1337/api/projects?populate=*")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data); // It's always a good practice to log and check the structure
+        setProjects(data.data); // Assuming the structure is the same as in Projects.js
+      })
+      .catch((error) => console.error("Error fetching data: ", error));
+  }, []);
+
   return (
     <div className="home-page">
       <div
@@ -45,9 +57,7 @@ const Home = () => {
 
         <div className="title-div">
           <h2>
-            LET’S COLLABORATE TO ELEVATE YOUR SPACE{" "}
-            <p></p>
-            
+            LET’S COLLABORATE TO ELEVATE YOUR SPACE <p></p>
           </h2>
           <p>
             Embrace the essence of your imagination and let Honey & Hive
@@ -118,34 +128,33 @@ const Home = () => {
           <div className="projects-carousel">
             <Swiper
               spaceBetween={20}
-              slidesPerView={1} 
+              slidesPerView={1}
               breakpoints={{
                 768: {
-                  slidesPerView: 3, 
+                  slidesPerView: 3,
                   spaceBetween: 20,
                 },
               }}
               onSlideChange={() => console.log("slide change")}
               onSwiper={(swiper) => console.log(swiper)}
             >
-              <SwiperSlide>
-                <img src={carouselImage1} alt="Carousel Image 1" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={carouselImage2} alt="Carousel Image 2" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={carouselImage3} alt="Carousel Image 3" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={carouselImage4} alt="Carousel Image 4" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={carouselImage5} alt="Carousel Image 5" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={carouselImage6} alt="Carousel Image 6" />
-              </SwiperSlide>
+              {projects.map((project) => {
+                const { attributes } = project;
+                const imageUrl = attributes.mainImage.data
+                  ? `http://localhost:1337${attributes.mainImage.data.attributes.url}`
+                  : "";
+                return (
+                  <SwiperSlide key={project.id} className="carousel-slide">
+                    <Link to={`/projects/${project.attributes.slug}`}>
+                      {" "}
+                      <img src={imageUrl} alt={attributes.title} />
+                      <div className="carousel-hover-overlay">
+                        <h1><em>View</em> Project</h1>
+                      </div>
+                    </Link>
+                  </SwiperSlide>
+                );
+              })}
             </Swiper>
           </div>
         </div>
@@ -170,7 +179,6 @@ const Home = () => {
                 INTERIOR STYLING
               </Link>
             </div>
-            
           </div>
         </div>
 

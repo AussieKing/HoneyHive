@@ -266,6 +266,11 @@ p, h1, .first-section .project-title {
 
   .strapi-fields {
     padding-right: 0px;
+    padding-left: 0px;
     margin-left: 0px;
+  }
+
+  .content-with-images {
+    padding-bottom: 0px;
   }
 }

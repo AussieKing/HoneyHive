@@ -388,6 +388,7 @@
 
   .services-hero-text {
     font-size: 0.8em;
+    padding: 0px;
   }
 
   .services-text-half {
@@ -477,5 +478,9 @@
   .about-contact {
     margin: 0; 
     padding: 0;
+  }
+
+  .book-consultation-link {
+    margin-left: 0;
   }
 }

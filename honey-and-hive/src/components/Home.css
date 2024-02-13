@@ -208,6 +208,53 @@ p {
   object-fit: cover;
 }
 
+/* Carousel Slide Styling for Uniformity and Hover Effect */
+.carousel-slide {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  height: 320px !important; /* Set a fixed height for uniformity */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-slide img {
+  width: auto !important;
+  height: 100% !important;
+  min-width: 100% !important;
+  object-fit: cover !important; /* Ensures the image covers the tile while maintaining aspect ratio */
+}
+
+.carousel-hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(245, 236, 226, 0.7); /* Semi-transparent overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  visibility: hidden;
+}
+
+.carousel-slide:hover .carousel-hover-overlay {
+  opacity: 1;
+  visibility: visible; /* Make overlay visible on hover */
+}
+
+.carousel-hover-overlay h1 {
+  color: var(--text-color); /* Use existing color variable for consistency */
+  font-size: 2rem;
+  text-align: center;
+}
+
+
+
 /* Key Offerings Section */
 .key-offerings-container {
   background-color: rgb(224, 214, 204); 
