@@ -9,9 +9,8 @@ import horizontalImage from "../assets/services-horizontal.PNG";
 import designPhases from "../assets/design-phases.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import _ from "lodash"; 
-import { useInView } from 'react-intersection-observer';
-
+import _ from "lodash";
+import { useInView } from "react-intersection-observer";
 
 const Services = () => {
   const [projects, setProjects] = useState([]);
@@ -28,7 +27,7 @@ const Services = () => {
 
   const { ref, inView } = useInView({
     triggerOnce: true, // Trigger animation once
-    threshold: 0.5,    // Trigger when 50% visible
+    threshold: 0.5, // Trigger when 50% visible
   });
 
   return (
@@ -52,9 +51,13 @@ const Services = () => {
             />
           </div>
           <div className="services-hero-text">
-          <h1 ref={ref}>
-        Serving <p></p><em className={inView ? 'em-animate' : ''}>Your</em><p></p> Vision.
-      </h1>
+            <h1 ref={ref}>
+              <span className="line line1">Serving</span>
+              <span className="line line2">
+                <em className={inView ? "em-animate" : ""}>Your</em>
+              </span>
+              <span className="line line3">Vision.</span>
+            </h1>
           </div>
         </div>
         <div className="services-subcontent">
@@ -115,21 +118,21 @@ const Services = () => {
                 Embarking on a design project can initially feel overwhelming,
                 particularly if you find yourself short on time or uncertain
                 about your vision. <p></p>
-                The thought of orchestrating an entire team
-                to transform your space can be a daunting and we get that!<p></p> 
-                At Honey & Hive Interiors, we're here to lift this burden, offering
-                our expertise to streamline the process and ensure a result that
-                surpasses your expectations. <p></p>
-                We encourage you to engage H&H from
-                the very beginning, and from that point forward, we will take
-                care of the intricacies and the nitty gritty. <p></p>
-                Our seamless communication with architects, builders, trades and suppliers
-                ensures a collaborative effort, bringing your vision to life. We
-                truly believe that every space possesses inherent potential, and
-                our expertise lies in realizing this potential and bringing it
-                to fruition. <p></p>
-                Here is an overview of our design process when you
-                choose to partner with us.
+                The thought of orchestrating an entire team to transform your
+                space can be a daunting and we get that!<p></p>
+                At Honey & Hive Interiors, we're here to lift this burden,
+                offering our expertise to streamline the process and ensure a
+                result that surpasses your expectations. <p></p>
+                We encourage you to engage H&H from the very beginning, and from
+                that point forward, we will take care of the intricacies and the
+                nitty gritty. <p></p>
+                Our seamless communication with architects, builders, trades and
+                suppliers ensures a collaborative effort, bringing your vision
+                to life. We truly believe that every space possesses inherent
+                potential, and our expertise lies in realizing this potential
+                and bringing it to fruition. <p></p>
+                Here is an overview of our design process when you choose to
+                partner with us.
               </p>
               <Link to="/contact" className="book-consultation-link">
                 Book A Consultation
@@ -243,12 +246,12 @@ const Services = () => {
         </div>
 
         <div className="projects-section">
-        <div className="projects-header">
-          <h1>
-            Portfolio <em>Projects</em>
-          </h1>
-        </div>
-        <div className="projects-carousel">
+          <div className="projects-header">
+            <h1>
+              Portfolio <em>Projects</em>
+            </h1>
+          </div>
+          <div className="projects-carousel">
             <Swiper
               spaceBetween={20}
               slidesPerView={1}
@@ -272,7 +275,9 @@ const Services = () => {
                       {" "}
                       <img src={imageUrl} alt={attributes.title} />
                       <div className="carousel-hover-overlay">
-                        <h1>View <em>Project</em></h1>
+                        <h1>
+                          View <em>Project</em>
+                        </h1>
                       </div>
                     </Link>
                   </SwiperSlide>

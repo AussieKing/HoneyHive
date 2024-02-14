@@ -1,10 +1,17 @@
 import React, { useState } from "react";
 import "./About.css";
 import { Link } from "react-router-dom";
+import { useInView } from 'react-intersection-observer';
 import founderImage from "../assets/founder-image.jpg";
 import contactImage from "../assets/contact-image.jpg";
 
 const About = () => {
+
+  const { ref, inView } = useInView({
+    triggerOnce: true, 
+    threshold: 0.5,    
+  });
+
   const [readMore, setReadMore] = useState(false);
 
   const handleReadMoreClick = () => {
@@ -62,7 +69,7 @@ const About = () => {
         <div className="founders-left">
           <h1>Meet the mind</h1>
           <h1>
-            <em> behind </em>
+          <em ref={ref} className={inView ? 'em-animate' : ''}> behind </em>
             <p>Honey and Hive.</p>
           </h1>
         </div>

@@ -122,6 +122,25 @@
   margin-bottom: 50px;
   font-size: 3em;
   color: var(--text-color);
+  text-align: left;
+}
+
+/* Individual line styles */
+.services-hero-text .line {
+  display: block; 
+  margin-bottom: 10px; 
+}
+
+.services-hero-text .line1 {
+  margin-left: 0;
+}
+
+.services-hero-text .line2 {
+  margin-left: 25px; 
+}
+
+.services-hero-text .line3 {
+  margin-left: 55px; 
 }
 
 /* Title and Description Styles */
