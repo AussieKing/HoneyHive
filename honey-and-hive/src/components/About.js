@@ -129,10 +129,6 @@ const About = () => {
         </div>
       </div>
 
-      {/* <div className="about-press">
-        <p>Our work in the press...</p>
-      </div> */}
-
       {/* Contact sectiom*/}
       <div className="about-contact">
         <div className="contact-left">

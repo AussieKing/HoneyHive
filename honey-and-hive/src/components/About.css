@@ -52,6 +52,7 @@
   display: flex;
   flex-direction: column;
   flex: 1;
+  /* margin-top: 85px; */
   margin-left: 20px;
   color: #444;
 }
@@ -347,6 +348,7 @@ object-fit: cover; */
 @media only screen and (min-width: 1200px) {
 .about-text-content , .about-contact {
   font-size: 22px;
+  margin-top: 85px;
 }
 
   .founders-left {

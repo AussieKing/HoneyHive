@@ -7,12 +7,6 @@ import specialtyImage from "../assets/home-specialty-image.jpg";
 import video1 from "../assets/video-1.mp4";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
-import carouselImage1 from "../assets/carousel-image-1.jpg";
-import carouselImage2 from "../assets/carousel-image-2.jpg";
-import carouselImage3 from "../assets/carousel-image-3.jpg";
-import carouselImage4 from "../assets/carousel-image-4.jpg";
-import carouselImage5 from "../assets/carousel-image-5.jpg";
-import carouselImage6 from "../assets/carousel-image-6.jpg";
 
 const Home = () => {
   const [projects, setProjects] = useState([]);
@@ -149,7 +143,7 @@ const Home = () => {
                       {" "}
                       <img src={imageUrl} alt={attributes.title} />
                       <div className="carousel-hover-overlay">
-                        <h1><em>View</em> Project</h1>
+                        <h1>View <em>Project</em></h1>
                       </div>
                     </Link>
                   </SwiperSlide>

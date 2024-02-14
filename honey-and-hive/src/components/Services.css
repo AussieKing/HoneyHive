@@ -85,9 +85,10 @@
 }
 
 .services-specialty-image {
-  width: 100%;
-  height: auto;
-  margin-bottom: 30px;
+  width: auto; 
+  max-height: 700px; 
+  display: block; 
+  margin: 0 auto; 
 }
 
 .services-hero-text {
@@ -166,12 +167,11 @@
   cursor: pointer; /* Indicates an interactive element */
 }
 
+/* Hover effect */
 .services-specialties-list p:hover {
   transform: scale(1.05); 
   color: #BB9C71; 
 }
-
-
 
 .services-content-wrapper {
   display: flex;
@@ -186,8 +186,10 @@
 }
 
 .services-horizontal-image {
-  width: 100%;
-  height: auto;
+  width: auto; 
+  max-height: 680px; 
+  display: block; 
+  margin: 0 auto; 
 }
 
 .services-text-half {
@@ -285,6 +287,14 @@
   height: auto;
 }
 
+/* Hover effect */
+.interior-design-phases h2:hover {
+  transform: scale(1.05);
+  color: #BB9C71;
+  cursor: pointer; /* Optional: if you want the cursor to change to indicate interactivity */
+  transition: transform 0.3s ease, color 0.3s ease; /* Ensures smooth transition */
+}
+
 /* Phase Container Styles */
 .phase-container {
   display: flex;
@@ -309,6 +319,10 @@
 
 .projects-carousel {
   margin-bottom: 50px; 
+}
+
+.projects-carousel .carousel-hover-overlay{
+font-size: small;
 }
 
 .swiper {
@@ -408,7 +422,6 @@
     margin: 20px 0;
   }
 
-  .services-specialty-image,
   .services-aligned-image img {
     max-width: 100%;
     height: auto;
@@ -468,6 +481,12 @@
   .services-title, .services-description {
     padding-left: 50px;
     padding-right: 50px;
+  }
+
+  .services-horizontal-image {
+    max-height: 400px; 
+    width: 100%;
+    height: auto; 
   }
 
   .projects-section {

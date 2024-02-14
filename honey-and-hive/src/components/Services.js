@@ -1,48 +1,30 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import "./Services.css";
-import servicesBackground from "../assets/services-background.jpg";
+import servicesBackground from "../assets/services-background.PNG";
 import contactImage from "../assets/contact-image.jpg";
-import specialtyImage from "../assets/specialty-image.jpg";
+import specialtyImage from "../assets/specialty-image.PNG";
 import smallerImage from "../assets/smaller-image.jpeg";
-import horizontalImage from "../assets/services-horizontal.jpg";
+import horizontalImage from "../assets/services-horizontal.PNG";
 import designPhases from "../assets/design-phases.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import carouselImage1 from "../assets/carousel-image-1.jpg";
-import carouselImage2 from "../assets/carousel-image-2.jpg";
-import carouselImage3 from "../assets/carousel-image-3.jpg";
-import carouselImage4 from "../assets/carousel-image-4.jpg";
-import carouselImage5 from "../assets/carousel-image-5.jpg";
-import carouselImage6 from "../assets/carousel-image-6.jpg";
 import _ from "lodash"; 
 import { useInView } from 'react-intersection-observer';
 
 
 const Services = () => {
-  const swiperRef = useRef(null);
-  const [lastScrollY, setLastScrollY] = useState(window.scrollY);
+  const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const direction = window.scrollY > lastScrollY ? 'next' : 'prev';
-      if (swiperRef.current) {
-        if (direction === 'next') {
-          swiperRef.current.slideNext();
-        } else {
-          swiperRef.current.slidePrev();
-        }
-      }
-      setLastScrollY(window.scrollY);
-    };
-
-    // Throttle the scroll event to avoid performance issues
-    const throttledHandleScroll = _.throttle(handleScroll, 100);
-
-    window.addEventListener('scroll', throttledHandleScroll);
-
-    return () => window.removeEventListener('scroll', throttledHandleScroll);
-  }, [lastScrollY]);
+    fetch("http://localhost:1337/api/projects?populate=*")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data); // It's always a good practice to log and check the structure
+        setProjects(data.data); // Assuming the structure is the same as in Projects.js
+      })
+      .catch((error) => console.error("Error fetching data: ", error));
+  }, []);
 
   const { ref, inView } = useInView({
     triggerOnce: true, // Trigger animation once
@@ -132,18 +114,21 @@ const Services = () => {
               <p>
                 Embarking on a design project can initially feel overwhelming,
                 particularly if you find yourself short on time or uncertain
-                about your vision. The thought of orchestrating an entire team
-                to transform your space can be a daunting and we get that!<p></p> At
-                Honey & Hive Interiors, we're here to lift this burden, offering
+                about your vision. <p></p>
+                The thought of orchestrating an entire team
+                to transform your space can be a daunting and we get that!<p></p> 
+                At Honey & Hive Interiors, we're here to lift this burden, offering
                 our expertise to streamline the process and ensure a result that
-                surpasses your expectations. <p></p>We encourage you to engage H&H from
+                surpasses your expectations. <p></p>
+                We encourage you to engage H&H from
                 the very beginning, and from that point forward, we will take
-                care of the intricacies and the nitty gritty. <p></p>Our seamless
-                communication with architects, builders, trades and suppliers
+                care of the intricacies and the nitty gritty. <p></p>
+                Our seamless communication with architects, builders, trades and suppliers
                 ensures a collaborative effort, bringing your vision to life. We
                 truly believe that every space possesses inherent potential, and
                 our expertise lies in realizing this potential and bringing it
-                to fruition. Here is an overview of our design process when you
+                to fruition. <p></p>
+                Here is an overview of our design process when you
                 choose to partner with us.
               </p>
               <Link to="/contact" className="book-consultation-link">
@@ -264,24 +249,36 @@ const Services = () => {
           </h1>
         </div>
         <div className="projects-carousel">
-          <Swiper
-            onSwiper={(swiper) => (swiperRef.current = swiper)}
-            spaceBetween={20}
-            slidesPerView={1}
-            breakpoints={{
-              768: {
-                slidesPerView: 3,
-                spaceBetween: 20,
-              },
-            }}
-          >
-            <SwiperSlide><img src={carouselImage1} alt="Carousel Image 1" /></SwiperSlide>
-            <SwiperSlide><img src={carouselImage2} alt="Carousel Image 2" /></SwiperSlide>
-            <SwiperSlide><img src={carouselImage3} alt="Carousel Image 3" /></SwiperSlide>
-            <SwiperSlide><img src={carouselImage4} alt="Carousel Image 4" /></SwiperSlide>
-            <SwiperSlide><img src={carouselImage5} alt="Carousel Image 5" /></SwiperSlide>
-            <SwiperSlide><img src={carouselImage6} alt="Carousel Image 6" /></SwiperSlide>
-          </Swiper>
+            <Swiper
+              spaceBetween={20}
+              slidesPerView={1}
+              breakpoints={{
+                768: {
+                  slidesPerView: 3,
+                  spaceBetween: 20,
+                },
+              }}
+              onSlideChange={() => console.log("slide change")}
+              onSwiper={(swiper) => console.log(swiper)}
+            >
+              {projects.map((project) => {
+                const { attributes } = project;
+                const imageUrl = attributes.mainImage.data
+                  ? `http://localhost:1337${attributes.mainImage.data.attributes.url}`
+                  : "";
+                return (
+                  <SwiperSlide key={project.id} className="carousel-slide">
+                    <Link to={`/projects/${project.attributes.slug}`}>
+                      {" "}
+                      <img src={imageUrl} alt={attributes.title} />
+                      <div className="carousel-hover-overlay">
+                        <h1>View <em>Project</em></h1>
+                      </div>
+                    </Link>
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
           </div>
         </div>
 

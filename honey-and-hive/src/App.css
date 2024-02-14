@@ -110,21 +110,21 @@ body {
   transition: color 0.3s;
 }
 
-.menu-content a:hover {
-  color: var(--accent-color);
-}
-
 .menu-content {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.menu-content a:hover {
+  color: var(--accent-color);
+}
+
 /* Close button */
 .close-icon {
   position: absolute;
   top: 20px; 
-  right: 20px; 
+  right: 40px; 
   font-size: 30px; 
   cursor: pointer; 
   color: #fff;
