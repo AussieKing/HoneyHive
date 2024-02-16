@@ -6,18 +6,21 @@ import contactImage from "../assets/contact-image.jpg";
 const Projects = () => {
   const [projects, setProjects] = useState([]);
 
+ 
   useEffect(() => {
     // Fetch the project data from Strapi
-    fetch('http://localhost:1337/api/projects?populate=*') 
+    fetch('http://localhost:1337/api/projects?populate=*')
       .then(response => response.json())
       .then(data => {
         // Console log the data to see the structure
         console.log(data);
-        // Set the projects, adjust according to the received data structure
-        setProjects(data.data);
+        // Ensure projects is always an array
+        const projectsData = Array.isArray(data.data) ? data.data : [];
+        setProjects(projectsData);
       })
       .catch(error => console.error('Error fetching data: ', error));
   }, []);
+
 
   return (
     <div className="projects-page">
@@ -32,19 +35,20 @@ const Projects = () => {
         <div className="projects-container">
           {projects.map((project) => {
             const { attributes } = project;
-            const imageUrl = attributes.mainImage.data ? `http://localhost:1337${attributes.mainImage.data.attributes.url}` : '';
+            // Safely access imageUrl, providing a fallback if mainImage is not available
+            const imageUrl = attributes.mainImage?.data?.attributes?.url ? `http://localhost:1337${attributes.mainImage.data.attributes.url}` : '';
             return (
               <div className="project-item" key={project.id}>
-              <div className="project-image-container">
-                <img src={`http://localhost:1337${attributes.mainImage.data.attributes.url}`} alt={attributes.title} />
-                <Link to={`/projects/${attributes.slug}`}> 
-                  <div className="project-hover-overlay">
-                    <h1>View<em> Project</em></h1>
-                  </div>
-                </Link> {/* Update this line */}
+                <div className="project-image-container">
+                  <img src={imageUrl} alt={attributes.title} />
+                  <Link to={`/projects/${attributes.slug}`}>
+                    <div className="project-hover-overlay">
+                      <h1>View<em> Project</em></h1>
+                    </div>
+                  </Link>
+                </div>
+                <p className="project-title">{attributes.title}</p>
               </div>
-              <p className="project-title">{attributes.title}</p>
-            </div>
             );
           })}
         </div>
@@ -58,16 +62,13 @@ const Projects = () => {
             </Link>
           </div>
           <div className="contact-right">
-            <img
-              src={contactImage}
-              alt="Consultation"
-              className="contact-image"
-            />
+            <img src={contactImage} alt="Consultation" className="contact-image" />
           </div>
         </div>
       </div>
     </div>
   );
 };
+
 
 export default Projects;

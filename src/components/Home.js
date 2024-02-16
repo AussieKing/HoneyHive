@@ -15,10 +15,14 @@ const Home = () => {
     fetch("http://localhost:1337/api/projects?populate=*")
       .then((response) => response.json())
       .then((data) => {
-        console.log(data); // It's always a good practice to log and check the structure
-        setProjects(data.data); // Assuming the structure is the same as in Projects.js
+        console.log(data); // Log and check the structure
+        // Set projects to an empty array if data.data is not iterable
+        setProjects(Array.isArray(data.data) ? data.data : []);
       })
-      .catch((error) => console.error("Error fetching data: ", error));
+      .catch((error) => {
+        console.error("Error fetching data: ", error);
+        setProjects([]); // Ensure projects is always an array
+      });
   }, []);
 
   return (
@@ -68,9 +72,6 @@ const Home = () => {
             Learn About Our Services
           </Link>
         </div>
-        {/* <div className="home-subcontent">
-         
-        </div> */}
 
         <div className="home-content-wrapper">
           <div className="home-text-half">
@@ -114,12 +115,13 @@ const Home = () => {
         </div>
 
         <div className="projects-section">
-          <div className="projects-header">
-            <h1>
-              Portfolio <em>Projects</em>
-            </h1>
-          </div>
-          <div className="projects-carousel">
+        <div className="projects-header">
+          <h1>
+            Portfolio <em>Projects</em>
+          </h1>
+        </div>
+        <div className="projects-carousel">
+          {projects && projects.length > 0 ? (
             <Swiper
               spaceBetween={20}
               slidesPerView={1}
@@ -140,7 +142,6 @@ const Home = () => {
                 return (
                   <SwiperSlide key={project.id} className="carousel-slide">
                     <Link to={`/projects/${project.attributes.slug}`}>
-                      {" "}
                       <img src={imageUrl} alt={attributes.title} />
                       <div className="carousel-hover-overlay">
                         <h1>View <em>Project</em></h1>
@@ -150,9 +151,11 @@ const Home = () => {
                 );
               })}
             </Swiper>
-          </div>
+          ) : (
+            <div>No projects to display</div> // Display this if there are no projects
+          )}
         </div>
-
+      </div>
         {/* Key Offerings */}
         <div className="key-offerings-container">
           <div className="key-offerings-content">
