@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import axios from "axios"; // import axios for making HTTP requests
 import "./ContactForm.css";
-import contactBottomImg from '../assets/contact-bottom.jpg';
-
+import contactBottomImg from "../assets/contact-bottom.jpg";
 
 const ContactForm = ({ onSubmitContact }) => {
   const [contact, setContact] = useState({
@@ -77,7 +76,7 @@ const ContactForm = ({ onSubmitContact }) => {
     if (validateForm()) {
       try {
         const response = await axios.post(
-          "http://localhost:3001/submit-form",
+          "http://localhost:3001/api/contact/submit-form",
           contact
         );
         console.log(response.data); // logs the response data
@@ -124,11 +123,15 @@ const ContactForm = ({ onSubmitContact }) => {
         <br />
         <div className="additional-info">
           {/* Additional contact details here */}
-          <p><strong>GENERAL INQUIRIE</strong>S</p>
+          <p>
+            <strong>GENERAL INQUIRIE</strong>S
+          </p>
           {/* TODO: link to google maps */}
           <p>BRISBANE</p>
           <p>Main Warehouse</p>
-          <p><a href="tel:+61427766288">0427766288</a></p>
+          <p>
+            <a href="tel:+61427766288">0427766288</a>
+          </p>
           <p>ashley@honeyandhiveinteriors.com</p>
         </div>
       </div>
