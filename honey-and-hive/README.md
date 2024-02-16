@@ -49,11 +49,11 @@ We are building a website for "Honey and Hive", an interior design firm. The web
 - Implementing a Bootstrap layout. [x]
 - Adding interactive elements with JavaScript/jQuery. [x]
 
-**Day 36-50: About Page** []
+**Day 36-50: About Page** [x]
 - Developing the HTML/CSS structure. [x]
 - Integrating Handlebars for templating. [x]
 - Adding personal touch with JavaScript animations. [x]
-- Ensuring accessibility standards are met. []
+- Ensuring accessibility standards are met. [x]
 
 **Day 51-65: Services Page and Subsections** [x]
 - Services page development with React.js components.[x]
