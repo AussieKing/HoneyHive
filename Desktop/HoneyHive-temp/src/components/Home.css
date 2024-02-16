@@ -1,0 +1,479 @@
+/* Global styles */
+.home-page {
+  background-color: var(--background-color);
+}
+
+/* Typography styles*/
+h1 {
+  font-family: "Kaisei Opti", serif;
+  letter-spacing: -2.6px;
+  color: var(--text-color);
+  margin-bottom: 50px;
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 1.25em;
+  color: var(--text-color);
+}
+
+p {
+  font-family: "Lato", sans-serif;
+  font-size: 0.9em;
+  color: var(--text-color);
+}
+
+/* Hero section */
+.home-hero {
+  position: relative;
+  height: 100vh;
+  background: url("../assets/services-background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.home-hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-top: 4em;
+}
+
+/* Image and Text Layout */
+.home-specialty-image {
+  width: 100%;
+  height: auto;
+}
+
+.home-image-container {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 0;
+  margin: 0;
+}
+
+.home-hero-text {
+  flex: 1;
+  padding: 0 4em 0 5em;
+}
+
+/* Title and Link styles */
+.title-div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: calc(10% + 50px); 
+  margin-top: 50px
+}
+
+/* Key Offerings */
+.key-offerings-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the start of the flex container */
+} 
+
+.key-offerings-title a {
+  display: block; /* This will place each link on a new line */
+  margin-bottom: 10px; /* Adjust the space between the links as needed */
+}
+
+.key-offerings-title .read-more-link {
+  margin-left: 60px; /* Adjust the value as needed */
+}
+
+/* Read more link style */
+.read-more-link {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 75px;
+  padding: 0.5em 1em; /* Adjust padding as needed */
+  text-decoration: none; /* Removes underline from links */
+  color: var(--text-color); /* Ensures the text color is consistent */
+  background-color: transparent; /* Ensures background is transparent */
+  transition: color 0.5s ease; /* Smooth transition for color changes */
+}
+
+/* Hover Animations for Links */
+/* Read more link style adjustments */
+.key-offerings-title .read-more-link {
+  position: relative;
+  display: inline-block; /* Use flex to better control the positioning of pseudo-elements */
+  align-items: center; /* Align items (including pseudo-elements) vertically */
+  margin-bottom: 75px;
+  padding: 0; /* Remove padding to ensure underline starts at text */
+  text-decoration: none; /* Removes underline from links */
+  color: var(--text-color); /* Ensures the text color is consistent */
+  background-color: transparent; /* Ensures background is transparent */
+}
+
+
+/* The underline effect */
+.key-offerings-title .read-more-link .read-more-link::after {
+  content: '';
+  position: absolute;
+  left: 0; /* Start at the very left of the element */
+  bottom: -5px; /* Adjust to the desired position below the text */
+  height: 2px;
+  width: 0;
+  background: #BB9C71;
+  transition: width 0.3s ease-in-out;
+}
+
+/* When hovering over the link, extend the underline to the full width of the text */
+.key-offerings-title .read-more-link .read-more-link:hover::after {
+  width: 100%;
+}
+
+/* Adjust the circle position */
+.key-offerings-title .read-more-link .read-more-link::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -20px; /* Adjust if necessary */
+  transform: translate(0, -50%);
+  width: 8px;
+  height: 8px;
+  border: 2px solid #BB9C71;
+  border-radius: 50%;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Change the circle's background on hover */
+.key-offerings-title .read-more-link .read-more-link:hover::before {
+  background-color: #BB9C71;
+}
+
+
+/* Content wrapper */
+.home-content-wrapper {
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 4em 0;
+}
+
+/* Home Title */
+.home-title {
+  margin-bottom: 20px; 
+}
+
+/* Home Text Half */
+.home-text-half {
+  flex: 1; 
+  padding: 0 2em;
+  margin-right: 50px;
+  margin-left: 20px;
+
+}
+
+.home-text-half h2 {
+  font-size: 1.5em;
+}
+
+.home-description {
+  flex: 1; 
+}
+
+/* Home Image Half */
+.home-image-half {
+  flex: 0 0 50%;
+  margin-right: 0;
+  max-width: 50%;
+  padding: 0;
+}
+
+/* Home Aligned Image and Video */
+.home-aligned-image img,
+.home-aligned-image video {
+  width: 95%; 
+  height: auto; 
+  display: block; 
+}
+
+
+/* Carousel section */
+.projects-carousel, .swiper {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.swiper-slide img {
+  max-height: 336px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Carousel Slide Styling for Uniformity and Hover Effect */
+.carousel-slide {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  height: 320px !important; /* Set a fixed height for uniformity */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-slide img {
+  width: auto !important;
+  height: 100% !important;
+  min-width: 100% !important;
+  object-fit: cover !important; /* Ensures the image covers the tile while maintaining aspect ratio */
+}
+
+.carousel-hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(245, 236, 226, 0.7); /* Semi-transparent overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  visibility: hidden;
+}
+
+.carousel-slide:hover .carousel-hover-overlay {
+  opacity: 1;
+  visibility: visible; /* Make overlay visible on hover */
+}
+
+.carousel-hover-overlay h1 {
+  color: var(--text-color); /* Use existing color variable for consistency */
+  font-size: 2rem;
+  text-align: center;
+}
+
+
+
+/* Key Offerings Section */
+.key-offerings-container {
+  background-color: rgb(224, 214, 204); 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.key-offerings-content {
+  display: flex; 
+  width: 100%; 
+  margin-left: 50px;
+}
+
+.key-offerings-title {
+  flex-basis: 50%; 
+}
+
+.key-offerings-title h1 {
+  font-family: "Kaisei Opti", serif;
+  letter-spacing: -2.6px;
+  margin-bottom: 50px;
+  font-size: 3em;
+  color: var(--text-color);
+  padding-left: 50px;
+}
+
+.read-more-link, 
+.key-offerings-title a { 
+  display: block; 
+  margin-bottom: 10px; 
+  padding-left: 50px;
+}
+
+.key-offerings-image {
+  flex-basis: 50%;
+  display: flex;
+  justify-content: start; 
+  align-items: center; 
+}
+
+.key-offerings-image img {
+  width: 100%; 
+  max-height: 400px;
+  height: auto; 
+  object-fit: cover;
+}
+
+/* Extend underline hover effect for read-more-link */
+.read-more-link::after {
+  content: '';
+  position: absolute;
+  width: 0; /* Start with no width */
+  height: 1px;
+  bottom: 0;
+  right: 0; /* Extend to the right */
+  background-color: #BB9C71;
+  visibility: hidden;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+/* Adjust width on hover to extend the underline */
+.read-more-link:hover::after {
+  visibility: visible;
+  transform: scaleX(1);
+  width: 100%; /* Extend to full width on hover */
+}
+
+
+/* Media query adjustments for responsiveness */
+/* Large screens */
+@media (min-width: 1200px) {
+  .title-div,
+  .home-page p,
+  .home-page a,
+  .home-page .book-consultation-link {
+    font-size: 20px;
+  }
+}
+
+/* Medium devices (tablets up to 991px) */
+@media (max-width: 991px) {
+  .title-div,
+  .home-page p,
+  .home-page a,
+  .home-page .book-consultation-link {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-image-half {
+    flex-basis: 60%; 
+    max-width: 60%; 
+  }
+  .home-content-wrapper {
+    justify-content: center; 
+  }
+}
+
+/* Tablets in landscape mode */
+@media (max-width: 991px) {
+  .footer-content,
+  .footer-section,
+  .footer-logo {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .footer-section,
+  .footer-logo {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .footer-logo {
+    order: -1; /* Place logo at the top */
+  }
+
+  .footer-bottom {
+    border-top: 1px solid #ccc;
+    padding-top: 1rem;
+    width: 100%;
+  }
+}
+
+
+/* Small screens */
+@media (max-width: 768px) {
+  /* Hide the contact link in the header */
+  .navbar .nav-link {
+    display: none;
+  }
+
+  /* Reorder the hero content so the image is on top and the text is below */
+  .home-hero-content {
+    flex-direction: column-reverse;
+  }
+
+  .home-content-wrapper, .projects-section .projects-header {
+    padding-top: 0px;
+    margin-top: 0px;
+  }
+
+  .home-content-wrapper, .title-div .read-more-link {
+    padding-bottom:0px;
+    margin-bottom:0px;
+  }
+
+  .key-offerings-title h1 {
+    padding-left: 0;
+  }
+
+  /* Adjust the home content wrapper to stack children vertically */
+  .home-content-wrapper,
+  .key-offerings-content,
+  .title-div,
+  .home-image-half,
+  .home-text-half,
+  .home-image-container,
+  .home-aligned-image {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    margin: 20px 0;
+  }
+
+  /* Adjust padding for the text half and title div for smaller screens */
+  .home-text-half,
+  .title-div {
+    padding: 1em;
+  }
+
+  /* Ensure images and videos scale down to fit the width of the screen */
+  .home-specialty-image,
+  .home-aligned-image img,
+  .home-aligned-image video,
+  .key-offerings-image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Adjust read-more links and key offerings links for smaller screens */
+  .read-more-link,
+  .key-offerings-title a {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  /* Order key offerings content properly */
+  .key-offerings-image {
+    order: 2;
+  }
+
+  .key-offerings-container {
+    padding: 0; /* Removes padding */
+  }
+
+  .key-offerings-image img {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .key-offerings-title {
+    order: 1;
+  }
+
+  /* Hide the 'Get In Touch' section at the bottom */
+  .home-overlay .about-contact {
+    display: none;
+  }
+}
+
+

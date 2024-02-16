@@ -1,0 +1,394 @@
+/* Main CSS styles for About page */
+
+/* Import fonts */
+@import url("https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap");
+
+/* Reset styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color: #f5ece2;
+  --text-color: #333;
+  --accent-color: #bb9c71;
+}
+
+/* Hero section styling */
+.about-hero {
+  position: relative;
+  height: 100vh;
+  background: url("../assets/about-background.PNG") no-repeat center center
+    fixed;
+  background-size: cover;
+}
+
+.about-page {
+  background-color: #f5ece2; /* Your chosen color */
+}
+
+/* Content section styling */
+.about-content-section {
+  display: flex;
+  align-items: flex-start;
+  padding: 15px;
+  background-color: var(--background-color);
+}
+
+/* Image styling within content section */
+.about-text-image {
+  width: 40%;
+  height: 500px;
+  background: url("../assets/about-1.jpg") no-repeat center center;
+  background-size: cover;
+  margin-right: 20px;
+  margin-top: 100px;
+}
+
+/* Text content styling */
+.about-text-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  /* margin-top: 85px; */
+  margin-left: 20px;
+  color: #444;
+}
+
+.about-text-content h1 {
+  font-family: "Kaisei Opti", serif;
+  letter-spacing: -2.6px;
+  margin-bottom: 50px;
+}
+
+.italic-text {
+  font-style: italic;
+}
+
+/* Vision title and button container styling */
+.content-with-vision {
+  display: flex;
+  align-items: flex-start;
+}
+
+.vision-title {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+  color: #444;
+}
+
+/* Button styling */
+.book-consultation-link,
+.about-button {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.book-consultation-link {
+  color: inherit;
+  text-decoration: underline;
+  margin-top: 20px;
+}
+
+.book-consultation-link:hover {
+  color: var(--accent-color);
+}
+
+/* Global button styling */
+.about-button {
+  background-color: var(--accent-color);
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+}
+
+/* Section styling */
+.about-ethos,
+.about-projects,
+.about-founders,
+.about-press,
+.about-contact {
+  padding: 60px 20px;
+  background-color: #e0d6cc;
+  color: var(--text-color);
+}
+
+/* Founder section styling */
+.about-founders {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 20px;
+  background-color:  #e0d6cc;
+}
+
+.founders-left,
+.founders-right {
+  flex: 1;
+}
+
+.founders-left {
+  padding-right: 50px;
+  font-family: "Kaisei Opti", serif;
+  letter-spacing: -2.6px;
+  margin-bottom: 50px;
+  margin-left: 70px;
+  color: #444;
+}
+
+.founders-left h1 {
+  margin-bottom: 15px;
+}
+
+.founders-left em {
+  font-style: italic;
+  display: inline-block;
+  margin-left: 60px;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.founders-left p {
+  font-family: "Kaisei Opti", serif;
+  margin-left: 90px;
+  color: #444;
+}
+
+.founders-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 50px;
+  color: #444;
+}
+
+.founder-image {
+  max-width: 100%;
+  height: 400px;
+}
+
+.founder-info {
+  text-align: center;
+  color: #444;
+}
+
+.founder-info h2,
+.founder-title {
+  font-family: "Kaisei Opti", serif;
+  margin: 20px 0 10px;
+}
+
+.founder-title {
+  margin-bottom: 20px;
+}
+
+.founder-description {
+  text-align: left;
+}
+
+.book-consultation-link {
+  margin-left: 60px;
+}
+
+/* Read More link styling */
+.read-more-link {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  color: #bb9c71;
+  font-size: 0.9em;
+  margin-top: 1rem; 
+  padding-bottom: 0.25rem; 
+}
+
+/* Pseudo-element for the underline */
+.read-more-link {
+  color: var(--accent-color);
+  font-size: 0.9em;
+  margin-top: 1rem;
+  padding-bottom: 0.25rem;
+}
+
+.read-more-link::after,
+.read-more-link::before {
+  content: "";
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+}
+
+.read-more-link::after {
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--accent-color);
+  visibility: hidden;
+  transform: scaleX(0);
+}
+
+.read-more-link::before {
+  top: 50%;
+  right: -20px;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border: 2px solid var(--accent-color);
+  border-radius: 50%;
+}
+
+.read-more-link:hover::after {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.read-more-link:hover::before {
+  background-color: var(--accent-color);
+}
+
+/* Get in touch section styling */
+.about-contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #616060;
+  color: var(--background-color);
+}
+
+.contact-left,
+.contact-right {
+  flex: 1;
+}
+
+.contact-left {
+  margin-left: 80px;
+}
+
+.contact-left h1,
+.contact-left p,
+.book-consultation-link {
+  color: rgb(245, 236, 226);
+}
+
+.contact-left h1 {
+  font-family: "Kaisei Opti", serif;
+  letter-spacing: -2.6px;
+}
+
+.contact-left p,
+.book-consultation-link {
+  margin-left: 95px;
+}
+
+.contact-right img {
+  width: 100%;
+  height: auto;
+  max-height: 800px;
+  object-fit: cover;
+}
+
+/* width: 100%; 
+max-height: 400px;
+height: auto; 
+object-fit: cover; */
+
+.book-consultation-link {
+  /* Styles for the book consultation link */
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  text-decoration: underline;
+  color: var(--accent-color);
+  transition: background-color 0.3s ease;
+  margin-left: 75px;
+}
+
+.book-consultation-link:hover {
+  /* Styles for hover state */
+  text-decoration: none;
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+/* Responsive and interactive styling */
+@media (max-width: 768px) {
+  .about-content-section,
+  .about-founders {
+    flex-direction: column;
+  }
+
+  .about-text-image,
+  .founders-left,
+  .founders-right {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 0;
+    padding-left: 0px;
+  }
+
+  .about-text-image {
+    margin-bottom: 20px;;
+  }
+
+  .contact-left,
+  .contact-right {
+    max-width: 100%;
+  }
+
+   /* Hide the 'Get In Touch' section at the bottom */
+   .about-contact {
+    display: none;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+.about-text-content , .about-contact {
+  font-size: 22px;
+  margin-top: 85px;
+}
+
+  .founders-left {
+    margin-left: 450px; /* Adjust this value as needed */
+  }
+
+  .content-with-vision, .founders-right {
+    padding-left: 0;
+    padding-right: 100px;
+    font-size: 22px;
+  }
+
+}
+
+/* Medium size screens (768 to 991px) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  body, html {
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+
+  .navbar, .about-page, .any-other-container {
+    max-width: 100%; /* Ensure no element stretches beyond the viewport */
+    padding: 0 15px; 
+  }
+}
+
+/* Small screens (below 768px) */
+@media only screen and (max-width: 767px) {
+  body, html {
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+
+  .navbar, .about-page, .any-other-container {
+    max-width: 100%; /* Ensure no element stretches beyond the viewport */
+    padding: 0 10px;
+  }
+}
