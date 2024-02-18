@@ -29,10 +29,23 @@ p {
   position: relative;
   height: 100vh;
   background: url("../assets/services-background.jpg") no-repeat center center fixed;
-  background-size: cover;
+  /* background-size: cover; */
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+}
+
+/* Testing out the parallax effect */
+.home-hero::before {
+  content: '';
+  position: fixed; /* Fixed position to stay in place on scroll */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../assets/services-background.jpg") no-repeat center center;
+  background-size: cover;
+  z-index: -1; /* Place it behind the content */
 }
 
 .home-hero-content {
