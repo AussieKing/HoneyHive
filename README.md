@@ -72,6 +72,7 @@ We are building a website for "Honey and Hive", an interior design firm. The web
 - Integrating a MongoDB or MySQL database for storing inquiries and bookings. [x]
 - Developing RESTful API endpoints for CRUD operations. [x]
 - Unit and functional testing of components and backend. []
+- Staging and Deploymennt on Netlify and Heroku. []
 
 **Day 96-100: Finalization and Launch Preparation** []
 - Conducting final tests and debugging. []
