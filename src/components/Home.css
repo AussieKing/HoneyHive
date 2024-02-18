@@ -29,7 +29,7 @@ p {
   position: relative;
   height: 100vh;
   background: url("../assets/services-background.jpg") no-repeat center center fixed;
-  /* background-size: cover; */
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -404,6 +404,13 @@ p {
 
 /* Small screens */
 @media (max-width: 768px) {
+
+  /* Disable parallax effect for mobile devices */
+  .home-hero::before {
+    position: absolute; /* Change to absolute positioning */
+    background-attachment: scroll; /* Change to scroll instead of fixed */
+  }
+
   /* Hide the contact link in the header */
   .navbar .nav-link {
     display: none;
