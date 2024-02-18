@@ -1,3 +1,4 @@
+
 /* Global styles */
 .home-page {
   background-color: var(--background-color);
@@ -12,7 +13,7 @@ h1 {
   font-size: 3em;
 }
 
-h2 {
+.home-page h2 {
   font-size: 1.25em;
   color: var(--text-color);
 }

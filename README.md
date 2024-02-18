@@ -29,7 +29,7 @@ We are building a website for "Honey and Hive", an interior design firm. The web
 - Dom React Router: For routing between pages.
 - Google fonts: For fonts. 
 - Strapi (Headless CMS): For managing project data (Projects page/portfolio).
-- Intersection observer : for effects when scrolling.
+- Intersection observer : for effects when scrolling!
 
 # STRUCTURE
 
