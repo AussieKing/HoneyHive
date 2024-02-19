@@ -30,6 +30,10 @@ We are building a website for "Honey and Hive", an interior design firm. The web
 - Google fonts: For fonts. 
 - Strapi (Headless CMS): For managing project data (Projects page/portfolio).
 - Intersection observer : for effects when scrolling!
+- pgLoader : to load data into the database, migrating from MySQL to PostgreSQL for the Heroku deployment.
+- POstgreSQL: For the database.
+- Heroku: For deployment of the backend.
+- Netlify: For deployment of the frontend.
 
 # STRUCTURE
 
