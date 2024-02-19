@@ -1,5 +1,16 @@
-
 /* Global styles */
+
+/* Prevent horizontal scrolling */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Ensure all elements do not exceed the width of the page */
+* {
+  box-sizing: border-box;
+}
+
 .home-page {
   background-color: var(--background-color);
 }
@@ -403,15 +414,18 @@ p {
 
 /* Small screens */
 @media (max-width: 768px) {
-  
-  home-hero {
-    /* Remove the fixed background and let the parallax script handle the effect */
-    background: none;
+
+  .home-hero {
+    background: url("../assets/home-background.PNG") no-repeat center center;
+    background-size: cover; /* Cover the entire area of the element */
+    background-attachment: scroll; /* Remove fixed since it's problematic on mobile */
+    height: auto; /* Set to auto to contain the content */
+    min-height: 50vh; /* Minimum height to ensure visibility */
   }
-  
-  .parallax-background {
-    /* Add a fallback position for mobile that doesn't support fixed backgrounds well */
-    background-attachment: scroll; 
+
+  .home-hero::before {
+    /* Remove the pseudo-element since we are not doing parallax on mobile */
+    content: none;
   }
 
   /* Hide the contact link in the header */
@@ -498,6 +512,24 @@ p {
   .home-overlay .about-contact {
     display: none;
   }
+
+
+  /* Fixes for specific elements if needed */
+.home-hero,
+.home-overlay,
+.home-content-wrapper,
+.home-image-half,
+.home-text-half,
+.home-image-container,
+.home-aligned-image,
+.key-offerings-container,
+.key-offerings-content,
+.key-offerings-title,
+.key-offerings-image,
+.about-contact {
+  width: 100%;
+  overflow: hidden; /* Hide the overflow */
+  position: relative; /* Make sure they are relative if using absolute positioning within them */
 }
 
-
+}
