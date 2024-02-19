@@ -404,13 +404,17 @@ p {
 /* Small screens */
 @media (max-width: 768px) {
 
-  .home-hero::before {
-      background-size: 100% auto; /* Adjust the size to fit the screen */
-      background-position: center;
-      background-repeat: no-repeat;
-      width: 100%; /* Set a specific width */
-      height: 50vh; /* Set a specific height for testing */
+  .parallax-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1;
   }
+  
 
   /* Hide the contact link in the header */
   .navbar .nav-link {
