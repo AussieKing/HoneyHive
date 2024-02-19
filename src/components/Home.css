@@ -405,10 +405,10 @@ p {
 /* Small screens */
 @media (max-width: 768px) {
 
-  /* Disable parallax effect for mobile devices */
   .home-hero::before {
-    background-size: contain; /* Changes how the background image is fitted to the container */
-    background-position: top center; /* Adjusts the starting position of the background image */
+    background-size: contain; /* This will ensure the whole image is visible but might not cover the entire background */
+    background-position: center; /* This will center the image in the available space */
+    background-repeat: no-repeat; /* This will prevent the image from repeating */
   }
 
   /* Hide the contact link in the header */
