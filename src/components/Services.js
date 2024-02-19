@@ -6,7 +6,7 @@ import contactImage from "../assets/contact-image.jpg";
 import specialtyImage from "../assets/specialty-image.PNG";
 import smallerImage from "../assets/smaller-image.jpeg";
 import horizontalImage from "../assets/services-horizontal.PNG";
-import designPhases from "../assets/design-phases.jpg";
+import designPhases from "../assets/design-phases.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import _ from "lodash";

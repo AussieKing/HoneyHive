@@ -403,18 +403,16 @@ p {
 
 /* Small screens */
 @media (max-width: 768px) {
-
-  .parallax-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-size: cover;
-    background-attachment: fixed;
-    z-index: -1;
+  
+  home-hero {
+    /* Remove the fixed background and let the parallax script handle the effect */
+    background: none;
   }
   
+  .parallax-background {
+    /* Add a fallback position for mobile that doesn't support fixed backgrounds well */
+    background-attachment: scroll; 
+  }
 
   /* Hide the contact link in the header */
   .navbar .nav-link {
