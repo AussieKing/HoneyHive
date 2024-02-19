@@ -48,7 +48,7 @@ const Home = () => {
           <div className="home-hero-text">
             <h1>
               We create earthy and considerate spaces with an emphasis on{" "}
-              <em>timeless and considered</em> design.
+              <em>timeless </em> design.
             </h1>
           </div>
         </div>
