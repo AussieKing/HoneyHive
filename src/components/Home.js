@@ -115,47 +115,49 @@ const Home = () => {
         </div>
 
         <div className="projects-section">
-        <div className="projects-header">
-          <h1>
-            Portfolio <em>Projects</em>
-          </h1>
+          <div className="projects-header">
+            <h1>
+              Portfolio <em>Projects</em>
+            </h1>
+          </div>
+          <div className="projects-carousel">
+            {projects && projects.length > 0 ? (
+              <Swiper
+                spaceBetween={20}
+                slidesPerView={1}
+                breakpoints={{
+                  768: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                  },
+                }}
+                onSlideChange={() => console.log("slide change")}
+                onSwiper={(swiper) => console.log(swiper)}
+              >
+                {projects.map((project) => {
+                  const { attributes } = project;
+                  const imageUrl = attributes.mainImage.data
+                    ? `http://localhost:1337${attributes.mainImage.data.attributes.url}`
+                    : "";
+                  return (
+                    <SwiperSlide key={project.id} className="carousel-slide">
+                      <Link to={`/projects/${project.attributes.slug}`}>
+                        <img src={imageUrl} alt={attributes.title} />
+                        <div className="carousel-hover-overlay">
+                          <h1>
+                            View <em>Project</em>
+                          </h1>
+                        </div>
+                      </Link>
+                    </SwiperSlide>
+                  );
+                })}
+              </Swiper>
+            ) : (
+              <div>No projects to display</div> // Display this if there are no projects
+            )}
+          </div>
         </div>
-        <div className="projects-carousel">
-          {projects && projects.length > 0 ? (
-            <Swiper
-              spaceBetween={20}
-              slidesPerView={1}
-              breakpoints={{
-                768: {
-                  slidesPerView: 3,
-                  spaceBetween: 20,
-                },
-              }}
-              onSlideChange={() => console.log("slide change")}
-              onSwiper={(swiper) => console.log(swiper)}
-            >
-              {projects.map((project) => {
-                const { attributes } = project;
-                const imageUrl = attributes.mainImage.data
-                  ? `http://localhost:1337${attributes.mainImage.data.attributes.url}`
-                  : "";
-                return (
-                  <SwiperSlide key={project.id} className="carousel-slide">
-                    <Link to={`/projects/${project.attributes.slug}`}>
-                      <img src={imageUrl} alt={attributes.title} />
-                      <div className="carousel-hover-overlay">
-                        <h1>View <em>Project</em></h1>
-                      </div>
-                    </Link>
-                  </SwiperSlide>
-                );
-              })}
-            </Swiper>
-          ) : (
-            <div>No projects to display</div> // Display this if there are no projects
-          )}
-        </div>
-      </div>
         {/* Key Offerings */}
         <div className="key-offerings-container">
           <div className="key-offerings-content">
