@@ -406,9 +406,11 @@ p {
 @media (max-width: 768px) {
 
   .home-hero::before {
-    background-size: contain; /* This will ensure the whole image is visible but might not cover the entire background */
-    background-position: center; /* This will center the image in the available space */
-    background-repeat: no-repeat; /* This will prevent the image from repeating */
+      background-size: 100% auto; /* Adjust the size to fit the screen */
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100%; /* Set a specific width */
+      height: 50vh; /* Set a specific height for testing */
   }
 
   /* Hide the contact link in the header */
