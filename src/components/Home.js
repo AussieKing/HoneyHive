@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 import homeBackground from "../assets/home-background.PNG";
@@ -10,8 +10,17 @@ import "swiper/css/bundle";
 
 const Home = () => {
   const [projects, setProjects] = useState([]);
+  const parallaxRef = useRef(null);
+
+  const handleScroll = () => {
+    if (parallaxRef.current) {
+      const offset = window.pageYOffset;
+      parallaxRef.current.style.backgroundPositionY = `${offset * 0.5}px`;
+    }
+  };
 
   useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
     fetch("http://localhost:1337/api/projects?populate=*")
       .then((response) => response.json())
       .then((data) => {
@@ -23,16 +32,17 @@ const Home = () => {
         console.error("Error fetching data: ", error);
         setProjects([]); // Ensure projects is always an array
       });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <div className="home-page">
-      <div
-        className="home-hero"
-        style={{ backgroundImage: `url(${homeBackground})` }}
-      >
-        {/* Semi-transparent overlay that allows the fixed background to be visible */}
-        <div className="background-overlay"></div>
+      <div className="home-hero">
+        <div
+          className="parallax-background"
+          ref={parallaxRef} // Attach the ref
+          style={{ backgroundImage: `url(${homeBackground})` }}
+        ></div>{" "}
       </div>
 
       {/* Content that scrolls over the background */}

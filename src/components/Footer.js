@@ -86,7 +86,6 @@ const Footer = () => {
                     Instagram
                   </a>
                 </p>
-                <a href="https://facebook.com/">Facebook</a>
               </div>
             </div>
           </Col>
