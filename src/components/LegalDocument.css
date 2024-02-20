@@ -7,7 +7,6 @@
   background-color: #F5ECE2; 
   padding: 20px; 
   box-sizing: border-box;
-  height: calc(100vh - (headerHeight + footerHeight)); 
   overflow-y: auto; 
   padding-top: 100px;
 }

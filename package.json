@@ -19,6 +19,7 @@
     "googleapis": "^130.0.0",
     "mongoose": "^8.1.1",
     "nodemailer": "^6.9.8",
+    "pg-connection-string": "^2.6.2",
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.0",
     "react-dom": "^18.2.0",
@@ -34,7 +35,10 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "start:backend": "nodemon backend/server.js",
-    "dev": "concurrently \"npm start\" \"npm run start:backend\""
+    "dev": "concurrently \"npm start\" \"npm run start:backend\"",
+    "start-strapi": "npm start --prefix honey-and-hive-strapi",
+    "heroku-prebuild": "echo 'Setting up environment...'",
+    "heroku-postbuild": "npm run build --prefix honey-and-hive-strapi && npm run build"
   },
   "eslintConfig": {
     "extends": [
@@ -56,8 +60,9 @@
   },
   "engines": {
     "node": "18.19.1"
-  },  
+  },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.16.7",
     "concurrently": "^8.2.2",
     "nodemon": "^3.0.2"
   },

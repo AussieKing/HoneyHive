@@ -1,2 +1,2 @@
-web: npm start --prefix honey-and-hive-strapi
+web: npm run start-strapi
 
