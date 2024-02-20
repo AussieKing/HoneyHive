@@ -1,2 +1,1 @@
-web: cd honey-and-hive-strapi && NODE_ENV=production npm start
-
+web: NODE_ENV=production npm start
