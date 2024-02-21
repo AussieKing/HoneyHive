@@ -34,6 +34,7 @@ We are building a website for "Honey and Hive", an interior design firm. The web
 - POstgreSQL: For the database.
 - Heroku: For deployment of the backend.
 - Netlify: For deployment of the frontend.
+- Google Cloud Storage: for the PostgreSQL database that Heroku uses (https://storage.googleapis.com/honeyandhive/strapi.dump)
 
 # STRUCTURE
 
