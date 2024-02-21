@@ -1,20 +1,16 @@
-module.exports = ({ env }) => {
-    const parse = require('pg-connection-string').parse;
-    const config = parse(env('DATABASE_URL'));
-  
-    return {
-      connection: {
-        client: 'postgres',
-        connection: {
-          host: config.host,
-          port: config.port,
-          database: config.database,
-          user: config.user,
-          password: config.password,
-          ssl: env.bool('DATABASE_SSL', false) ? { rejectUnauthorized: false } : undefined,          
-        },
-        debug: false,
-      },
-    };
-  };
-  
+module.exports = ({ env }) => ({
+  connection: {
+    client: 'postgres',
+    connection: {
+      host: env('DATABASE_HOST', 'localhost'),
+      port: env.int('DATABASE_PORT', 5432),
+      database: env('DATABASE_NAME', 'strapi'),
+      user: env('DATABASE_USERNAME', 'freddydordoni'),
+      password: env('DATABASE_PASSWORD', '@shley7B3'),
+      // ssl: env.bool('DATABASE_SSL', false) ? {
+      //   rejectUnauthorized: env.bool('DATABASE_SSL_SELF', false),
+      // } : false,
+    },
+    debug: false,
+  },
+});
