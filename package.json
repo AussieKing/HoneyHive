@@ -36,9 +36,8 @@
     "eject": "react-scripts eject",
     "start:backend": "nodemon backend/server.js",
     "dev": "concurrently \"npm start\" \"npm run start:backend\"",
-    "start-strapi": "npm start --prefix honey-and-hive-strapi",
-    "heroku-prebuild": "echo 'Setting up environment...'",
-    "heroku-postbuild": "npm run build --prefix honey-and-hive-strapi"
+    "start-strapi": "node ./honey-and-hive-strapi/node_modules/@strapi/strapi/bin/strapi.js start",
+    "heroku-prebuild": "echo 'Setting up environment...'"
   },
   "eslintConfig": {
     "extends": [
