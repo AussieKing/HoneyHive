@@ -109,7 +109,7 @@ const About = () => {
                 characterised by a harmonious blend of practicality, aesthetic
                 elegance, and spatial design that promote well-being.
               </p>
-              {readMore && (
+              {/* {readMore && (
                 <p>
                   Extended founder's bio goes here... Aenean venenatis magna
                   vitae sem sagittis sollicitudin. Etiam vel euismod nibh. Donec
@@ -127,10 +127,10 @@ const About = () => {
                   egestas. Vivamus urna felis, egestas vitae rutrum eget,
                   finibus eget tortor.
                 </p>
-              )}
-              <a onClick={handleReadMoreClick} className="read-more-link">
+              )} */}
+              {/* <a onClick={handleReadMoreClick} className="read-more-link">
                 {readMore ? "Read Less" : "Read More"}
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

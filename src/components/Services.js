@@ -63,13 +63,14 @@ const Services = () => {
         <div className="services-subcontent">
           <div className="title-div">
             <p>
-              <strong>OUR SPECIALTIES</strong>
+              <strong>OUR SERVICES</strong>
             </p>
             <div className="services-specialties-list">
               <p>RESIDENTIAL DESIGN</p>
               <p>RETAIL DESIGN</p>
               <p>HOSPITALITY DESIGN</p>
               <p>PROJECT MANAGMENT</p>
+              <p>PROPERTY STAGING  & STYLING</p>
             </div>
           </div>
           <div className="title-div">
@@ -145,7 +146,7 @@ const Services = () => {
         <div className="interior-design-section">
           <div className="interior-design-text">
             <h1>
-              Interior <em>Design</em>
+              Our <em>Process</em>
             </h1>
             <p>
               The Honey & Hive design process can be broken down into distinct
@@ -155,9 +156,9 @@ const Services = () => {
             </p>
             <div className="interior-design-phases">
               <div className="phase-container">
-                <h2>PHASE 0</h2>
+                {/* <h2>PHASE 0</h2> */}
                 <div>
-                  <p>INITIAL CONSULTATION</p>
+                  <p><strong>INITIAL CONSULTATION</strong></p>
                   <p>
                     We begin with a comprehensive review of your space or plans
                     during the Initial Design Consultation. We offer in-person
@@ -186,7 +187,7 @@ const Services = () => {
               <div className="phase-container">
                 <h2>PHASE 2</h2>
                 <div>
-                  <p>DESIGN DEVELOPMENT</p>
+                  <p>BUILDING DESIGN</p>
                   <p>
                     We refine and bring your design closer to reality. Layouts
                     are finalised with scaled plans, including 3D

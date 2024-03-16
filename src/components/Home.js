@@ -64,9 +64,9 @@ const Home = () => {
         </div>
 
         <div className="title-div">
-          <h2>
-            LET’S COLLABORATE TO ELEVATE YOUR SPACE <p></p>
-          </h2>
+          <p><strong>
+            LET’S COLLABORATE TO ELEVATE YOUR SPACE
+         </strong> </p>
           <p>
             Embrace the essence of your imagination and let Honey & Hive
             Interiors bring it to life. If you're grappling with uncertainties,
@@ -86,7 +86,7 @@ const Home = () => {
         <div className="home-content-wrapper">
           <div className="home-text-half">
             <div className="home-title">
-              <h2>WHAT WE DO</h2>
+              <p><strong>WHAT WE DO</strong></p>
             </div>
             <div className="home-description">
               <p>
@@ -182,10 +182,16 @@ const Home = () => {
                 Key<em> Offerings</em>
               </h1>
               <Link to="/services" className="read-more-link">
+                BUILDING DESIGN
+              </Link>
+              <Link to="/services" className="read-more-link">
                 INTERIOR DESIGN
               </Link>
               <Link to="/services" className="read-more-link">
                 INTERIOR STYLING
+              </Link>
+              <Link to="/services" className="read-more-link">
+                INTERIOR STAGING
               </Link>
             </div>
           </div>

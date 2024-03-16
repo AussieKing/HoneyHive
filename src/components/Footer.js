@@ -16,7 +16,7 @@ const Footer = () => {
                 <strong>STUDIO</strong>
               </h5>
               <div className="first-item-and-below">
-                <p>Based in Brisbane,</p>
+                <p>Based in Brisbane</p>
                 <p>Servicing SEQ</p>
                 <p>Brisbane</p>
                 <p>4000</p>

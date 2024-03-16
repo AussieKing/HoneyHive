@@ -116,19 +116,19 @@ const ContactForm = ({ onSubmitContact }) => {
       <div className="contact-info">
         <h1>Get In Touch</h1>
         <p>
-          We look forward to chatting about your project.
+          We look forward to chatting with you about your project.
           <br />
-          Honey & Hive Interiors
         </p>
         <br />
         <div className="additional-info">
           {/* Additional contact details here */}
           <p>
-            <strong>GENERAL INQUIRIE</strong>S
+            <strong>GENERAL INQUIRIES</strong>
           </p>
           {/* TODO: link to google maps */}
           <p>BRISBANE</p>
-          <p>Main Warehouse</p>
+          <p>Servicing South-East Queensland.</p>
+          <p>Inquire for interstate projects.</p>
           <p>
             <a href="tel:+61427766288">0427766288</a>
           </p>

@@ -34,19 +34,14 @@
   margin-top: 8px;
 }
 
-/* Portfolio Title */
-.portfolio-title {
+/* Portfolio Title and */
+/* Project titles size */
+.projects-container .project-title {
   font-family: "Kaisei Opti", serif;
   letter-spacing: -2.6px;
   text-align: center;
-  margin: 100px 40px 10px;
+  margin-bottom: 80px;
   background-color: transparent;
-}
-
-/* Project titles size */
-.projects-container .project-title{
-  font-size: 24px; 
-  font-family: Verdana, Geneva, Tahoma, sans-serif; 
 }
 
 /* Title Container */
