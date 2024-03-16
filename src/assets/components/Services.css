@@ -1,0 +1,524 @@
+/* Services.css */
+/* Import Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap");
+
+/* Services Page Styles */
+.services-page {
+  background-color: var(--background-color);
+}
+
+/* Style for h1 elements */
+.services-hero-text h1,
+.interior-design-text h1,
+.projects-section h1 {
+  font-family: "Kaisei Opti", serif;
+  letter-spacing: -2.6px;
+  margin-bottom: 50px;
+  font-size: 3em;
+  color: var(--text-color);
+}
+
+.services-page {
+  background-color: var(--background-color);
+}
+
+/* em effect  */
+@keyframes popIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  80% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    color: #444;
+  }
+  50% {
+    color: #BB9C71;
+  }
+  100% {
+    color: #444;
+  }
+}
+
+.em-animate {
+  display: inline-block;
+  animation: popIn 0.6s ease-out, colorChange 4s infinite alternate;
+  cursor: pointer; 
+}
+
+
+/* Hero Section Styles */
+.services-hero {
+  position: relative;
+  height: 100vh;
+  background: url("../assets/services-background.jpg") no-repeat center center
+    fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.services-hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-top: 4em;
+}
+
+/* Image Styles */
+.services-image-container {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 0;
+  margin: 0;
+}
+
+.services-specialty-image {
+  width: auto; 
+  max-height: 700px; 
+  display: block; 
+  margin: 0 auto; 
+}
+
+.services-hero-text {
+  flex: 1;
+  padding: 0 4em 0 5em;
+}
+
+/* Subcontent Styles */
+.services-subcontent {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding: 2em 50px;
+}
+
+.services-aligned-image {
+  max-width: 300px;
+  margin-right: 50px;
+}
+
+.services-aligned-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.services-hero-text h1 {
+  font-family: "Kaisei Opti", serif;
+  letter-spacing: -2.6px;
+  margin-bottom: 50px;
+  font-size: 3em;
+  color: var(--text-color);
+  text-align: left;
+}
+
+/* Individual line styles */
+.services-hero-text .line {
+  display: block; 
+  margin-bottom: 20px; 
+}
+
+.services-hero-text .line1 {
+  margin-left: 0;
+}
+
+.services-hero-text .line2 {
+  margin-left: 25px; 
+}
+
+.services-hero-text .line3 {
+  margin-left: 55px; 
+}
+
+/* Title and Description Styles */
+.title-div {
+  display: flex;
+  align-items: flex-start;
+  margin-right: 20px;
+}
+
+.title-div h2 {
+  font-size: 1.25em;
+  color: var(--text-color);
+  margin-right: 30px;
+}
+
+.title-div p {
+  font-family: "Lato", sans-serif;
+  font-size: 0.9em;
+  color: var(--text-color);
+  max-width: 600px;
+}
+
+/* Specialties and Aim Section Styles */
+.title-div.specialties,
+.title-div.aim {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+.title-div.aim {
+  flex-direction: row;
+}
+
+.services-specialties-list {
+  display: flex;
+  flex-direction: column;
+  margin-right: 30px;
+}
+
+.services-specialties-list p {
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer; /* Indicates an interactive element */
+}
+
+/* Hover effect */
+.services-specialties-list p:hover {
+  transform: scale(1.05); 
+  color: #BB9C71; 
+}
+
+.services-content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4em 0;
+}
+
+.services-image-half {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.services-horizontal-image {
+  width: auto; 
+  max-height: 680px; 
+  display: block; 
+  margin: 0 auto; 
+}
+
+.services-text-half {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex: 1;
+  max-width: 50%;
+  padding-left: 2em;
+}
+
+.services-title {
+  flex: 0 0 auto;
+  margin-right: 20px;
+}
+
+.services-description {
+  flex: 1;
+}
+
+.services-text-half h1 {
+  font-family: "Kaisei Opti", serif;
+  letter-spacing: -2.6px;
+  margin-bottom: 50px;
+  font-size: 3em;
+  color: var(--text-color);
+}
+
+.services-text-half h2 {
+  font-size: 1.5em;
+  color: var(--text-color);
+}
+
+.services-text-half p {
+  font-family: "Lato", sans-serif;
+  font-size: 0.9em;
+  color: var(--text-color);
+  max-width: 600px;
+}
+
+/* Interior Design Section Styles */
+.interior-design-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #e0d6cc; 
+  padding: 4em;
+}
+
+.interior-design-text {
+  flex: 1; 
+  max-width: 50%;
+  padding-right: 2em;
+}
+
+.interior-design-text h1 {
+  font-family: "Kaisei Opti", serif;
+  font-size: 3em;
+}
+
+.interior-design-text h2 {
+  margin-left: 0; 
+  padding-left: 0; 
+  text-align: left; 
+}
+
+.interior-design-text p {
+  font-family: "Lato", sans-serif;
+  list-style-type: none;
+  padding-bottom: 5px;
+  margin-left: 0; 
+  padding-left: 0; 
+  text-align: left; 
+}
+
+.interior-design-phases h2 {
+  font-size: 1.25em;
+  margin-right: 20px;
+}
+
+.interior-design-phases p {
+  list-style-type: none;
+  padding-bottom: 5px;
+}
+
+.interior-design-image {
+  flex: 1; 
+  max-width: 50%;
+  height: 100%;
+  margin-top: 115px;
+}
+
+.interior-design-image img {
+  width: 100%;
+  height: auto;
+}
+
+/* Hover effect */
+.interior-design-phases h2:hover {
+  transform: scale(1.05);
+  color: #BB9C71;
+  cursor: pointer; /* Optional: if you want the cursor to change to indicate interactivity */
+  transition: transform 0.3s ease, color 0.3s ease; /* Ensures smooth transition */
+}
+
+/* Phase Container Styles */
+.phase-container {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.phase-container h2 {
+  margin-right: 20px;
+  white-space: nowrap;
+}
+
+.phase-container p {
+  margin-top: 0;
+}
+
+/* Carousel Section */
+.projects-header {
+  padding-left: 5em;
+  padding-top: 80px;
+}
+
+.projects-carousel {
+  margin-bottom: 50px; 
+}
+
+.projects-carousel .carousel-hover-overlay{
+font-size: small;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto; 
+  padding: 0; 
+  height: auto; 
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  max-height: 336px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Responsive Design Adjustments */
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .services-page p,
+  .services-page a,
+  .services-page .book-consultation-link {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .services-aligned-image {
+    width: 100%; 
+    height: auto; 
+  }
+}
+
+/* Medium devices (tablets up to 991px) */
+@media (max-width: 991px) {
+  .services-page p,
+  .services-page a,
+  .services-page .book-consultation-link {
+    font-size: 18px;
+  }
+
+  .interior-design-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .interior-design-text,
+  .interior-design-image {
+    max-width: 100%;
+  }
+
+  .interior-design-image img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Small devices (phones) */
+@media (max-width: 768px) {
+  .services-content-wrapper {
+    flex-direction: column;
+  }
+
+  .services-image-half,
+  .services-text-half {
+    max-width: 100%;
+  }
+
+  .services-hero-text {
+    font-size: 0.8em;
+    padding: 0px;
+  }
+
+  .services-text-half {
+    padding: 1em;
+  }
+
+  .services-hero-content,
+  .services-subcontent {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2em;
+  }
+
+  .services-image-container,
+  .services-aligned-image {
+    max-width: 100%;
+    margin: 20px 0;
+  }
+
+  .services-aligned-image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .title-div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .title-div h2 {
+    margin-bottom: 0.5em;
+    margin-right: 0;
+  }
+
+  .services-hero-text h1 {
+    font-size: 3em;
+  }
+
+  .interior-design-text h1, .projects-section .projects-header h1 {
+    font-size: 2em;
+  }
+
+  .title-div p, .services-text-half .services-title p strong, .services-description title, .services-description p, .interior-design-text p,.interior-design-text h2, .projects-section .projects-header p {
+    font-size: 0.9em;
+  }
+
+  .services-text-half {
+    flex-direction: column;
+  }
+
+  .services-title,
+  .services-description {
+    max-width: 100%;
+  }
+
+  .interior-design-image img {
+    width: 100%; 
+    margin: 0;
+    padding: 0;
+  }
+
+  .interior-design-section {
+    flex-direction: column; 
+  }
+
+  .interior-design-text h2,
+  .interior-design-text p {
+    margin-left: 0; 
+    padding-left: 0; 
+  }
+
+  .services-page {
+    margin-bottom: -20px;
+  }
+
+  .services-title, .services-description {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .services-horizontal-image {
+    max-height: 400px; 
+    width: 100%;
+    height: auto; 
+  }
+
+  .projects-section {
+    padding-top: 30px;
+  }
+
+  .projects-carousel,
+  .about-contact {
+    margin: 0; 
+    padding: 0;
+  }
+
+  .book-consultation-link {
+    margin-left: 0;
+  }
+}
