@@ -30,9 +30,9 @@ h1 {
   position: relative;
   z-index: 1;
   padding-top: 30px;
-  margin-top: 100vh; /* This should be the height of the .project-detail-background */
-  min-height: 100vh; /* Ensure content covers the entire screen height */
-  background: #f5ece2; /* This is your content background color */
+  margin-top: 100vh; 
+  min-height: 100vh; 
+  background: #f5ece2; 
 }
 
 /* First Section Styles */
@@ -44,33 +44,32 @@ h1 {
 }
 
 .project-title {
-  flex: 3; /* Adjust the ratio as needed */
-  font-size: 36px; /* Adjust the font size as needed */
+  flex: 3;
+  font-size: 36px; 
   margin-left: 50px;
   text-transform: none;
 }
 
 .project-description {
-  flex: 2; /* Adjust the ratio as needed */
+  flex: 2;
   margin-right: 20px;
-  font-size: 20px; /* Adjust the font size as needed */
+  font-size: 20px; 
 }
 
 .featured-image-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* Remove the max-width or adjust it to a larger value if necessary */
-  max-width: none; /* or try 100% if none doesn't work */
-  margin: 0 auto; /* This should center the container */
+  max-width: none; 
+  margin: 0 auto; 
   margin-right: 50px;
-  width: 50%; /* This allows the container to take the full width of its parent */
+  width: 50%; 
 }
 
 .featured-image {
-  width: 80%; /* This should stretch the image to the full width of its container */
-  height: auto; /* This maintains the aspect ratio */
-  object-fit: cover; /* This will cover the area and cut off any excess */
+  width: 80%; 
+  height: auto; 
+  object-fit: cover; 
 }
 
 /* Full-width Hero Image Styles */
@@ -91,39 +90,39 @@ h1 {
 .description,
 .concept {
   font-size: 20px;
-  line-height: 1.6; /* Improve readability */
+  line-height: 1.6; 
 }
 
 /* Description and Gallery Wrap Styles - Revised */
 .description-gallery-wrap,
 .concept-gallery-wrap {
   display: flex;
-  flex-wrap: wrap; /* Wrap on smaller screens */
+  flex-wrap: wrap; 
   align-items: flex-start;
 }
 
 /* Description and Concept Text Sections */
 .description,
 .concept {
-  flex: 0 0 50%; /* Take up exactly 50% of the space */
+  flex: 0 0 50%; 
   padding: 2rem;
   background-color: rgba(
     255,
     255,
     255,
     0.9
-  ); /* More opaque for better readability */
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  );
+  box-sizing: border-box; 
   background-color: #f5ece2;
 }
 
 /* Gallery Styles */
 .gallery {
   display: flex;
-  flex-wrap: wrap; /* Allow images to wrap */
+  flex-wrap: wrap; 
   justify-content: space-between;
-  flex: 0 0 50%; /* Take up exactly 50% of the space */
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  flex: 0 0 50%; 
+  box-sizing: border-box; 
   margin-left: 0;
   margin-right: 0;
 }
@@ -131,8 +130,8 @@ h1 {
 /* Individual Image Container */
 /* Gallery Image Container */
 .gallery-image-container {
-  flex: 0 0 calc(50% - 20px); /* Two images per row with spacing */
-  margin: 10px; /* Spacing around each image container */
+  flex: 0 0 calc(50% - 20px); 
+  margin: 10px;
   position: relative;
   overflow: hidden;
 }
@@ -140,7 +139,7 @@ h1 {
 .gallery-image-container::before {
   content: "";
   display: block;
-  padding-top: 100%; /* Aspect ratio 1:1 */
+  padding-top: 100%; 
 }
 
 /* Gallery Image Styles */
@@ -156,16 +155,14 @@ h1 {
 /* Media queries */
 /* For larger screens */
 @media (min-width: 1500px) {
-  /* For very large screens, you might want larger images or fewer images per row */
   .gallery-image-container {
-    flex: 0 0 calc(50% - 20px); /* Two images per row with spacing */
-    /* Adjust padding-top on the ::before pseudo-element if you change the number of items per row to maintain the square shape */
+    flex: 0 0 calc(50% - 20px); 
   }
 }
 
 /* Adjust the gallery container margin if needed */
 .gallery {
-  margin: 20px -10px; /* Compensates for the 10px margin on each `.gallery-image-container` */
+  margin: 20px -10px; 
 }
 
 @media (max-width: 991px) {
@@ -185,74 +182,73 @@ h1 {
 
   /* Make the featured image container take full width and stack below the text */
   .first-section {
-    flex-direction: column; /* Stack children vertically */
+    flex-direction: column; 
   }
 
   .featured-image-container {
-    width: 100%; /* Take full width */
-    max-width: none; /* Remove any max-width restrictions */
-    margin: 0 auto 1rem; /* Center it and add margin below */
+    width: 100%; 
+    max-width: none; 
+    margin: 0 auto 1rem; 
   }
 
   /* Make the featured image responsive within its container */
   .featured-image {
-    width: 100%; /* Take full width of its container */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%; 
+    height: auto; 
   }
 
   /* Other styles for medium screens */
   .description,
   .concept,
   .gallery {
-    flex-basis: 100%; /* Each section takes full width */
+    flex-basis: 100%;
   }
 
   .gallery-image-container {
-    flex: 0 0 calc(50% - 20px); /* Two images per row with spacing */
-    margin-left: 10px; /* Provides 20px total space between images */
-    padding-top: calc(50% - 20px); /* Keep a square aspect ratio */
+    flex: 0 0 calc(50% - 20px); 
+    margin-left: 10px; 
+    padding-top: calc(50% - 20px); 
   }
 }
 
 @media (max-width: 767px) {
   .project-content {
-    margin-top: 100vh; /* Adjust this if the height of your background image changes */
+    margin-top: 100vh; 
   }
 
   .featured-image-container {
-    /* Make any necessary adjustments for small screens */
-    margin: 0 auto; /* Ensure the container is centered */
+    margin: 0 auto; 
     padding: 0.5rem;
   }
 
   .featured-image {
-    width: 100%; /* Image takes full width of the container */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%; 
+    height: auto; 
     object-fit: cover;
   }
 
   /* Adjusting the text sections to stack on top of each other */
   .description,
   .concept {
-    padding: 1rem; /* Provide some padding around the text */
+    padding: 1rem; 
   }
 
   .gallery-image-container {
-    flex: 0 0 100%; /* Full width for each image container */
-    padding-top: 0; /* Remove padding-top since we don't need to enforce aspect ratio */
-    margin-bottom: 1rem; /* Add some space between the images */
+    flex: 0 0 100%;
+    padding-top: 0; 
+    margin-bottom: 1rem; 
   }
 
   .gallery-image {
-    height: 100%; /* Make sure image fills the container */
-    object-fit: cover; /* Cover the area, might result in cropping */
+    height: 100%; 
+    object-fit: cover;
   }
 }
 
 /* Adjust the gallery margin to ensure even spacing */
 .gallery {
-  margin-left: -10px; /* Counteract the left margin of image containers */
-  margin-right: -10px; /* Counteract the right margin of image containers */
+  margin-left: -10px; 
+  margin-right: -10px; 
 }
 
 /* Each gallery image container will have even spacing */
@@ -264,8 +260,8 @@ h1 {
 /* For very small screens where each image should take the full width */
 @media (max-width: 480px) {
   .gallery-image-container {
-    flex: 0 0 100%; /* Take full width of the gallery */
+    flex: 0 0 100%; 
     margin-top: 10px;
-    padding-top: 0; /* No padding-top needed as each image will be full width */
+    padding-top: 0; 
   }
 }

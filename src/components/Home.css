@@ -1,5 +1,4 @@
 /* Global styles */
-
 /* Prevent horizontal scrolling */
 html, body {
   max-width: 100%;
@@ -97,16 +96,16 @@ p {
 .key-offerings-title {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align items to the start of the flex container */
+  align-items: flex-start; 
 } 
 
 .key-offerings-title a {
-  display: block; /* This will place each link on a new line */
-  margin-bottom: 10px; /* Adjust the space between the links as needed */
+  display: block; 
+  margin-bottom: 10px; 
 }
 
 .key-offerings-title .read-more-link {
-  margin-left: 60px; /* Adjust the value as needed */
+  margin-left: 60px; 
 }
 
 /* Read more link style */
@@ -114,33 +113,32 @@ p {
   position: relative;
   display: inline-block;
   margin-bottom: 75px;
-  padding: 0.5em 1em; /* Adjust padding as needed */
-  text-decoration: none; /* Removes underline from links */
-  color: var(--text-color); /* Ensures the text color is consistent */
-  background-color: transparent; /* Ensures background is transparent */
-  transition: color 0.5s ease; /* Smooth transition for color changes */
+  padding: 0.5em 1em; 
+  text-decoration: none; 
+  color: var(--text-color); 
+  background-color: transparent; 
+  transition: color 0.5s ease; 
 }
 
 /* Hover Animations for Links */
 /* Read more link style adjustments */
 .key-offerings-title .read-more-link {
   position: relative;
-  display: inline-block; /* Use flex to better control the positioning of pseudo-elements */
-  align-items: center; /* Align items (including pseudo-elements) vertically */
+  display: inline-block;
+  align-items: center; 
   margin-bottom: 75px;
-  padding: 0; /* Remove padding to ensure underline starts at text */
-  text-decoration: none; /* Removes underline from links */
-  color: var(--text-color); /* Ensures the text color is consistent */
-  background-color: transparent; /* Ensures background is transparent */
+  padding: 0; 
+  text-decoration: none;
+  color: var(--text-color); 
+  background-color: transparent; 
 }
-
 
 /* The underline effect */
 .key-offerings-title .read-more-link .read-more-link::after {
   content: '';
   position: absolute;
-  left: 0; /* Start at the very left of the element */
-  bottom: -5px; /* Adjust to the desired position below the text */
+  left: 0; 
+  bottom: -5px; 
   height: 2px;
   width: 0;
   background: #BB9C71;
@@ -157,7 +155,7 @@ p {
   content: '';
   position: absolute;
   top: 50%;
-  right: -20px; /* Adjust if necessary */
+  right: -20px; 
   transform: translate(0, -50%);
   width: 8px;
   height: 8px;
@@ -227,18 +225,18 @@ p {
 }
 
 .swiper-slide img {
-  width: 100%; /* Make the image take full width of the slide */
-  height: 100%; /* Make the image take full height of the slide */
-  object-fit: cover; /* Cover the area, might result in cropping */
+  width: 100%;
+  height: 100%; 
+  object-fit: cover; 
 }
 
 /* Carousel Slide */
-/* Carousel Slide Styling */
+/* Slide Styling */
 .carousel-slide {
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  height: 300px; /* Adjust the height as needed */
+  height: 300px; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -246,9 +244,9 @@ p {
 
 /* Carousel Image Styling */
 .carousel-slide img {
-  width: 100%; /* Stretch to fill the width */
-  height: 100%; /* Stretch to fill the height */
-  object-fit: cover; /* Cover the tile entirely, cropping as necessary */
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
 }
 
 /* This additional container is used to handle vertical images */
@@ -263,7 +261,7 @@ p {
 /* Adjusting the image to cover the space */
 .carousel-image-container img {
   height: 100%;
-  width: auto; /* Auto width will ensure the aspect ratio is maintained */
+  width: auto; 
   object-fit: cover;
 }
 
@@ -274,7 +272,7 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(245, 236, 226, 0.7); /* Semi-transparent overlay */
+  background: rgba(245, 236, 226, 0.7); 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -291,7 +289,7 @@ p {
 
 /* Style for the overlay text */
 .carousel-hover-overlay h1 {
-  color: var(--text-color); /* Use existing color variable for consistency */
+  color: var(--text-color); 
   font-size: 2rem;
   text-align: center;
 }
@@ -300,19 +298,19 @@ p {
 .swiper-button-next,
 .swiper-button-prev {
   color: #BB9C71 !important;
-  filter: none !important; /* Remove any default filter/opacity */
+  filter: none !important;
   z-index: 10;
 }
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
-  font-size: 16px; /* Adjust arrow size */
+  font-size: 16px; 
 }
 
 /* Optionally, adjust the position and size further if needed */
 .swiper-button-next,
 .swiper-button-prev {
-  top: 50%; /* Center vertically */
+  top: 50%; 
   transform: translateY(-50%);
 }
 
@@ -362,7 +360,7 @@ p {
 .key-offerings-image img {
   object-fit: cover; /* Ensures image covers the area without stretching */
   width: auto;
-  height: auto; /* Match height of sibling container */
+  height: auto; 
   align-items: right;
 }
 
@@ -370,10 +368,10 @@ p {
 .read-more-link::after {
   content: '';
   position: absolute;
-  width: 0; /* Start with no width */
+  width: 0;
   height: 1px;
   bottom: 0;
-  right: 0; /* Extend to the right */
+  right: 0;
   background-color: #BB9C71;
   visibility: hidden;
   border-radius: 5px;
@@ -385,7 +383,7 @@ p {
 .read-more-link:hover::after {
   visibility: visible;
   transform: scaleX(1);
-  width: 100%; /* Extend to full width on hover */
+  width: 100%; 
 }
 
 /* font-size for p in title-div and home-text-half is explicitly set */
@@ -416,18 +414,18 @@ p {
 /* Media queries for the Key Offerings */
 @media (min-width: 769px) and (max-width: 1499px) {
   .key-offerings-content {
-    flex-wrap: wrap; /* Allows the items to wrap as needed */
+    flex-wrap: wrap;
   }
 
   .key-offerings-title,
   .key-offerings-image {
-    flex: 1; /* Both take equal space */
-    max-width: 50%; /* Each takes up to half of the container width */
+    flex: 1;
+    max-width: 50%;
   }
 
   .key-offerings-image img {
-    max-width: 100%; /* Ensure the image does not overflow */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; 
+    height: auto;
   }
 }
 
@@ -469,7 +467,7 @@ p {
   }
 
   .footer-logo {
-    order: -1; /* Place logo at the top */
+    order: -1;
   }
 
   .footer-bottom {
@@ -485,14 +483,14 @@ p {
 
   .home-hero {
     background: url("../assets/home-background.PNG") no-repeat center center;
-    background-size: cover; /* Cover the entire area of the element */
-    background-attachment: scroll; /* Remove fixed since it's problematic on mobile */
-    height: auto; /* Set to auto to contain the content */
-    min-height: 50vh; /* Minimum height to ensure visibility */
+    background-size: cover;
+    background-attachment: scroll;
+    height: auto; 
+    min-height: 50vh; 
   }
 
   .home-hero::before {
-    /* Remove the pseudo-element since we are not doing parallax on mobile */
+    /*! Remove the pseudo-element since we are not doing parallax on mobile */
     content: none;
   }
 
@@ -501,7 +499,7 @@ p {
     display: none;
   }
 
-  /* Reorder the hero content so the image is on top and the text is below */
+  /*! Reorder the hero content so the image is on top and the text is below */
   .home-hero-content {
     flex-direction: column-reverse;
   }
@@ -563,7 +561,7 @@ p {
   }
 
   .key-offerings-container {
-    padding: 0; /* Removes padding */
+    padding: 0; 
   }
 
   .key-offerings-image img {
@@ -596,20 +594,19 @@ p {
 .key-offerings-image,
 .about-contact {
   width: 100%;
-  overflow: hidden; /* Hide the overflow */
-  position: relative; /* Make sure they are relative if using absolute positioning within them */
+  overflow: hidden; 
+  position: relative; 
 }
 
 .key-offerings-title h1,
   .key-offerings-title .read-more-link {
     text-align: center;
-    padding-left: 0; /* Override previous padding for h1 */
+    padding-left: 0; 
     margin-left: 0px;
   }
   
   .key-offerings-title {
-    align-items: center; /* Center items in the flex container */
+    align-items: center; 
     font-size: 11px;
   }
-
 }

@@ -14,9 +14,9 @@ const About = () => {
 
   const [readMore, setReadMore] = useState(false);
 
-  const handleReadMoreClick = () => {
-    setReadMore(!readMore);
-  };
+  // const handleReadMoreClick = () => {
+  //   setReadMore(!readMore);
+  // };
 
   return (
     <div className="about-page">

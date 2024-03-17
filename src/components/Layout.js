@@ -1,8 +1,8 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
-import { Container } from 'react-bootstrap'; // importing the Container component from react-bootstrap
-import contactBottomImg from '../assets/contact-bottom.jpg'; // Ensure the path is correct
+import { Container } from 'react-bootstrap'; 
+import contactBottomImg from '../assets/contact-bottom.jpg'; 
 
 const Layout = ({ children, useContainer }) => {
   // Determine if the current page is the contact page

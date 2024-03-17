@@ -14,7 +14,7 @@ const Header = () => {
   };
 
   const closeMenu = () => {
-    setIsMenuOpen(false); // Directly set the menu to be closed
+    setIsMenuOpen(false); 
   };
 
   const [navbarScrolled, setNavbarScrolled] = useState(false);
@@ -68,9 +68,9 @@ const Header = () => {
       {/* Menu overlay */}
       <div className={`menu-overlay ${isMenuOpen ? "show" : ""}`}>
         <FontAwesomeIcon
-          icon={faTimes} // Using the 'times' icon as a close icon
-          onClick={closeMenu} // Using the closeMenu function on click
-          className="close-icon" // Assign a class for styling
+          icon={faTimes} 
+          onClick={closeMenu} 
+          className="close-icon" 
         />
         <div className="menu-content">
           {/* Menu links */}

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "./Services.css";
 import servicesBackground from "../assets/services-background.PNG";
@@ -8,39 +8,22 @@ import smallerImage from "../assets/smaller-image.jpeg";
 import horizontalImage from "../assets/services-horizontal.PNG";
 import designPhases from "../assets/design-phases.png";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import _ from "lodash";
-import { useInView } from "react-intersection-observer";
+import { Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+
+import { projectsData } from "./projectsData"; 
 
 const Services = () => {
-  const [projects, setProjects] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:1337/api/projects?populate=*")
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data); // It's always a good practice to log and check the structure
-        setProjects(data.data); // Assuming the structure is the same as in Projects.js
-      })
-      .catch((error) => console.error("Error fetching data: ", error));
-  }, []);
-
-  const { ref, inView } = useInView({
-    triggerOnce: true, // Trigger animation once
-    threshold: 0.5, // Trigger when 50% visible
-  });
-
   return (
     <div className="services-page">
       <div
         className="services-hero"
         style={{ backgroundImage: `url(${servicesBackground})` }}
       >
-        {/* Semi-transparent overlay that allows the fixed background to be visible */}
         <div className="background-overlay"></div>
       </div>
 
-      {/* Content that scrolls over the background */}
       <div className="services-overlay">
         <div className="services-hero-content">
           <div className="services-image-container">
@@ -51,15 +34,10 @@ const Services = () => {
             />
           </div>
           <div className="services-hero-text">
-            <h1 ref={ref}>
-              <span className="line line1">Serving</span>
-              <span className="line line2">
-                <em className={inView ? "em-animate" : ""}>Your</em>
-              </span>
-              <span className="line line3">Vision.</span>
-            </h1>
+            <h1>Serving <em>Your</em> Vision.</h1>
           </div>
         </div>
+
         <div className="services-subcontent">
           <div className="title-div">
             <p>
@@ -247,45 +225,35 @@ const Services = () => {
         </div>
 
         <div className="projects-section">
-          <div className="projects-header">
-            <h1>
-              Portfolio <em>Projects</em>
-            </h1>
-          </div>
-          <div className="projects-carousel">
-            <Swiper
-              spaceBetween={20}
-              slidesPerView={1}
-              breakpoints={{
-                768: {
-                  slidesPerView: 3,
-                  spaceBetween: 20,
-                },
-              }}
-              onSlideChange={() => console.log("slide change")}
-              onSwiper={(swiper) => console.log(swiper)}
-            >
-              {projects.map((project) => {
-                const { attributes } = project;
-                const imageUrl = attributes.mainImage.data
-                  ? `http://localhost:1337${attributes.mainImage.data.attributes.url}`
-                  : "";
-                return (
-                  <SwiperSlide key={project.id} className="carousel-slide">
-                    <Link to={`/projects/${project.attributes.slug}`}>
-                      {" "}
-                      <img src={imageUrl} alt={attributes.title} />
-                      <div className="carousel-hover-overlay">
-                        <h1>
-                          View <em>Project</em>
-                        </h1>
-                      </div>
-                    </Link>
-                  </SwiperSlide>
-                );
-              })}
-            </Swiper>
-          </div>
+          <h1>
+            Portfolio <em>Projects</em>
+          </h1>
+          <Swiper
+            spaceBetween={20}
+            slidesPerView={1}
+            loop={true}
+            navigation={true}
+            modules={[Navigation]}
+            breakpoints={{
+              768: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+              },
+            }}
+          >
+            {projectsData.map((project, index) => (
+              <SwiperSlide key={index} className="carousel-slide">
+                <Link to={`/projects/${project.slug}`}>
+                  <div className="carousel-image-container">
+                    <img src={project.backgroundImage?.url || ""} alt={project.title} />
+                    <div className="carousel-hover-overlay">
+                      <h1>View <em>Project</em></h1>
+                    </div>
+                  </div>
+                </Link>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
 
         <div className="about-contact">
