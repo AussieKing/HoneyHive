@@ -29,7 +29,7 @@ const Services = () => {
           <div className="services-image-container">
             <img
               src={specialtyImage}
-              alt="Specialty"
+              alt="Specialty tap and textures"
               className="services-specialty-image"
             />
           </div>
@@ -82,7 +82,7 @@ const Services = () => {
           <div className="services-image-half">
             <img
               src={horizontalImage}
-              alt="Descriptive Alt Text"
+              alt="Dining table with chairs and a plant in the middle."
               className="services-horizontal-image"
             />
           </div>
@@ -220,7 +220,7 @@ const Services = () => {
             </div>
           </div>
           <div className="interior-design-image">
-            <img src={designPhases} alt="Interior Design" />
+            <img src={designPhases} alt="Wooden stairs with concrete textures and plants" />
           </div>
         </div>
 
