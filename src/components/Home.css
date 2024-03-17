@@ -231,6 +231,14 @@ p {
 }
 
 /* Carousel Slide */
+.projects-section .projects-header h1 {
+  font-family: "Kaisei Opti", serif;
+  letter-spacing: -2.6px;
+  margin-left: 50px;
+  font-size: 3em;
+  color: var(--text-color);
+}
+
 /* Slide Styling */
 .carousel-slide {
   position: relative;
