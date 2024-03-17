@@ -1,16 +1,25 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+
+
 import "./Home.css";
+import { projectsData } from "./projectsData";
 import homeBackground from "../assets/home-background.PNG";
 import contactImage from "../assets/contact-image.jpg";
 import specialtyImage from "../assets/home-specialty-image.jpg";
 import video1 from "../assets/video-1.mp4";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css/bundle";
 
 const Home = () => {
-  const [projects, setProjects] = useState([]);
   const parallaxRef = useRef(null);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const handleScroll = () => {
     if (parallaxRef.current) {
@@ -19,28 +28,13 @@ const Home = () => {
     }
   };
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    fetch("http://localhost:1337/api/projects?populate=*")
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data); // Log and check the structure
-        // Set projects to an empty array if data.data is not iterable
-        setProjects(Array.isArray(data.data) ? data.data : []);
-      })
-      .catch((error) => {
-        console.error("Error fetching data: ", error);
-        setProjects([]); // Ensure projects is always an array
-      });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <div className="home-page">
       <div className="home-hero">
         <div
           className="parallax-background"
-          ref={parallaxRef} // Attach the ref
+          ref={parallaxRef} 
           style={{ backgroundImage: `url(${homeBackground})` }}
         ></div>{" "}
       </div>
@@ -64,9 +58,9 @@ const Home = () => {
         </div>
 
         <div className="title-div">
-          <p><strong>
-            LET’S COLLABORATE TO ELEVATE YOUR SPACE
-         </strong> </p>
+          <p>
+            <strong>LET’S COLLABORATE TO ELEVATE YOUR SPACE</strong>{" "}
+          </p>
           <p>
             Embrace the essence of your imagination and let Honey & Hive
             Interiors bring it to life. If you're grappling with uncertainties,
@@ -86,7 +80,9 @@ const Home = () => {
         <div className="home-content-wrapper">
           <div className="home-text-half">
             <div className="home-title">
-              <p><strong>WHAT WE DO</strong></p>
+              <p>
+                <strong>WHAT WE DO</strong>
+              </p>
             </div>
             <div className="home-description">
               <p>
@@ -131,40 +127,39 @@ const Home = () => {
             </h1>
           </div>
           <div className="projects-carousel">
-            {projects && projects.length > 0 ? (
+            {projectsData && projectsData.length > 0 ? (
               <Swiper
-                spaceBetween={20}
-                slidesPerView={1}
-                breakpoints={{
-                  768: {
-                    slidesPerView: 3,
-                    spaceBetween: 20,
-                  },
-                }}
-                onSlideChange={() => console.log("slide change")}
-                onSwiper={(swiper) => console.log(swiper)}
-              >
-                {projects.map((project) => {
-                  const { attributes } = project;
-                  const imageUrl = attributes.mainImage.data
-                    ? `http://localhost:1337${attributes.mainImage.data.attributes.url}`
-                    : "";
-                  return (
-                    <SwiperSlide key={project.id} className="carousel-slide">
-                      <Link to={`/projects/${project.attributes.slug}`}>
-                        <img src={imageUrl} alt={attributes.title} />
-                        <div className="carousel-hover-overlay">
-                          <h1>
-                            View <em>Project</em>
-                          </h1>
-                        </div>
-                      </Link>
-                    </SwiperSlide>
-                  );
-                })}
-              </Swiper>
+              spaceBetween={20}
+              slidesPerView={1}
+              navigation={true}
+              modules={[Navigation]} 
+              className="mySwiper" 
+              breakpoints={{
+                768: {
+                  slidesPerView: 3,
+                  spaceBetween: 20
+                }
+              }}
+            >
+              {projectsData.map((project, index) => {
+                const imageUrl = project.backgroundImage?.url || "";
+                return (
+                  <SwiperSlide key={index} className="carousel-slide">
+                    <Link to={`/projects/${project.slug}`}>
+                    <div className="carousel-image-container">
+                      <img src={imageUrl} alt={project.title} />
+                      <div className="carousel-hover-overlay">
+                        <h1>View <em>Project</em></h1>
+                      </div>
+                    </div>
+                    </Link>
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
+            
             ) : (
-              <div>No projects to display</div> // Display this if there are no projects
+              <div>No projects to display</div>
             )}
           </div>
         </div>

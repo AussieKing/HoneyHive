@@ -227,30 +227,47 @@ p {
 }
 
 .swiper-slide img {
-  max-height: 336px;
-  width: 100%;
-  object-fit: cover;
+  width: 100%; /* Make the image take full width of the slide */
+  height: 100%; /* Make the image take full height of the slide */
+  object-fit: cover; /* Cover the area, might result in cropping */
 }
 
-/* Carousel Slide Styling for Uniformity and Hover Effect */
+/* Carousel Slide */
+/* Carousel Slide Styling */
 .carousel-slide {
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  height: 320px !important; /* Set a fixed height for uniformity */
-  width: 100%;
+  height: 300px; /* Adjust the height as needed */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* Carousel Image Styling */
 .carousel-slide img {
-  width: auto !important;
-  height: 100% !important;
-  min-width: 100% !important;
-  object-fit: cover !important; /* Ensures the image covers the tile while maintaining aspect ratio */
+  width: 100%; /* Stretch to fill the width */
+  height: 100%; /* Stretch to fill the height */
+  object-fit: cover; /* Cover the tile entirely, cropping as necessary */
 }
 
+/* This additional container is used to handle vertical images */
+.carousel-image-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Adjusting the image to cover the space */
+.carousel-image-container img {
+  height: 100%;
+  width: auto; /* Auto width will ensure the aspect ratio is maintained */
+  object-fit: cover;
+}
+
+/* Carousel Hover Overlay Styling */
 .carousel-hover-overlay {
   position: absolute;
   top: 0;
@@ -266,18 +283,38 @@ p {
   visibility: hidden;
 }
 
+/* Show overlay on hover */
 .carousel-slide:hover .carousel-hover-overlay {
   opacity: 1;
   visibility: visible; /* Make overlay visible on hover */
 }
 
+/* Style for the overlay text */
 .carousel-hover-overlay h1 {
   color: var(--text-color); /* Use existing color variable for consistency */
   font-size: 2rem;
   text-align: center;
 }
 
+/* Swiper navigation arrows customization */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #BB9C71 !important;
+  filter: none !important; /* Remove any default filter/opacity */
+  z-index: 10;
+}
 
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 16px; /* Adjust arrow size */
+}
+
+/* Optionally, adjust the position and size further if needed */
+.swiper-button-next,
+.swiper-button-prev {
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%);
+}
 
 /* Key Offerings Section */
 .key-offerings-container {
@@ -373,6 +410,24 @@ p {
   .home-page a,
   .home-page .book-consultation-link {
     font-size: 20px !important;
+  }
+}
+
+/* Media queries for the Key Offerings */
+@media (min-width: 769px) and (max-width: 1499px) {
+  .key-offerings-content {
+    flex-wrap: wrap; /* Allows the items to wrap as needed */
+  }
+
+  .key-offerings-title,
+  .key-offerings-image {
+    flex: 1; /* Both take equal space */
+    max-width: 50%; /* Each takes up to half of the container width */
+  }
+
+  .key-offerings-image img {
+    max-width: 100%; /* Ensure the image does not overflow */
+    height: auto; /* Maintain aspect ratio */
   }
 }
 

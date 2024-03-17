@@ -28,9 +28,9 @@
 /* Project Titles and Categories */
 .project-title,
 .project-category {
+  font-family: "Kaisei Opti", serif;
   text-align: start;
-  text-transform: uppercase; 
-  font-weight: bold;
+  text-transform: none; 
   margin-top: 8px;
 }
 

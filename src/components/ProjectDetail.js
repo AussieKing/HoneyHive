@@ -42,11 +42,10 @@ const ProjectDetail = () => {
               <img key={index} src={img.url} alt={img.alt || 'Featured image'} className="featured-image" />
             ))}
           </div>
-          <div className="strapi-fields">
+          <div className="project-description">
             <p><strong>LOCATION:</strong> {project.location}</p>
             <p><strong>DESIGNER:</strong> {project.interiorDesign}</p>
-            <p><strong>BUILDER:</strong> {project.builder}</p>
-            <p><strong>PHOTOGRAPHY:</strong> {project.photography}</p>
+            <p><strong>TYPE:</strong> {project.projectType}</p>
           </div>
         </div>
 

@@ -1,13 +1,14 @@
 /* Import fonts */
-@import url('https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap");
 
 /* Global Styles */
 .project-detail-container {
-  font-family: 'Kaisei Opti', serif;
+  font-family: "Kaisei Opti", serif;
 }
 
 /* Adjust global paragraph and heading colors */
-p, h1 {
+p,
+h1 {
   color: #444;
 }
 
@@ -31,7 +32,6 @@ p, h1 {
   padding-top: 30px;
   margin-top: 100vh; /* This should be the height of the .project-detail-background */
   min-height: 100vh; /* Ensure content covers the entire screen height */
-
   background: #f5ece2; /* This is your content background color */
 }
 
@@ -47,22 +47,30 @@ p, h1 {
   flex: 3; /* Adjust the ratio as needed */
   font-size: 36px; /* Adjust the font size as needed */
   margin-left: 50px;
+  text-transform: none;
 }
 
-.strapi-fields {
+.project-description {
   flex: 2; /* Adjust the ratio as needed */
-  margin-left: 1rem;
+  margin-right: 20px;
+  font-size: 20px; /* Adjust the font size as needed */
 }
 
 .featured-image-container {
-  max-width: 300px; /* Adjust the width as needed */
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Remove the max-width or adjust it to a larger value if necessary */
+  max-width: none; /* or try 100% if none doesn't work */
+  margin: 0 auto; /* This should center the container */
+  margin-right: 50px;
+  width: 50%; /* This allows the container to take the full width of its parent */
 }
 
 .featured-image {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+  width: 80%; /* This should stretch the image to the full width of its container */
+  height: auto; /* This maintains the aspect ratio */
+  object-fit: cover; /* This will cover the area and cut off any excess */
 }
 
 /* Full-width Hero Image Styles */
@@ -78,7 +86,13 @@ p, h1 {
   object-fit: cover;
 }
 
-/* Text and Gallery Wrap Styles - Adjusted */
+/* Text and Gallery Wrap Styles */
+/* Text Section Styles */
+.description,
+.concept {
+  font-size: 20px;
+  line-height: 1.6; /* Improve readability */
+}
 
 /* Description and Gallery Wrap Styles - Revised */
 .description-gallery-wrap,
@@ -93,9 +107,14 @@ p, h1 {
 .concept {
   flex: 0 0 50%; /* Take up exactly 50% of the space */
   padding: 2rem;
-  background-color: rgba(255, 255, 255, 0.9); /* More opaque for better readability */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* More opaque for better readability */
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
-  background-color: #f5ece2 ;
+  background-color: #f5ece2;
 }
 
 /* Gallery Styles */
@@ -105,14 +124,23 @@ p, h1 {
   justify-content: space-between;
   flex: 0 0 50%; /* Take up exactly 50% of the space */
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  margin-left: 0;
+  margin-right: 0;
 }
 
 /* Individual Image Container */
+/* Gallery Image Container */
 .gallery-image-container {
-  flex: 0 0 calc(50% - 0.5rem); /* Take up 50% of the gallery container minus half the gap */
-  margin-bottom: 1rem; /* Add space between rows of images */
-  position: relative; /* Position relative to allow absolute positioned images */
-  padding-top: 100%; /* Maintain aspect ratio */
+  flex: 0 0 calc(50% - 20px); /* Two images per row with spacing */
+  margin: 10px; /* Spacing around each image container */
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-image-container::before {
+  content: "";
+  display: block;
+  padding-top: 100%; /* Aspect ratio 1:1 */
 }
 
 /* Gallery Image Styles */
@@ -123,6 +151,21 @@ p, h1 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* Media queries */
+/* For larger screens */
+@media (min-width: 1500px) {
+  /* For very large screens, you might want larger images or fewer images per row */
+  .gallery-image-container {
+    flex: 0 0 calc(50% - 20px); /* Two images per row with spacing */
+    /* Adjust padding-top on the ::before pseudo-element if you change the number of items per row to maintain the square shape */
+  }
+}
+
+/* Adjust the gallery container margin if needed */
+.gallery {
+  margin: 20px -10px; /* Compensates for the 10px margin on each `.gallery-image-container` */
 }
 
 @media (max-width: 991px) {
@@ -139,13 +182,90 @@ p, h1 {
   .gallery-image-container {
     flex: 0 0 100%; /* Full width */
   }
+
+  /* Make the featured image container take full width and stack below the text */
+  .first-section {
+    flex-direction: column; /* Stack children vertically */
+  }
+
+  .featured-image-container {
+    width: 100%; /* Take full width */
+    max-width: none; /* Remove any max-width restrictions */
+    margin: 0 auto 1rem; /* Center it and add margin below */
+  }
+
+  /* Make the featured image responsive within its container */
+  .featured-image {
+    width: 100%; /* Take full width of its container */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  /* Other styles for medium screens */
+  .description,
+  .concept,
+  .gallery {
+    flex-basis: 100%; /* Each section takes full width */
+  }
+
+  .gallery-image-container {
+    flex: 0 0 calc(50% - 20px); /* Two images per row with spacing */
+    margin-left: 10px; /* Provides 20px total space between images */
+    padding-top: calc(50% - 20px); /* Keep a square aspect ratio */
+  }
 }
 
 @media (max-width: 767px) {
   .project-content {
     margin-top: 100vh; /* Adjust this if the height of your background image changes */
   }
+
+  .featured-image-container {
+    /* Make any necessary adjustments for small screens */
+    margin: 0 auto; /* Ensure the container is centered */
+    padding: 0.5rem;
+  }
+
+  .featured-image {
+    width: 100%; /* Image takes full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+  }
+
+  /* Adjusting the text sections to stack on top of each other */
+  .description,
+  .concept {
+    padding: 1rem; /* Provide some padding around the text */
+  }
+
+  .gallery-image-container {
+    flex: 0 0 100%; /* Full width for each image container */
+    padding-top: 0; /* Remove padding-top since we don't need to enforce aspect ratio */
+    margin-bottom: 1rem; /* Add some space between the images */
+  }
+
+  .gallery-image {
+    height: 100%; /* Make sure image fills the container */
+    object-fit: cover; /* Cover the area, might result in cropping */
+  }
 }
 
-/* ... additional CSS ... */
+/* Adjust the gallery margin to ensure even spacing */
+.gallery {
+  margin-left: -10px; /* Counteract the left margin of image containers */
+  margin-right: -10px; /* Counteract the right margin of image containers */
+}
 
+/* Each gallery image container will have even spacing */
+.gallery-image-container {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* For very small screens where each image should take the full width */
+@media (max-width: 480px) {
+  .gallery-image-container {
+    flex: 0 0 100%; /* Take full width of the gallery */
+    margin-top: 10px;
+    padding-top: 0; /* No padding-top needed as each image will be full width */
+  }
+}

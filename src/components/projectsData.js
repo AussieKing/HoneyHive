@@ -50,11 +50,10 @@ export const projectsData = [
     // FIG BISTRO
     {
       slug: "fig-bistro",
-      title: "FIG BISTRO",
+      title: "Fig Bistro",
       location: "WYNNUM, QLD",
       interiorDesign: "HONEY & HIVE",
-      builder: "HEMMES CONSTRUCTIONS",
-      photography: "AUSSIEKING PHOTOGRAPGY",
+      projectType: "COMMERCIAL",
       description: [
         { type: "paragraph", 
         children: [{ text: "Welcome to Fig Bistro, an enchanting Alfresco dining experience nestled within the serene ambiance of the Waterloo Bay Hotel in Wynnum. As you step into the oasis, you're greeted by the gentle rustle of palm leaves and the inviting aroma of freshly prepared cuisine. Drawing inspiration from its bayside location, Fig Bistro exudes a charming nautical vibe, seamlessly blending with the surrounding greenery. The interior design ethos revolves around creating an inviting and cosy atmosphere, perfect for gatherings with loved ones or quiet moments of relaxation. At the heart of the design concept lies functionality and versatility. White Plantation shutters elegantly section off different areas, effortlessly accommodating small intimate gatherings or larger groups with ease. The open-concept layout seamlessly transitions between spaces, offering an intimate dining experience while still embracing the expansive outdoors." }] },
@@ -75,11 +74,10 @@ export const projectsData = [
     // HEPBURN'S LOUNGE & DINING
     {
       slug: "hepburns",
-      title: "HEPBURN's LOUNGE & DINING",
+      title: "Hepburn's Lounge & Dining",
       location: "WYNNUM, QLD",
       interiorDesign: "HONEY & HIVE",
-      builder: "HEMMES CONSTRUCTIONS",
-      photography: "AUSSIEKING PHOTOGRAPGY",
+      projectType: "COMMERCIAL",
       description: [
         { type: "paragraph", 
         children: [{ text: "The inspiration was to revitalize a once forgotten and tired eatery, infusing it with the charm and elegance of a Parisian café by day and an intimate candlelit bistro by night. To achieve this vision, we embarked on a journey of upcycling and repurposing, ensuring that the essence of the original space remained while adding a touch of modern European eclecticism. The bones of the original tables and chairs were salvaged and rejuvenated with new timber tops, breathing fresh vitality into their worn surfaces. To enhance comfort and style, each seating element was meticulously curated. Navy tufted commercial grade upholstery was carefully selected to harmonize with the newly designed timber banquettes and the Bentwood chairs were saved from landfill with a matching navy button seat cushion, creating a cohesive and inviting atmosphere." }] },
@@ -100,11 +98,10 @@ export const projectsData = [
     // CAPTAIN'S QUARTERS
     {
       slug: "captains-quarters",
-      title: "CAPTAIN'S QUARTERS",
+      title: "Captain's Quarters",
       location: "WYNNUM, QLD",
       interiorDesign: "HONEY & HIVE",
-      builder: "HEMMES CONSTRUCTIONS",
-      photography: "AUSSIEKING PHOTOGRAPGY",
+      projectType: "COMMERCIAL",
       description: [
         { type: "paragraph", 
         children: [{ text: " Step into the captivating revival of the Captain's Quarter's at the Waterloo Bay Hotel—a once-forgotten relic now boldly flaunting its 1889 heritage. As the visionary behind this transformation, our mission was clear: to celebrate the timeless elegance of this historic space while infusing it with a fresh vitality that pays homage to its coastal surroundings. With meticulous attention to detail, I restored remnants of its storied past, from the majestic fireplace mantel to the enduring hardwood flooring. Every element within these walls serves as a narrative, a testament to the beauty of history reborn. we breathed new life into weathered relics, infusing them with a modern twist that's equal parts audacious and sophisticated. These preserved treasures laid the foundation for a coastal-plantation oasis like no other—a fusion of classic sophistication and contemporary cool. Weathered wood accents dance alongside sleek lines and industrial touches, while a palette of crisp whites and moody blues evokes the serene ambiance of coastal living with a hint of urban edge." }] },
@@ -125,11 +122,10 @@ export const projectsData = [
     // DOREMI
     {
       slug: "doremi",
-      title: "DO RE MI CAFE",
+      title: "Do Re Mi Cafe'",
       location: "WYNNUM, QLD",
       interiorDesign: "HONEY & HIVE",
-      builder: "HEMMES CONSTRUCTIONS",
-      photography: "AUSSIEKING PHOTOGRAPGY",
+      projectType: "COMMERCIAL",
       description: [
         { type: "paragraph", 
         children: [{ text: "Immerse yourself in a harmonious blend of nostalgia and modernity at this little Cafe, where every detail pays homage to the timeless allure of the Sound of Music. Inspired by the venue's namesake, the furniture and styling design plan was meticulously crafted to evoke the essence of this beloved classic. The aim was to create an enchanting and antiquated ambiance that transports customers to a simpler time, while still embracing the comforts of modernity. " }] },
@@ -147,11 +143,10 @@ export const projectsData = [
     // PROUD HENRY
     {
       slug: "proud-henry",
-      title: "PROUD HENRY GINOTECA & WINE BAR",
+      title: "Proud Henry Ginoteca & Wine Bar",
       location: "FORTITUDE VALLEY, QLD",
       interiorDesign: "HONEY & HIVE",
-      builder: "ATLAS CONSTRUCTIONS",
-      photography: "AUSSIEKING PHOTOGRAPGY",
+      projectType: "COMMERCIAL",
       description: [
         { type: "paragraph", 
         children: [{ text: "Once a convenient shop and newspaper agency, dating back to the early 1900's, A Ginoteca and Wine bar was later born in its place, shaping what now feels like a hidden gem straight out of the laneways of London. Drawing inspiration from the mascot Henry, a proud peacock, the interior reflects his regal presence with a color scheme to match. When you step inside you are transported to a world where vintage wares, retro artwork, antique lighting, textiles, and carefully selected antique and custom furniture pieces combine to create an eclectic and playful atmosphere. From the moment you enter, you'll be captivated by the charm, history and character of the space. Unique treasures adorn every corner, adding depth and personality to the surroundings. " }] },
@@ -172,11 +167,10 @@ export const projectsData = [
     // GRAPE THERAPY
     {
       slug: "grape-therapy",
-      title: "GRAPE THERAPY WINE & WHISKEY BAR",
+      title: "Grape Therapy Wine & Whisky Bar",
       location: "BRISBANE, QLD",
       interiorDesign: "HONEY & HIVE",
-      builder: "ATLAS CONSTRUCTIONS",
-      photography: "AUSSIEKING PHOTOGRAPGY",
+      projectType: "COMMERCIAL",
       description: [
         { type: "paragraph", 
         children: [{ text: "A speakeasy, underground Wine and Whisky Bar, with an ambiance steeped in nostalgia, evoking the Rat Pack feel and jazz accompaniment of yesteryears. Sparked by this retro charm, we endeavored to transport our guests back to the swinging 1960s, where life was simpler and the atmosphere was imbued with timeless elegance. With meticulous attention to detail, we curated a space that exudes intimacy and sophistication. Vintage chesterfields beckon guests to sink into plush comfort, while restored doors repurposed as communal tables offer a unique and communal dining experience. Antique lighting fixtures cast a warm, inviting glow, enhancing the ambiance of nostalgia and refinement." }] },
