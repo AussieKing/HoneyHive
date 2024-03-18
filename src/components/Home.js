@@ -1,10 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-
+import { Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 
 import "./Home.css";
 import { projectsData } from "./projectsData";
@@ -28,13 +27,12 @@ const Home = () => {
     }
   };
 
-
   return (
     <div className="home-page">
       <div className="home-hero">
         <div
           className="parallax-background"
-          ref={parallaxRef} 
+          ref={parallaxRef}
           style={{ backgroundImage: `url(${homeBackground})` }}
         ></div>{" "}
       </div>
@@ -51,29 +49,30 @@ const Home = () => {
           </div>
           <div className="home-hero-text">
             <h1>
-              We create earthy and considerate spaces with an emphasis on{" "}
-              <em>timeless </em> design.
+              We curate sophisticated yet grounded spaces, prioritizing{" "}
+              <em>timeless </em> elegance with <em>functional</em> design.
             </h1>
           </div>
         </div>
 
         <div className="title-div">
           <p>
-            <strong>LET’S COLLABORATE TO ELEVATE YOUR SPACE</strong>{" "}
+            <strong>LET’S WORK TOGETHER TO ENHANCE YOUR SPACE</strong>{" "}
           </p>
           <p>
             Embrace the essence of your imagination and let Honey & Hive
             Interiors bring it to life. If you're grappling with uncertainties,
             we're here to illuminate the path of possibilities. For those
             pressed for time, relax as we meticulously manage every detail,
-            easing your load. Your journey from the initial concept to the final
-            flourish is our responsibility. Embark on Honey & Hive Interiors'
-            serene and thorough approach to interior design, unlocking the
-            extraordinary potential of your home or business space. The journey
-            to transformation begins now…
+            guiding you from the initial concept phase to completion. Your
+            journey from the initial concept to the final flourish is our
+            responsibility. Embark on Honey & Hive Interiors' serene and
+            thorough approach to interior design, unlocking the extraordinary
+            potential of your home or business space. The journey to
+            transformation begins now…
           </p>
           <Link to="/services" className="read-more-link">
-            Learn About Our Services
+            Explore our range of services
           </Link>
         </div>
 
@@ -129,36 +128,37 @@ const Home = () => {
           <div className="projects-carousel">
             {projectsData && projectsData.length > 0 ? (
               <Swiper
-              spaceBetween={20}
-              slidesPerView={1}
-              loop={true}
-              navigation={true}
-              modules={[Navigation]} 
-              className="mySwiper" 
-              breakpoints={{
-                768: {
-                  slidesPerView: 3,
-                  spaceBetween: 20
-                }
-              }}
-            >
-              {projectsData.map((project, index) => {
-                const imageUrl = project.backgroundImage?.url || "";
-                return (
-                  <SwiperSlide key={index} className="carousel-slide">
-                    <Link to={`/projects/${project.slug}`}>
-                    <div className="carousel-image-container">
-                      <img src={imageUrl} alt={project.title} />
-                      <div className="carousel-hover-overlay">
-                        <h1>View <em>Project</em></h1>
-                      </div>
-                    </div>
-                    </Link>
-                  </SwiperSlide>
-                );
-              })}
-            </Swiper>
-            
+                spaceBetween={20}
+                slidesPerView={1}
+                loop={true}
+                navigation={true}
+                modules={[Navigation]}
+                className="mySwiper"
+                breakpoints={{
+                  768: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                  },
+                }}
+              >
+                {projectsData.map((project, index) => {
+                  const imageUrl = project.backgroundImage?.url || "";
+                  return (
+                    <SwiperSlide key={index} className="carousel-slide">
+                      <Link to={`/projects/${project.slug}`}>
+                        <div className="carousel-image-container">
+                          <img src={imageUrl} alt={project.title} />
+                          <div className="carousel-hover-overlay">
+                            <h1>
+                              View <em>Project</em>
+                            </h1>
+                          </div>
+                        </div>
+                      </Link>
+                    </SwiperSlide>
+                  );
+                })}
+              </Swiper>
             ) : (
               <div>No projects to display</div>
             )}

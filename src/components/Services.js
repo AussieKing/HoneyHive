@@ -8,11 +8,11 @@ import smallerImage from "../assets/smaller-image.jpeg";
 import horizontalImage from "../assets/services-horizontal.PNG";
 import designPhases from "../assets/design-phases.png";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
+import { Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 
-import { projectsData } from "./projectsData"; 
+import { projectsData } from "./projectsData";
 
 const Services = () => {
   return (
@@ -34,7 +34,9 @@ const Services = () => {
             />
           </div>
           <div className="services-hero-text">
-            <h1>Serving <em>Your</em> Vision.</h1>
+            <h1>
+              Bringing Your Vision to <em>Life</em>
+            </h1>
           </div>
         </div>
 
@@ -48,7 +50,7 @@ const Services = () => {
               <p>RETAIL DESIGN</p>
               <p>HOSPITALITY DESIGN</p>
               <p>PROJECT MANAGMENT</p>
-              <p>PROPERTY STAGING  & STYLING</p>
+              <p>PROPERTY STAGING & STYLING</p>
             </div>
           </div>
           <div className="title-div">
@@ -136,7 +138,9 @@ const Services = () => {
               <div className="phase-container">
                 {/* <h2>PHASE 0</h2> */}
                 <div>
-                  <p><strong>INITIAL CONSULTATION</strong></p>
+                  <p>
+                    <strong>INITIAL CONSULTATION</strong>
+                  </p>
                   <p>
                     We begin with a comprehensive review of your space or plans
                     during the Initial Design Consultation. We offer in-person
@@ -157,7 +161,17 @@ const Services = () => {
                     The excitement begins with the creative visualisation of
                     your Project. We gather inspiration, sketch the Concept
                     Design, share preliminary 3D drawings, and offer finish and
-                    fixture palettes for your choice.
+                    fixture palettes for your choice. We gather inspiration from
+                    collaborative Pinterest mood boards and start the spatial
+                    planning of internal layouts by creating and sharing
+                    preliminary 3D Concept Drawings, including any custom
+                    joinery designs.
+                    <p></p>
+                    We also begin the interior selections process by offering
+                    finish and fixture palettes of your choice. In this phase we
+                    conceptualize the overall look and feel of your space,
+                    ensuring it aligns with your style preferences and
+                    functional needs.
                   </p>
                   <p>Hourly Fixed Fee - $250</p>
                 </div>
@@ -167,10 +181,11 @@ const Services = () => {
                 <div>
                   <p>BUILDING DESIGN</p>
                   <p>
-                    We refine and bring your design closer to reality. Layouts
-                    are finalised with scaled plans, including 3D
-                    representations of all cabinetry designs, and the showcasing
-                    of internal finishes and fixtures.
+                    This is when we integrate your feedback to refine and bring
+                    your design vision closer to reality. Layouts are finalised
+                    with scaled plans, including 3D representations of all
+                    cabinetry designs, and the showcasing of internal finishes
+                    and fixtures.
                   </p>
                   <p>Hourly Fixed Fee - $250</p>
                 </div>
@@ -178,27 +193,34 @@ const Services = () => {
               <div className="phase-container">
                 <h2>PHASE 3</h2>
                 <div>
-                  <p>DESIGN DOCUMENTATION</p>
+                  <p>DETAIL DRAWINGS</p>
                   <p>
-                    We get into the nitty-gritty with comprehensive interior
-                    design documentation. Carefully curated schedules and
-                    relevant consultant information are collated to achieve
-                    accurate pricing and precise execution with builders and
-                    trades.
+                    Here, we deliver meticulously detailed "working drawings,"
+                    that include the essential dimensions and elevations
+                    necessary to obtain your Building Approval. The Detailed
+                    Drawings (DD's) will serve as your Builder's plans for
+                    construction.
+                    <p></p>
+                    Guided by your stylistic preferences and practical "must
+                    have s", we work together to craft a vivid, multi-faceted
+                    representation of your vision. Our forte lies in the
+                    preservation and fusion of existing heritage elements with
+                    contemporary design to ensure today's relevance and
+                    longevity for many years to come."
                   </p>
-                  <p>Hourly Fixed Fee - $150</p>
+                  <p>Hourly Fixed Fee - $250</p>
                 </div>
               </div>
               <div className="phase-container">
                 <h2>PHASE 4</h2>
                 <div>
-                  <p>CONSTRUCTION</p>
+                  <p>DESIGN DOCUMENTATION</p>
                   <p>
-                    Here's where your design vision starts taking tangible
-                    shape. Our design team works closely with your project
-                    manager, builders, and trades for flawless execution. We
-                    keep a watchful eye to make sure everything aligns with your
-                    expectations and brief requirements.
+                    This is where we get specific with comprehensive
+                    documentation of all your Interior Specifications .
+                    Meticulously curated schedules and any relevant consultant
+                    information are collated to ensure your project team has
+                    everything they need to execute successfully.
                   </p>
                   <p>Hourly Fixed Fee - $150</p>
                 </div>
@@ -220,7 +242,10 @@ const Services = () => {
             </div>
           </div>
           <div className="interior-design-image">
-            <img src={designPhases} alt="Wooden stairs with concrete textures and plants" />
+            <img
+              src={designPhases}
+              alt="Wooden stairs with concrete textures and plants"
+            />
           </div>
         </div>
 
@@ -245,9 +270,14 @@ const Services = () => {
               <SwiperSlide key={index} className="carousel-slide">
                 <Link to={`/projects/${project.slug}`}>
                   <div className="carousel-image-container">
-                    <img src={project.backgroundImage?.url || ""} alt={project.title} />
+                    <img
+                      src={project.backgroundImage?.url || ""}
+                      alt={project.title}
+                    />
                     <div className="carousel-hover-overlay">
-                      <h1>View <em>Project</em></h1>
+                      <h1>
+                        View <em>Project</em>
+                      </h1>
                     </div>
                   </div>
                 </Link>

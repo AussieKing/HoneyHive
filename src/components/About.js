@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 import "./About.css";
 import { Link } from "react-router-dom";
-import { useInView } from 'react-intersection-observer';
+import { useInView } from "react-intersection-observer";
 import founderImage from "../assets/founder-image.jpg";
 import contactImage from "../assets/contact-image.jpg";
 
 const About = () => {
-
   const { ref, inView } = useInView({
-    triggerOnce: true, 
-    threshold: 0.5,    
+    triggerOnce: true,
+    threshold: 0.5,
   });
 
   const [readMore, setReadMore] = useState(false);
@@ -25,11 +24,14 @@ const About = () => {
         <div className="about-text-image"></div>
         <div className="about-text-content">
           <h1>
-          Crafting Interiors, from Brisbane and Beyond:<p></p> Honey & Hive Interiors - <em>If you can see it, it exists.</em>
+            Crafting Interiors, from Brisbane and Beyond:<p></p> Honey & Hive
+            Interiors - <em>If you can see it, it exists.</em>
           </h1>
           <div className="content-with-vision">
             <div className="text-and-button">
-              <p><strong>OUR ETHOS</strong></p>
+              <p>
+                <strong>OUR ETHOS</strong>
+              </p>
               <p>
                 At our core, we focus on crafting spaces that blend an organic
                 feel with sophistication, always aiming for designs that are
@@ -69,7 +71,10 @@ const About = () => {
         <div className="founders-left">
           <h1>Meet the mind</h1>
           <h1>
-          <em ref={ref} className={inView ? 'em-animate' : ''}> behind </em>
+            <em ref={ref} className={inView ? "em-animate" : ""}>
+              {" "}
+              behind{" "}
+            </em>
             <p>Honey and Hive.</p>
           </h1>
         </div>
@@ -102,13 +107,20 @@ const About = () => {
                 Designer at a renowned Building & Interior Design Firm in
                 Brisbane, where she also led the Furniture & Styling team. Her
                 diploma in Interior Design, coupled with her practical
-                experience, has been instrumental in honing her skills. She has
-                successfully combined her diverse experiences, crafting a
-                uniquely holistic approach that applies Ethical, Biophilic and
-                Feng Shui principles to interior design. Her approach is
-                characterised by a harmonious blend of practicality, aesthetic
-                elegance, and spatial design that promote well-being.
-              </p>
+                experience, has been instrumental in honing her skills.
+                Winemaker and Sales Director to a full-time interior designer,
+                she has successfully combined her diverse experiences, crafting
+                a uniquely holistic approach that applies Ethical, Biophilic and
+                Feng Shui principles to interior design. Her method is
+                characterised by a harmonious blend of practicality, ethical
+                selections and spatial design that promotes well-being.
+                
+                Ashley and her husband Freddy relocated from Sydney in 2018 to settle in the Moreton Bay region of Southeast Queensland,
+                where they now reside with their son Byron. 
+                Upon purchasing their first home, which proved to be a "renovator's delight," Ashley embraced a more laid-back lifestyle, 
+                with open arms. 
+                This change allowed her to focus on family, her own wellbeing and cultivating and expanding her business, Honey & Hive Interiors, 
+                with a renewed sense of ambition and creativity. 
               {/* {readMore && (
                 <p>
                   Extended founder's bio goes here... Aenean venenatis magna
