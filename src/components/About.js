@@ -113,14 +113,16 @@ const About = () => {
                 a uniquely holistic approach that applies Ethical, Biophilic and
                 Feng Shui principles to interior design. Her method is
                 characterised by a harmonious blend of practicality, ethical
-                selections and spatial design that promotes well-being.
-                
-                Ashley and her husband Freddy relocated from Sydney in 2018 to settle in the Moreton Bay region of Southeast Queensland,
-                where they now reside with their son Byron. 
-                Upon purchasing their first home, which proved to be a "renovator's delight," Ashley embraced a more laid-back lifestyle, 
-                with open arms. 
-                This change allowed her to focus on family, her own wellbeing and cultivating and expanding her business, Honey & Hive Interiors, 
-                with a renewed sense of ambition and creativity. 
+                selections and spatial design that promotes well-being. Ashley
+                and her husband Freddy relocated from Sydney in 2018 to settle
+                in the Moreton Bay region of Southeast Queensland, where they
+                now reside with their son Byron. Upon purchasing their first
+                home, which proved to be a "renovator's delight," Ashley
+                embraced a more laid-back lifestyle, with open arms. This change
+                allowed her to focus on family, her own wellbeing and
+                cultivating and expanding her business, Honey & Hive Interiors,
+                with a renewed sense of ambition and creativity.ß
+              </p>
               {/* {readMore && (
                 <p>
                   Extended founder's bio goes here... Aenean venenatis magna
